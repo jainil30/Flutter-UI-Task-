@@ -11,4 +11,6 @@ const priceColor = Color(0xfff2a666);
 const starsColor = Color(0xffeac92c);
 const dot2Color = Color(0xff164B45);
 const dot3Color = Color(0xff13433E);
+const white = Colors.white;
+const bottomBackColor = Color(0xff1B201E);
 

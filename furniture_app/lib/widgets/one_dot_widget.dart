@@ -1,9 +1,12 @@
-
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/controllers/initial_page_controller.dart';
 import 'package:get/get.dart';
+
+/*Created By: Tushar Jethva
+
+*/
 
 class MyOneDotWidget extends StatelessWidget {
   const MyOneDotWidget({

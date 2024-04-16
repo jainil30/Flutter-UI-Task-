@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:gap/gap.dart';
 
+/*Created By: Tushar Jethva
+
+*/
 class MyInitImageText extends StatelessWidget {
   const MyInitImageText({
     super.key,

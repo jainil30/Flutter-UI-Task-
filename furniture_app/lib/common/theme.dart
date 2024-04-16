@@ -1,36 +1,56 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/colors.dart';
 
+/*Created By: Tushar Jethva
+
+*/
 ThemeData lightTheme() {
   return ThemeData(
-      scaffoldBackgroundColor: lightGreyColor,
-      fontFamily: "Switzer",
-      textTheme: const TextTheme(
-        displayLarge: TextStyle(
-            fontSize: 32, color: darkColor, fontWeight: FontWeight.bold),
-        displayMedium: TextStyle(
-            fontSize: 24, color: darkColor, fontWeight: FontWeight.w500),
-        displaySmall: TextStyle(fontSize: 16, color: darkColor),
-        titleLarge: TextStyle(fontSize: 16, color: darkColor),
-        titleMedium: TextStyle(fontSize: 13, color: darkColor),
-        titleSmall: TextStyle(fontSize: 11, color: darkColor),
-        bodyLarge: TextStyle(fontSize: 16, color: darkColor),
-        bodyMedium: TextStyle(
-            fontSize: 14, color: darkColor, fontWeight: FontWeight.bold),
-        bodySmall: TextStyle(fontSize: 12, color: darkColor),
-      ),
-      iconTheme: const IconThemeData(
-        color: darkColor,
-        size: 24,
-      ),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ButtonStyle(
+    scaffoldBackgroundColor: white,
+    fontFamily: "Switzer",
+    textTheme: const TextTheme(
+      displayLarge: TextStyle(
+          fontSize: 32, color: darkColor, fontWeight: FontWeight.bold),
+      displayMedium: TextStyle(
+          fontSize: 24, color: darkColor, fontWeight: FontWeight.w500),
+      displaySmall: TextStyle(fontSize: 16, color: darkColor),
+      titleLarge: TextStyle(fontSize: 16, color: darkColor),
+      titleMedium: TextStyle(fontSize: 13, color: darkColor),
+      titleSmall: TextStyle(fontSize: 11, color: darkColor),
+      bodyLarge: TextStyle(fontSize: 16, color: darkColor),
+      bodyMedium: TextStyle(
+          fontSize: 14, color: darkColor, fontWeight: FontWeight.bold),
+      bodySmall: TextStyle(fontSize: 12, color: darkColor),
+    ),
+    iconTheme: const IconThemeData(
+      color: darkColor,
+      size: 24,
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
         backgroundColor: const MaterialStatePropertyAll(primaryColor),
-        shape: MaterialStatePropertyAll(
-            BeveledRectangleBorder(borderRadius: BorderRadius.circular(20))),
+        textStyle: const MaterialStatePropertyAll(
+            TextStyle(fontSize: 16, color: lightTextColor)),
+        shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        )),
         elevation: const MaterialStatePropertyAll(3),
         iconColor: const MaterialStatePropertyAll(lightTextColor),
-      )));
+      ),
+    ),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        elevation: 0,
+        backgroundColor: white,
+        type: BottomNavigationBarType.fixed,
+        selectedIconTheme: IconThemeData(color: primaryColor),
+        unselectedIconTheme: IconThemeData(color: greyColor),
+        selectedLabelStyle:
+            TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+        unselectedLabelStyle:
+            TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+        selectedItemColor: primaryColor,
+        unselectedItemColor: greyColor),
+  );
 }
 
 ThemeData darkTheme() {
@@ -55,11 +75,27 @@ ThemeData darkTheme() {
         size: 24,
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ButtonStyle(
-        backgroundColor: const MaterialStatePropertyAll(primaryColor),
-        shape: MaterialStatePropertyAll(
-            BeveledRectangleBorder(borderRadius: BorderRadius.circular(20))),
-        elevation: const MaterialStatePropertyAll(3),
-        iconColor: const MaterialStatePropertyAll(lightTextColor),
-      )));
+        style: ButtonStyle(
+          backgroundColor: const MaterialStatePropertyAll(primaryColor),
+          textStyle: const MaterialStatePropertyAll(
+            TextStyle(fontSize: 16, color: lightTextColor),
+          ),
+          shape: MaterialStatePropertyAll(
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
+          elevation: const MaterialStatePropertyAll(3),
+          iconColor: const MaterialStatePropertyAll(lightTextColor),
+        ),
+      ),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          elevation: 0,
+          backgroundColor: bottomBackColor,
+          selectedIconTheme: IconThemeData(color: primaryColor),
+          unselectedIconTheme: IconThemeData(color: greyColor),
+          type: BottomNavigationBarType.fixed,
+          selectedLabelStyle:
+              TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+          unselectedLabelStyle:
+              TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+          selectedItemColor: primaryColor,
+          unselectedItemColor: greyColor));
 }
