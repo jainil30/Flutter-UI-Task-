@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:furniture_app/common/colors.dart';
+import 'package:furniture_app/common/bottom_nav.dart';
 import 'package:furniture_app/common/sizes.dart';
+import 'package:furniture_app/constants/strings.dart';
 import 'package:furniture_app/controllers/initial_page_controller.dart';
+import 'package:furniture_app/widgets/custom_button.dart';
 import 'package:furniture_app/widgets/init_image_text_widget.dart';
 import 'package:furniture_app/widgets/init_row.dart';
 import 'package:furniture_app/widgets/one_dot_widget.dart';
 import 'package:furniture_app/common/data.dart';
-import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
@@ -26,7 +26,6 @@ class _MyInitialScreenState extends State<MyInitialScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _pageController = PageController(initialPage: 0);
   }
@@ -39,38 +38,48 @@ class _MyInitialScreenState extends State<MyInitialScreen> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Scaffold(
-      body: Column(
-        children: [
-          Gap(getHeight(height: 0.2, context: context)),
-          Container(
-            height: getHeight(height: 0.6, context: context),
-            child: PageView.builder(
-              controller: _pageController,
-              onPageChanged: changePage,
-              itemCount: initData.length,
-              itemBuilder: (context, index) {
-                var data = initData[index];
-                return MyInitImageText(data: data, theme: theme);
-              },
+      body: Obx(
+        () => Column(
+          children: [
+            Gap(getHeight(height: 0.2, context: context)),
+            SizedBox(
+              height: getHeight(height: 0.6, context: context),
+              child: PageView.builder(
+                controller: _pageController,
+                onPageChanged: changePage,
+                itemCount: initData.length,
+                itemBuilder: (context, index) {
+                  var data = initData[index];
+                  return MyInitImageText(data: data, theme: theme);
+                },
+              ),
             ),
-          ),
-          const MyOneDotWidget(),
-          Gap(getHeight(height: 0.07, context: context)),
-          initialPageController.initialPage==2? ElevatedButton(onPressed: (){}, child: Text("Get Started")) :Padding(
-            padding: EdgeInsets.only(
-                left: getWidth(width: 0.023, context: context),
-                bottom: getHeight(height: 0.02, context: context)),
-            child: MyInitRow(
-              content: "Skip",
-              onPressed: () {
-                int val = initialPageController.initialPage;
-                changePage(val + 1);
-                _pageController.jumpToPage(initialPageController.initialPage);
-              },
-            ),
-          ),
-        ],
+            const MyOneDotWidget(),
+            Gap(getHeight(height: 0.07, context: context)),
+            initialPageController.initialPage == 2
+                ?  MyCustomButton(buttonName: StringConstants.INIT_BUTTON_TEXT,onPressed: () {
+                    Navigator.pushNamed(context, MyBottomNavigation.routeName);
+                },)
+                : Padding(
+                    padding: EdgeInsets.only(
+                        left: getWidth(width: 0.023, context: context),
+                        bottom: getHeight(height: 0.02, context: context)),
+                    child: MyInitRow(
+                      content: "Skip",
+                      onContentPressed: () {},
+                      onButtonPressed: () {
+                        int val = initialPageController.initialPage;
+                        changePage(val + 1);
+                        _pageController
+                            .jumpToPage(initialPageController.initialPage);
+                      },
+                    ),
+                  ),
+          ],
+        ),
       ),
     );
   }
 }
+
+
