@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/constants/colors.dart';
+import 'package:furniture_app/widgets/reusable_text.dart';
 
-import '../common/reusable_text.dart';
+import '../common/colors.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   CustomElevatedButton(

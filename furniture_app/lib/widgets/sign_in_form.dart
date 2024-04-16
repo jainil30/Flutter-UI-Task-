@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/controllers/sign_in_controller.dart';
+import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:get/get.dart';
 
-import '../common/reusable_text.dart';
+import '../common/colors.dart';
 import '../common/text_form_field.dart';
-import '../constants/colors.dart';
 
 class SignInForm extends GetView<SignInController> {
   const SignInForm({super.key});

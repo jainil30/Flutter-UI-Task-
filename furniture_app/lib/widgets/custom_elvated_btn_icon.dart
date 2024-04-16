@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../common/reusable_text.dart';
+import 'package:furniture_app/widgets/reusable_text.dart';
 
 class CustomElevatedIconButton extends StatelessWidget {
   CustomElevatedIconButton(

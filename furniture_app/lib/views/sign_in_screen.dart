@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/common/reusable_text.dart';
-import 'package:furniture_app/constants/colors.dart';
 import 'package:furniture_app/widgets/custom_elvated_btn.dart';
 import 'package:furniture_app/widgets/custom_elvated_btn_icon.dart';
 import 'package:furniture_app/widgets/sign_in_form.dart';
+
+import '../common/colors.dart';
+import '../widgets/reusable_text.dart';
 
 /*
   Created By : Jainil Dalwadi

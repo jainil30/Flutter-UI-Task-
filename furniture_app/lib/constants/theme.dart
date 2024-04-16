@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/constants/colors.dart';
+
+import '../common/colors.dart';
 
 ThemeData lightTheme() {
   return ThemeData(
