@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/constants/theme.dart';
+import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/routes.dart';
-import 'package:furniture_app/views/splash_screen.dart';
+import 'package:furniture_app/views/sign_up_screen.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,14 +13,15 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    Get.put(SignInController());
+    return GetMaterialApp(
       title: 'Crafty',
       theme: lightTheme(),
       darkTheme: darkTheme(),
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: (settings) => genterateRoutes(settings),
-      home: const SplashScreen(),
+      home: SignUpScreen(),
     );
   }
 }

@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/common/reusable_text.dart';
-import 'package:furniture_app/constants/colors.dart';
-import 'package:furniture_app/widgets/custom_elvated_btn.dart';
-import 'package:furniture_app/widgets/custom_elvated_btn_icon.dart';
-import 'package:furniture_app/widgets/sign_in_form.dart';
+import 'package:furniture_app/widgets/sign_up_form.dart';
+
+import '../common/reusable_text.dart';
+import '../constants/colors.dart';
+import '../widgets/custom_elvated_btn.dart';
+import '../widgets/custom_elvated_btn_icon.dart';
 
 /*
   Created By : Jainil Dalwadi
-  Purpose : Sign In Sreen
+  Purpose : Sign Up Sreen
  */
 
-class SignInScreen extends StatefulWidget {
-  const SignInScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<SignInScreen> createState() => _SignInScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
 
@@ -58,14 +59,14 @@ class _SignInScreenState extends State<SignInScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       MyReusableText(
-                        content: "Welcome Back",
+                        content: "Create Account  ",
                         style: Theme.of(context)
                             .textTheme
                             .displayLarge!
                             .copyWith(),
                       ),
                       MyReusableText(
-                        content: "Welcome Back! Please Enter Your Details.",
+                        content: "Let’s create account toghter",
                         style: Theme.of(context)
                             .textTheme
                             .displaySmall!
@@ -74,57 +75,22 @@ class _SignInScreenState extends State<SignInScreen> {
                       const SizedBox(
                         height: 20,
                       ),
-                      SignInForm(),
+                      SignOutForm(),
                       CustomElevatedButton(
-                        text: "Sign In",
+                        text: "Sign Up",
                         onClickFunction: () {},
                       ),
                       CustomElevatedIconButton(
-                        text: "Sign In",
+                        text: "Sign Up",
                         onClickFunction: () {},
                         imagePath: "assets/images/google_logo.png",
                       ),
-                      // Container(
-                      //   margin: EdgeInsets.only(top: 16, bottom: 10),
-                      //   width: double.infinity,
-                      //   height: 56,
-                      //   child: ElevatedButton(
-                      //     onPressed: () {},
-                      //     style: ElevatedButton.styleFrom(
-                      //       backgroundColor: Colors.white,
-                      //     ),
-                      //     child: Row(
-                      //       mainAxisSize: MainAxisSize.max,
-                      //       mainAxisAlignment: MainAxisAlignment.center,
-                      //       crossAxisAlignment: CrossAxisAlignment.center,
-                      //       children: [
-                      //         Container(
-                      //             margin: EdgeInsets.all(10),
-                      //             width: 23,
-                      //             height: 24,
-                      //             child: Image.asset(
-                      //                 "assets/images/google_logo.png")
-                      //
-                      //             // SvgPicture.string(
-                      //             //     "assets/images/google_icon.svg"),
-                      //             ),
-                      //         const MyReusableText(
-                      //           content: "Sign In",
-                      //           style: TextStyle(
-                      //               fontSize: 16,
-                      //               color: darkColor,
-                      //               fontWeight: FontWeight.normal),
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           MyReusableText(
-                            content: "Don’t have an account?",
+                            content: "Already have an account?",
                             style: Theme.of(context)
                                 .textTheme
                                 .titleMedium!
@@ -134,7 +100,7 @@ class _SignInScreenState extends State<SignInScreen> {
                             width: 5,
                           ),
                           MyReusableText(
-                            content: "Sign Up for free",
+                            content: "Sign In",
                             style: Theme.of(context)
                                 .textTheme
                                 .titleMedium!

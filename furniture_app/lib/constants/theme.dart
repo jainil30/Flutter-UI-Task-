@@ -3,27 +3,28 @@ import 'package:furniture_app/constants/colors.dart';
 
 ThemeData lightTheme() {
   return ThemeData(
-      scaffoldBackgroundColor: lightGreyColor,
-      fontFamily: "Switzer",
-      textTheme: const TextTheme(
-        displayLarge: TextStyle(
-            fontSize: 32, color: darkColor, fontWeight: FontWeight.bold),
-        displayMedium: TextStyle(fontSize: 24, color: darkColor),
-        displaySmall: TextStyle(fontSize: 16, color: darkColor),
-        titleLarge: TextStyle(fontSize: 16, color: darkColor),
-        titleMedium: TextStyle(fontSize: 13, color: darkColor),
-        titleSmall: TextStyle(fontSize: 11, color: darkColor),
-        bodyLarge: TextStyle(fontSize: 16, color: darkColor),
-        bodyMedium: TextStyle(
-            fontSize: 14, color: darkColor, fontWeight: FontWeight.bold),
-        bodySmall: TextStyle(fontSize: 12, color: darkColor),
-      ),
-      iconTheme: IconThemeData(
-        color: darkColor,
-        size: 24,
-      ),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ButtonStyle(
+    scaffoldBackgroundColor: lightGreyColor,
+    hoverColor: lightTextColor,
+    fontFamily: "Switzer",
+    textTheme: const TextTheme(
+      displayLarge: TextStyle(
+          fontSize: 32, color: darkColor, fontWeight: FontWeight.bold),
+      displayMedium: TextStyle(fontSize: 24, color: darkColor),
+      displaySmall: TextStyle(fontSize: 16, color: darkColor),
+      titleLarge: TextStyle(fontSize: 16, color: darkColor),
+      titleMedium: TextStyle(fontSize: 13, color: darkColor),
+      titleSmall: TextStyle(fontSize: 11, color: darkColor),
+      bodyLarge: TextStyle(fontSize: 16, color: darkColor),
+      bodyMedium: TextStyle(
+          fontSize: 14, color: darkColor, fontWeight: FontWeight.bold),
+      bodySmall: TextStyle(fontSize: 12, color: darkColor),
+    ),
+    iconTheme: IconThemeData(
+      color: darkColor,
+      size: 24,
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
         backgroundColor: MaterialStatePropertyAll(primaryColor),
         shape: MaterialStatePropertyAll(
           RoundedRectangleBorder(
@@ -32,12 +33,15 @@ ThemeData lightTheme() {
         ),
         elevation: MaterialStatePropertyAll(3),
         iconColor: MaterialStatePropertyAll(lightTextColor),
-      )));
+      ),
+    ),
+  );
 }
 
 ThemeData darkTheme() {
   return ThemeData(
       scaffoldBackgroundColor: darkColor,
+      hoverColor: lightDarkGreyColor,
       fontFamily: "Switzer",
       textTheme: const TextTheme(
         displayLarge: TextStyle(

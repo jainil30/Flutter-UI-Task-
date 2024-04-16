@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3),
+        const Duration(seconds: 3),
         () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => SignInScreen())));
   }
@@ -32,28 +32,28 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                height: MediaQuery.sizeOf(context).height / 4,
-                width: MediaQuery.sizeOf(context).width / 2,
-                child: SvgPicture.asset(
-                  "assets/images/splash_screen_img.svg",
-                  color: lightTextColor,
-                ),
+      backgroundColor: primaryColor,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: MediaQuery.sizeOf(context).height / 4,
+              width: MediaQuery.sizeOf(context).width / 2,
+              child: SvgPicture.asset(
+                "assets/images/splash_screen_img.svg",
+                // colorFilter:
+                //     const ColorFilter.mode(lightTextColor, BlendMode.color),
               ),
-              const MyReusableText(
-                content: StringConstants.APP_NAME,
-                style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.normal,
-                    color: lightTextColor),
-              )
-            ],
-          ),
+            ),
+            const MyReusableText(
+              content: StringConstants.APP_NAME,
+              style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.normal,
+                  color: lightTextColor),
+            )
+          ],
         ),
       ),
     );
