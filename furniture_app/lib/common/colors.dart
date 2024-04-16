@@ -9,3 +9,6 @@ const dartTextColor = Colors.black;
 const redColor = Colors.red;
 const priceColor = Color(0xfff2a666);
 const starsColor = Color(0xffeac92c);
+const dot2Color = Color(0xff164B45);
+const dot3Color = Color(0xff13433E);
+

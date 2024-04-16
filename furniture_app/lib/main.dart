@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/constants/theme.dart';
+import 'package:furniture_app/common/theme.dart';
 import 'package:furniture_app/routes.dart';
 import 'package:furniture_app/views/initial_screen.dart';
 
@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: lightTheme(),
       darkTheme: darkTheme(),
