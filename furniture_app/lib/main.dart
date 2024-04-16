@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/constants/theme.dart';
+import 'package:furniture_app/routes.dart';
 import 'package:furniture_app/views/initial_screen.dart';
 
 void main() {
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       theme: lightTheme(),
       darkTheme: darkTheme(),
       themeMode: ThemeMode.system,
+      onGenerateRoute: (settings) => genterateRoutes(settings),
       home: const MyInitialScreen(),
     );
   }

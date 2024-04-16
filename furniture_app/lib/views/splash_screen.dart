@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:furniture_app/constants/strings.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -26,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 "assets/images/splash_screen_img.svg",
               ),
             ),
-            Text(
+            const Text(
               StringConstants.APP_NAME,
               textDirection: TextDirection.ltr,
             )
