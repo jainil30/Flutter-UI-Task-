@@ -1,7 +1,17 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:furniture_app/constants/strings.dart';
+import 'package:furniture_app/views/sign_in_screen.dart';
 
+import '../common/reusable_text.dart';
+import '../constants/colors.dart';
+
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Splash Screen of app
+ */
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -11,25 +21,39 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(seconds: 3),
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => SignInScreen())));
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Theme.of(context).secondaryHeaderColor,
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              height: MediaQuery.sizeOf(context).height / 4,
-              width: MediaQuery.sizeOf(context).width / 2,
-              child: SvgPicture.asset(
-                "assets/images/splash_screen_img.svg",
+    return Scaffold(
+      body: Container(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: MediaQuery.sizeOf(context).height / 4,
+                width: MediaQuery.sizeOf(context).width / 2,
+                child: SvgPicture.asset(
+                  "assets/images/splash_screen_img.svg",
+                  color: lightTextColor,
+                ),
               ),
-            ),
-            const Text(
-              StringConstants.APP_NAME,
-              textDirection: TextDirection.ltr,
-            )
-          ],
+              const MyReusableText(
+                content: StringConstants.APP_NAME,
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.normal,
+                    color: lightTextColor),
+              )
+            ],
+          ),
         ),
       ),
     );
