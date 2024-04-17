@@ -4,15 +4,15 @@ import 'package:furniture_app/widgets/reusable_text.dart';
 import '../common/colors.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  CustomElevatedButton(
+  const CustomElevatedButton(
       {super.key, required this.text, required this.onClickFunction});
 
   final String? text;
-  void Function() onClickFunction;
+  final void Function() onClickFunction;
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       width: double.infinity,
       height: 56,
       child: ElevatedButton(

@@ -13,16 +13,16 @@ class MyEyeContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+
     return Positioned(
       bottom: getHeight(height: 0.053, context: context),
       right: getWidth(width: 0.16, context: context),
       child: Container(
         width: getWidth(width: 0.15, context: context),
         height: getHeight(height: 0.1, context: context),
-        decoration:  BoxDecoration(
+        decoration: const BoxDecoration(
           shape: BoxShape.circle,
-          color: theme.scaffoldBackgroundColor
+          color: Colors.transparent
         ),
         child: Container(
           margin: const EdgeInsets.all(10),

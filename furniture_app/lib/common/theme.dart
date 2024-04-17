@@ -6,9 +6,10 @@ import 'package:furniture_app/common/colors.dart';
 */
 ThemeData lightTheme() {
   return ThemeData(
-    scaffoldBackgroundColor: white,
-    hoverColor: lightTextColor,
+    scaffoldBackgroundColor: lightGreyColor,
+    hoverColor: white,
     fontFamily: "Switzer",
+    cardColor: imageBackColorL,
     textTheme: const TextTheme(
       displayLarge: TextStyle(
           fontSize: 32, color: darkColor, fontWeight: FontWeight.bold),
@@ -57,7 +58,8 @@ ThemeData lightTheme() {
 ThemeData darkTheme() {
   return ThemeData(
       scaffoldBackgroundColor: darkColor,
-      hoverColor: lightDarkGreyColor,
+      hoverColor: darkGreyColor,
+      cardColor: imageBackColorD,
       fontFamily: "Switzer",
       textTheme: const TextTheme(
         displayLarge: TextStyle(
@@ -73,9 +75,10 @@ ThemeData darkTheme() {
         bodySmall: TextStyle(fontSize: 12, color: lightTextColor),
       ),
       iconTheme: const IconThemeData(
-        color: lightTextColor,
+        color: white,
         size: 24,
       ),
+      
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           backgroundColor: const MaterialStatePropertyAll(primaryColor),
@@ -90,7 +93,7 @@ ThemeData darkTheme() {
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           elevation: 0,
-          backgroundColor: bottomBackColor,
+          backgroundColor: darkGreyColor,
           selectedIconTheme: IconThemeData(color: primaryColor),
           unselectedIconTheme: IconThemeData(color: greyColor),
           type: BottomNavigationBarType.fixed,

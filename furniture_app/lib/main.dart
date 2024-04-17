@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/common/theme.dart';
 import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/routes.dart';
-import 'package:furniture_app/views/sign_up_screen.dart';
+import 'package:furniture_app/views/initial_screen.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: (settings) => genterateRoutes(settings),
-      home: SignUpScreen(),
+      home:const MyInitialScreen(),
     );
   }
 }

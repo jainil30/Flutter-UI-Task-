@@ -45,39 +45,7 @@ class SignInForm extends GetView<SignInController> {
               height: 8,
             ),
             Obx(
-              () => TextField(
-                controller: controller.passwordController.value,
-                obscureText: controller.isObstruct.value,
-                decoration: InputDecoration(
-                  hintText: "Enter Your Password",
-                  hintStyle: Theme.of(context).textTheme.titleMedium!,
-                  fillColor: Theme.of(context).hoverColor,
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
-                      borderSide: BorderSide.none),
-                  helperStyle: TextStyle(color: Colors.green),
-                  suffixIcon: IconButton(
-                    icon: Icon(controller.isObstruct.value
-                        ? Icons.visibility
-                        : Icons.visibility_off),
-                    onPressed: () {
-                      print(
-                          " << -- ${controller.passwordController.value.text}");
-                      controller.passwordController.value =
-                          controller.passwordController.value;
-                      controller.isObstruct.value =
-                          !controller.isObstruct.value;
-
-                      print(
-                          " -------> ${controller.passwordController.value.text}");
-                    },
-                  ),
-                  alignLabelWithHint: false,
-                  filled: true,
-                ),
-                keyboardType: TextInputType.visiblePassword,
-                textInputAction: TextInputAction.done,
-              ),
+              () => CustomTextField(controller: controller),
             ),
             Row(
               children: [
@@ -113,3 +81,49 @@ class SignInForm extends GetView<SignInController> {
     );
   }
 }
+class CustomTextField extends StatelessWidget {
+  const CustomTextField({
+    super.key,
+    required this.controller,
+  });
+
+  final SignInController controller;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      controller: controller.passwordController.value,
+      obscureText: controller.isObstruct.value,
+      decoration: InputDecoration(
+        hintText: "Enter Your Password",
+        hintStyle: Theme.of(context).textTheme.titleMedium!,
+        fillColor: Theme.of(context).hoverColor,
+        border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(20),
+            borderSide: BorderSide.none),
+        helperStyle: TextStyle(color: Colors.green),
+        suffixIcon: IconButton(
+          icon: Icon(controller.isObstruct.value
+              ? Icons.visibility
+              : Icons.visibility_off),
+          onPressed: () {
+            print(
+                " << -- ${controller.passwordController.value.text}");
+            controller.passwordController.value =
+                controller.passwordController.value;
+            controller.isObstruct.value =
+                !controller.isObstruct.value;
+    
+            print(
+                " -------> ${controller.passwordController.value.text}");
+          },
+        ),
+        alignLabelWithHint: false,
+        filled: true,
+      ),
+      keyboardType: TextInputType.visiblePassword,
+      textInputAction: TextInputAction.done,
+    );
+  }
+}
+
