@@ -52,10 +52,11 @@ ThemeData lightTheme() {
         selectedItemColor: primaryColor,
         unselectedItemColor: greyColor),
     appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.transparent,
-      centerTitle: true,
-      shadowColor: darkColor,
-    ),
+        backgroundColor: Colors.transparent,
+        centerTitle: true,
+        shadowColor: darkColor,
+        foregroundColor: darkTextColor,
+        surfaceTintColor: Colors.transparent),
   );
 }
 
@@ -106,9 +107,11 @@ ThemeData darkTheme() {
         selectedItemColor: primaryColor,
         unselectedItemColor: greyColor),
     appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.transparent,
-      centerTitle: true,
-      shadowColor: lightTextColor,
-    ),
+        backgroundColor: Colors.transparent,
+        centerTitle: true,
+        shadowColor: lightTextColor,
+        foregroundColor: lightTextColor,
+        surfaceTintColor: Colors.transparent,
+        actionsIconTheme: IconThemeData(color: lightTextColor)),
   );
 }

@@ -12,6 +12,7 @@ class SettingsMenu extends StatelessWidget {
         return CustomMenuItem(
           title: settingsPageMenu[index]["title"].toString(),
           iconPath: settingsPageMenu[index]["icon"].toString(),
+          isSvg: true,
         );
       },
       itemCount: settingsPageMenu.length,

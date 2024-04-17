@@ -35,41 +35,44 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                 Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 20),
           ),
         ),
-        body: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const CircleAvatar(
-                foregroundImage: NetworkImage(
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB9oF0K9m3KZbFrOm1s3GTB57LyEpOX2Rd9jFy91GDrw&s"),
-                maxRadius: 50,
-              ),
-              MyReusableText(
-                  content: "Jainil Dalwadi",
-                  style: Theme.of(context).textTheme.displayMedium!),
-              MyReusableText(
-                  content: "jainil.dalwadi@gmail.com",
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleLarge!
-                      .copyWith(color: greyColor)),
-              Container(
-                  margin:
-                      EdgeInsets.only(top: 10, left: 24, right: 24, bottom: 14),
-                  // color: Colors.red,
-                  height: MediaQuery.sizeOf(context).height * 0.6,
-                  child: ProfileMenu()),
-              TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Log out",
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const CircleAvatar(
+                  foregroundImage: NetworkImage(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB9oF0K9m3KZbFrOm1s3GTB57LyEpOX2Rd9jFy91GDrw&s"),
+                  maxRadius: 50,
+                ),
+                MyReusableText(
+                    content: "Jainil Dalwadi",
+                    style: Theme.of(context).textTheme.displayMedium!),
+                MyReusableText(
+                    content: "jainil.dalwadi@gmail.com",
                     style: Theme.of(context)
                         .textTheme
                         .titleLarge!
-                        .copyWith(color: redColor, fontWeight: FontWeight.w500),
-                  )),
-            ],
+                        .copyWith(color: greyColor)),
+                Container(
+                    margin: EdgeInsets.only(
+                        top: 10, left: 24, right: 24, bottom: 14),
+                    // color: Colors.red,
+                    height: MediaQuery.sizeOf(context).height * 0.6,
+                    child: ProfileMenu()),
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Log out",
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                          color: redColor, fontWeight: FontWeight.w500),
+                    )),
+                SizedBox(
+                  height: 300,
+                )
+              ],
+            ),
           ),
         ));
   }

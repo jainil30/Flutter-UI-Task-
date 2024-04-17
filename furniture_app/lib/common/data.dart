@@ -1,3 +1,5 @@
+import 'package:furniture_app/constants/icons.dart';
+
 final initData = [
   {
     "imageUrl": "assets/images/init_1.png",
@@ -32,4 +34,60 @@ final settingsPageMenu = [
   {"title": "Manage Addresses", "icon": "assets/icons/manage_address.svg"},
   {"title": "Manage Payment", "icon": "assets/icons/payments_icon.svg"},
   {"title": "Data Control", "icon": "assets/icons/data_center.svg"},
+];
+
+final categorisPageMenu = [
+  {
+    "title": "Minimalist Chair",
+    "icon": IconsConstants.MINIMALIST_CHAIR,
+    "products": "126 Products"
+  },
+  {
+    "title": "Hiro Arm Chair",
+    "icon": IconsConstants.HIRO_ARM_CHAIR,
+    "products": "236 Products"
+  },
+  {
+    "title": "Florence Chair ",
+    "icon": IconsConstants.FLORENCE_CHAIR,
+    "products": "375 Products"
+  },
+  {
+    "title": "Pearlystic Chair",
+    "icon": IconsConstants.PEARLYSTIC_CHAIR,
+    "products": "296 Products"
+  },
+  {
+    "title": "Arm Oxer Chair",
+    "icon": IconsConstants.ARM_OXER_CHAIR,
+    "products": "946 Products"
+  },
+];
+
+final notificationPageMenu = [
+  {
+    "title": "Minimalist Chair",
+    "icon": IconsConstants.MINIMALIST_CHAIR,
+    "products": "126 Products"
+  },
+  {
+    "title": "Hiro Arm Chair",
+    "icon": IconsConstants.HIRO_ARM_CHAIR,
+    "products": "236 Products"
+  },
+  {
+    "title": "Florence Chair ",
+    "icon": IconsConstants.FLORENCE_CHAIR,
+    "products": "375 Products"
+  },
+  {
+    "title": "Pearlystic Chair",
+    "icon": IconsConstants.PEARLYSTIC_CHAIR,
+    "products": "296 Products"
+  },
+  {
+    "title": "Arm Oxer Chair",
+    "icon": IconsConstants.ARM_OXER_CHAIR,
+    "products": "946 Products"
+  },
 ];

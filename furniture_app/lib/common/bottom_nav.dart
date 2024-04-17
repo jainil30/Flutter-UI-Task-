@@ -13,9 +13,9 @@ import 'package:get/get.dart';
 */
 class MyBottomNavigation extends StatelessWidget {
   static const String routeName = "/bottomNav";
-   const MyBottomNavigation({super.key});
+  const MyBottomNavigation({super.key});
 
-  final List<Widget> screens = const[
+  final List<Widget> screens = const [
     MyHomeScreen(),
     MyFavouriteScreen(),
     MyShoppingScreen(),
@@ -27,7 +27,7 @@ class MyBottomNavigation extends StatelessWidget {
     final bottomBarController = Get.put(BottomNavigationController());
     return Scaffold(
       body: Obx(
-       () => Stack(
+        () => Stack(
           children: [
             screens[bottomBarController.bottomIndex],
             Align(
@@ -37,17 +37,23 @@ class MyBottomNavigation extends StatelessWidget {
                   height: getHeight(height: 0.08, context: context),
                   child: Obx(
                     () => BottomNavigationBar(
-                      elevation: 0,
-                     onTap: (value) {
-                        bottomBarController.setBottomIndex = value;
-                     },
-                     currentIndex: bottomBarController.bottomIndex,
-                     items: const[
-                      BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-                      BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: "Favourite"),
-                      BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_outlined), label: "Shopping"),
-                      BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
-                    ]),
+                        elevation: 0,
+                        onTap: (value) {
+                          bottomBarController.setBottomIndex = value;
+                        },
+                        currentIndex: bottomBarController.bottomIndex,
+                        items: const [
+                          BottomNavigationBarItem(
+                              icon: Icon(Icons.home), label: "Home"),
+                          BottomNavigationBarItem(
+                              icon: Icon(Icons.favorite_border),
+                              label: "Favourite"),
+                          BottomNavigationBarItem(
+                              icon: Icon(Icons.shopping_cart_outlined),
+                              label: "Shopping"),
+                          BottomNavigationBarItem(
+                              icon: Icon(Icons.person), label: "Profile"),
+                        ]),
                   ),
                 )),
             const MyEyeContainer(),
@@ -57,5 +63,3 @@ class MyBottomNavigation extends StatelessWidget {
     );
   }
 }
-
-

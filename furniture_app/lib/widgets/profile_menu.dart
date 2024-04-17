@@ -8,10 +8,12 @@ class ProfileMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      shrinkWrap: true,
       itemBuilder: (context, index) {
         return CustomMenuItem(
           title: profilePageMenu[index]["title"].toString(),
           iconPath: profilePageMenu[index]["icon"].toString(),
+          isSvg: true,
         );
       },
       itemCount: profilePageMenu.length,

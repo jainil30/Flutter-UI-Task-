@@ -45,6 +45,12 @@ class ChangePasswordScreen extends GetView<ChangePasswordController> {
           ),
         ),
       ),
+      bottomNavigationBar: Container(
+        margin: EdgeInsets.all(25),
+        child: CustomElevatedButton(
+            text: "Change Password",
+            onClickFunction: controller.validatePasswords),
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(left: 16, right: 16, top: 40),
@@ -107,12 +113,10 @@ class ChangePasswordScreen extends GetView<ChangePasswordController> {
                 // Container(
                 //   height: MediaQuery.of(context).size.height * 0.35,
                 // ),
-                Align(
-                  alignment: AlignmentDirectional.bottomCenter,
-                  child: CustomElevatedButton(
-                      text: "Change Password",
-                      onClickFunction: controller.validatePasswords),
-                )
+                // Align(
+                //   alignment: AlignmentDirectional.bottomCenter,
+                //   child: ,
+                // )
               ],
             ),
           ),

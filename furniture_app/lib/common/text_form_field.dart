@@ -10,13 +10,18 @@ class CustomTextFormField extends StatelessWidget {
       this.color,
       required this.textInputType,
       required this.labelText,
-      this.showIcon});
+      this.showIcon,
+      this.maxLength,
+      this.validation});
+
   final bool? showIcon;
   final TextEditingController controller;
   final String? hintText;
   final String? labelText;
   final Color? color;
   final TextInputType? textInputType;
+  final int? maxLength;
+  final Function? validation;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -48,6 +53,8 @@ class CustomTextFormField extends StatelessWidget {
             return "Invalid Phone number";
           }
         }
+
+        return null;
       },
     );
   }

@@ -3,7 +3,7 @@ import 'package:furniture_app/controllers/change_password_controller.dart';
 import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/controllers/sign_up_controller.dart';
 import 'package:furniture_app/routes.dart';
-import 'package:furniture_app/views/settings_screen.dart';
+import 'package:furniture_app/views/notification_screen.dart';
 import 'package:get/get.dart';
 
 import 'common/theme.dart';
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: (settings) => genterateRoutes(settings),
-      home: SettingsScreen(),
+      home: NotificationScreen(),
     );
   }
 }
