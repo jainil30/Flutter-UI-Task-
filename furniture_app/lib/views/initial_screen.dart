@@ -57,16 +57,22 @@ class _MyInitialScreenState extends State<MyInitialScreen> {
             const MyOneDotWidget(),
             Gap(getHeight(height: 0.07, context: context)),
             initialPageController.initialPage == 2
-                ?  MyCustomButton(buttonName: StringConstants.INIT_BUTTON_TEXT,onPressed: () {
-                    Navigator.pushNamed(context, MyBottomNavigation.routeName);
-                },)
+                ? MyCustomButton(
+                    buttonName: StringConstants.INIT_BUTTON_TEXT,
+                    onPressed: () {
+                      Navigator.pushNamed(
+                          context, MyBottomNavigation.routeName);
+                    },
+                  )
                 : Padding(
                     padding: EdgeInsets.only(
                         left: getWidth(width: 0.023, context: context),
                         bottom: getHeight(height: 0.02, context: context)),
                     child: MyInitRow(
                       content: "Skip",
-                      onContentPressed: () {},
+                      onContentPressed: () {
+                        Navigator.pushNamedAndRemoveUntil(context, MyBottomNavigation.routeName,(route)=>false);
+                      },
                       onButtonPressed: () {
                         int val = initialPageController.initialPage;
                         changePage(val + 1);
@@ -81,5 +87,3 @@ class _MyInitialScreenState extends State<MyInitialScreen> {
     );
   }
 }
-
-

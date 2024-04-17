@@ -37,6 +37,7 @@ class CustomTextFormField extends StatelessWidget {
       ),
       keyboardType: TextInputType.emailAddress,
       autovalidateMode: AutovalidateMode.onUserInteraction,
+      // ignore: body_might_complete_normally_nullable
       validator: (value) {
         if (value!.isEmpty) {
           return "Field is mandatory";

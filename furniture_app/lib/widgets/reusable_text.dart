@@ -9,10 +9,10 @@ class MyReusableText extends StatelessWidget {
   final String content;
   final TextStyle style;
   const MyReusableText({
-    Key? key,
+    super.key,
     required this.content,
     required this.style,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

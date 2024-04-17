@@ -4,7 +4,7 @@ const primaryColor = Color(0xff0C8A7B);
 const darkColor = Color(0xff101817);
 const greyColor = Color(0xff828A89);
 const lightGreyColor = Color(0xffF0F0F2);
-const lightDarkGreyColor = Color(0xff1B201E);
+const darkGreyColor = Color(0xff1B201E);
 const lightTextColor = Colors.white;
 const darkTextColor = Colors.black;
 const redColor = Color(0xffEA3549);
@@ -14,3 +14,6 @@ const dot2Color = Color(0xff164B45);
 const dot3Color = Color(0xff13433E);
 const white = Colors.white;
 const bottomBackColor = Color(0xff1B201E);
+const imageBackColorD = Color(0xff292F2D);
+const imageBackColorL = Color(0xffF0F0F2);
+

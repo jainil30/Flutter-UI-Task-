@@ -9,8 +9,9 @@ import 'package:get/get.dart';
 */
 
 class MyOneDotWidget extends StatelessWidget {
+
   const MyOneDotWidget({
-    super.key,
+    super.key
   });
 
   @override
