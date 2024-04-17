@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/constants/theme.dart';
+import 'package:furniture_app/common/theme.dart';
 import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/routes.dart';
 import 'package:furniture_app/views/sign_up_screen.dart';
