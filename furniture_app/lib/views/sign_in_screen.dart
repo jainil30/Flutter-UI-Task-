@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/widgets/custom_elvated_btn.dart';
-import 'package:furniture_app/widgets/custom_elvated_btn_icon.dart';
+import 'package:furniture_app/views/initial_screen.dart';
+import 'package:furniture_app/views/sign_up_screen.dart';
 import 'package:furniture_app/widgets/sign_in_form.dart';
 
 import '../common/colors.dart';
@@ -13,7 +13,7 @@ import '../widgets/reusable_text.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
-
+  static const String routeName = "/signIn";
   @override
   State<SignInScreen> createState() => _SignInScreenState();
 }
@@ -28,6 +28,7 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         flexibleSpace: Container(
           margin: EdgeInsets.only(top: 50, left: 20),
@@ -40,7 +41,10 @@ class _SignInScreenState extends State<SignInScreen> {
                 icon: Icon(
                   Icons.arrow_back,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, MyInitialScreen.routeName, (route) => false);
+                },
               ),
             ],
           ),
@@ -76,50 +80,6 @@ class _SignInScreenState extends State<SignInScreen> {
                         height: 20,
                       ),
                       SignInForm(),
-                      CustomElevatedButton(
-                        text: "Sign In",
-                        onClickFunction: () {},
-                      ),
-                      CustomElevatedIconButton(
-                        text: "Sign In",
-                        onClickFunction: () {},
-                        imagePath: "assets/images/google_logo.png",
-                      ),
-                      // Container(
-                      //   margin: EdgeInsets.only(top: 16, bottom: 10),
-                      //   width: double.infinity,
-                      //   height: 56,
-                      //   child: ElevatedButton(
-                      //     onPressed: () {},
-                      //     style: ElevatedButton.styleFrom(
-                      //       backgroundColor: Colors.white,
-                      //     ),
-                      //     child: Row(
-                      //       mainAxisSize: MainAxisSize.max,
-                      //       mainAxisAlignment: MainAxisAlignment.center,
-                      //       crossAxisAlignment: CrossAxisAlignment.center,
-                      //       children: [
-                      //         Container(
-                      //             margin: EdgeInsets.all(10),
-                      //             width: 23,
-                      //             height: 24,
-                      //             child: Image.asset(
-                      //                 "assets/images/google_logo.png")
-                      //
-                      //             // SvgPicture.string(
-                      //             //     "assets/images/google_icon.svg"),
-                      //             ),
-                      //         const MyReusableText(
-                      //           content: "Sign In",
-                      //           style: TextStyle(
-                      //               fontSize: 16,
-                      //               color: darkColor,
-                      //               fontWeight: FontWeight.normal),
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -134,12 +94,18 @@ class _SignInScreenState extends State<SignInScreen> {
                           SizedBox(
                             width: 5,
                           ),
-                          MyReusableText(
-                            content: "Sign Up for free",
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleMedium!
-                                .copyWith(fontWeight: FontWeight.w500),
+                          InkWell(
+                            child: MyReusableText(
+                              content: "Sign Up for free",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleMedium!
+                                  .copyWith(fontWeight: FontWeight.w500),
+                            ),
+                            onTap: () => Navigator.pushNamedAndRemoveUntil(
+                                context,
+                                SignUpScreen.routeName,
+                                (route) => false),
                           ),
                         ],
                       )

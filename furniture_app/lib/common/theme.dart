@@ -52,6 +52,12 @@ ThemeData lightTheme() {
             TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
         selectedItemColor: primaryColor,
         unselectedItemColor: greyColor),
+    appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.transparent,
+        centerTitle: true,
+        shadowColor: darkColor,
+        foregroundColor: darkTextColor,
+        surfaceTintColor: Colors.transparent),
   );
 }
 
@@ -78,19 +84,17 @@ ThemeData darkTheme() {
         color: white,
         size: 24,
       ),
-      
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ButtonStyle(
-          backgroundColor: const MaterialStatePropertyAll(primaryColor),
-          textStyle: const MaterialStatePropertyAll(
-            TextStyle(fontSize: 16, color: lightTextColor),
-          ),
-          shape: MaterialStatePropertyAll(
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
-          elevation: const MaterialStatePropertyAll(3),
-          iconColor: const MaterialStatePropertyAll(lightTextColor),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: const MaterialStatePropertyAll(primaryColor),
+        textStyle: const MaterialStatePropertyAll(
+          TextStyle(fontSize: 16, color: lightTextColor),
         ),
-      ),
+        shape: MaterialStatePropertyAll(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
+        elevation: const MaterialStatePropertyAll(3),
+        iconColor: const MaterialStatePropertyAll(lightTextColor),
+      )),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           elevation: 0,
           backgroundColor: darkGreyColor,
@@ -102,5 +106,13 @@ ThemeData darkTheme() {
           unselectedLabelStyle:
               TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
           selectedItemColor: primaryColor,
-          unselectedItemColor: greyColor));
+          unselectedItemColor: greyColor),
+    appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.transparent,
+        centerTitle: true,
+        shadowColor: lightTextColor,
+        foregroundColor: lightTextColor,
+        surfaceTintColor: Colors.transparent,
+        actionsIconTheme: IconThemeData(color: lightTextColor)),
+  );
 }
