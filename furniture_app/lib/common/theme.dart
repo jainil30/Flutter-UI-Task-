@@ -7,6 +7,7 @@ import 'package:furniture_app/common/colors.dart';
 ThemeData lightTheme() {
   return ThemeData(
     scaffoldBackgroundColor: white,
+    hoverColor: lightTextColor,
     fontFamily: "Switzer",
     textTheme: const TextTheme(
       displayLarge: TextStyle(
@@ -56,6 +57,7 @@ ThemeData lightTheme() {
 ThemeData darkTheme() {
   return ThemeData(
       scaffoldBackgroundColor: darkColor,
+      hoverColor: lightDarkGreyColor,
       fontFamily: "Switzer",
       textTheme: const TextTheme(
         displayLarge: TextStyle(
