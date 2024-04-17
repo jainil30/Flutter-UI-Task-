@@ -38,7 +38,7 @@ class CustomTextFormField extends StatelessWidget {
         }
 
         if (textInputType == TextInputType.emailAddress) {
-          if (value.isEmail) {
+          if (!value.isEmail) {
             return "Invalid email address";
           }
         }

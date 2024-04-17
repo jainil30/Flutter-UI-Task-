@@ -6,7 +6,7 @@ import 'package:furniture_app/common/colors.dart';
 */
 ThemeData lightTheme() {
   return ThemeData(
-    scaffoldBackgroundColor: white,
+    scaffoldBackgroundColor: lightGreyColor,
     hoverColor: lightTextColor,
     fontFamily: "Switzer",
     textTheme: const TextTheme(
@@ -51,53 +51,64 @@ ThemeData lightTheme() {
             TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
         selectedItemColor: primaryColor,
         unselectedItemColor: greyColor),
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.transparent,
+      centerTitle: true,
+      shadowColor: darkColor,
+    ),
   );
 }
 
 ThemeData darkTheme() {
   return ThemeData(
-      scaffoldBackgroundColor: darkColor,
-      hoverColor: lightDarkGreyColor,
-      fontFamily: "Switzer",
-      textTheme: const TextTheme(
-        displayLarge: TextStyle(
-            fontSize: 32, color: lightTextColor, fontWeight: FontWeight.bold),
-        displayMedium: TextStyle(fontSize: 24, color: lightTextColor),
-        displaySmall: TextStyle(fontSize: 16, color: lightTextColor),
-        titleLarge: TextStyle(fontSize: 16, color: lightTextColor),
-        titleMedium: TextStyle(fontSize: 13, color: lightTextColor),
-        titleSmall: TextStyle(fontSize: 11, color: lightTextColor),
-        bodyLarge: TextStyle(fontSize: 16, color: lightTextColor),
-        bodyMedium: TextStyle(
-            fontSize: 14, color: lightTextColor, fontWeight: FontWeight.bold),
-        bodySmall: TextStyle(fontSize: 12, color: lightTextColor),
-      ),
-      iconTheme: const IconThemeData(
-        color: lightTextColor,
-        size: 24,
-      ),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ButtonStyle(
-          backgroundColor: const MaterialStatePropertyAll(primaryColor),
-          textStyle: const MaterialStatePropertyAll(
-            TextStyle(fontSize: 16, color: lightTextColor),
-          ),
-          shape: MaterialStatePropertyAll(
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
-          elevation: const MaterialStatePropertyAll(3),
-          iconColor: const MaterialStatePropertyAll(lightTextColor),
+    scaffoldBackgroundColor: darkColor,
+    hoverColor: lightDarkGreyColor,
+    fontFamily: "Switzer",
+    textTheme: const TextTheme(
+      displayLarge: TextStyle(
+          fontSize: 32, color: lightTextColor, fontWeight: FontWeight.bold),
+      displayMedium: TextStyle(fontSize: 24, color: lightTextColor),
+      displaySmall: TextStyle(fontSize: 16, color: lightTextColor),
+      titleLarge: TextStyle(fontSize: 16, color: lightTextColor),
+      titleMedium: TextStyle(fontSize: 13, color: lightTextColor),
+      titleSmall: TextStyle(fontSize: 11, color: lightTextColor),
+      bodyLarge: TextStyle(fontSize: 16, color: lightTextColor),
+      bodyMedium: TextStyle(
+          fontSize: 14, color: lightTextColor, fontWeight: FontWeight.bold),
+      bodySmall: TextStyle(fontSize: 12, color: lightTextColor),
+    ),
+    iconTheme: const IconThemeData(
+      color: lightTextColor,
+      size: 24,
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: const MaterialStatePropertyAll(primaryColor),
+        textStyle: const MaterialStatePropertyAll(
+          TextStyle(fontSize: 16, color: lightTextColor),
         ),
+        shape: MaterialStatePropertyAll(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
+        elevation: const MaterialStatePropertyAll(3),
+        iconColor: const MaterialStatePropertyAll(lightTextColor),
       ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          elevation: 0,
-          backgroundColor: bottomBackColor,
-          selectedIconTheme: IconThemeData(color: primaryColor),
-          unselectedIconTheme: IconThemeData(color: greyColor),
-          type: BottomNavigationBarType.fixed,
-          selectedLabelStyle:
-              TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
-          unselectedLabelStyle:
-              TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
-          selectedItemColor: primaryColor,
-          unselectedItemColor: greyColor));
+    ),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        elevation: 0,
+        backgroundColor: bottomBackColor,
+        selectedIconTheme: IconThemeData(color: primaryColor),
+        unselectedIconTheme: IconThemeData(color: greyColor),
+        type: BottomNavigationBarType.fixed,
+        selectedLabelStyle:
+            TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+        unselectedLabelStyle:
+            TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+        selectedItemColor: primaryColor,
+        unselectedItemColor: greyColor),
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.transparent,
+      centerTitle: true,
+      shadowColor: lightTextColor,
+    ),
+  );
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 
-class CustomElevatedIconButton extends StatelessWidget {
+class CustomElevatedIconButton extends StatefulWidget {
   CustomElevatedIconButton(
       {super.key,
       required this.text,
@@ -11,6 +11,13 @@ class CustomElevatedIconButton extends StatelessWidget {
   final String? text;
   void Function() onClickFunction;
   final String? imagePath;
+
+  @override
+  State<CustomElevatedIconButton> createState() =>
+      _CustomElevatedIconButtonState();
+}
+
+class _CustomElevatedIconButtonState extends State<CustomElevatedIconButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +27,7 @@ class CustomElevatedIconButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
             backgroundColor: Theme.of(context).hoverColor),
-        onPressed: onClickFunction,
+        onPressed: widget.onClickFunction,
         child: Padding(
           padding: const EdgeInsets.only(right: 40),
           child: Row(
@@ -32,13 +39,9 @@ class CustomElevatedIconButton extends StatelessWidget {
                   margin: EdgeInsets.all(10),
                   width: 23,
                   height: 24,
-                  child: Image.asset(imagePath!)
-
-                  // SvgPicture.string(
-                  //     "assets/images/google_icon.svg"),
-                  ),
+                  child: Image.asset("${widget.imagePath}")),
               MyReusableText(
-                content: text!,
+                content: widget.text!,
                 style: Theme.of(context).textTheme.titleLarge!,
               ),
             ],
