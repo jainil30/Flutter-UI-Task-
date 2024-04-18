@@ -58,6 +58,9 @@ ThemeData lightTheme() {
         shadowColor: darkColor,
         foregroundColor: darkTextColor,
         surfaceTintColor: Colors.transparent),
+    datePickerTheme: DatePickerThemeData(
+      backgroundColor: Colors.grey.shade300,
+    ),
   );
 }
 
@@ -84,8 +87,8 @@ ThemeData darkTheme() {
         color: white,
         size: 24,
       ),
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ButtonStyle(
+      elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
         backgroundColor: const MaterialStatePropertyAll(primaryColor),
         textStyle: const MaterialStatePropertyAll(
           TextStyle(fontSize: 16, color: lightTextColor),
@@ -107,12 +110,12 @@ ThemeData darkTheme() {
               TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
           selectedItemColor: primaryColor,
           unselectedItemColor: greyColor),
-    appBarTheme: const AppBarTheme(
-        backgroundColor: Colors.transparent,
-        centerTitle: true,
-        shadowColor: lightTextColor,
-        foregroundColor: lightTextColor,
-        surfaceTintColor: Colors.transparent,
-        actionsIconTheme: IconThemeData(color: lightTextColor)),
-  );
+      appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          centerTitle: true,
+          shadowColor: lightTextColor,
+          foregroundColor: lightTextColor,
+          surfaceTintColor: Colors.transparent,
+          actionsIconTheme: IconThemeData(color: lightTextColor)),
+      datePickerTheme: DatePickerThemeData(backgroundColor: darkGreyColor));
 }

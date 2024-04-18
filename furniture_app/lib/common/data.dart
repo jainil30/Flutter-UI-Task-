@@ -36,6 +36,7 @@ final categories = [
   {"imageUrl": "assets/images/sofa.svg", "label": "Sofa"},
   {"imageUrl": "assets/images/bed.svg", "label": "Bed"},
   {"imageUrl": "assets/images/lamp.svg", "label": "Light"},
+
 ];
 
 final items = [
@@ -87,6 +88,7 @@ final items = [
     "likes": 290,
     "isLiked": false,
   }
+
 ];
 
 final interestedItems = [
@@ -143,6 +145,10 @@ final popularItems = [
   }
 ];
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Profile Menu Items
+ */
 final profilePageMenu = [
   {"title": "Profile", "icon": "assets/icons/profile_icon.svg"},
   {"title": "Payment Methods", "icon": "assets/icons/payments_icon.svg"},
@@ -155,6 +161,10 @@ final profilePageMenu = [
   {"title": "Legal Policy", "icon": "assets/icons/legal_policy.svg"},
 ];
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Settings Menu Item
+ */
 final settingsPageMenu = [
   {"title": "Notifications", "icon": "assets/icons/notification.svg"},
   {"title": "Email Settings", "icon": "assets/icons/email_icon.svg"},
@@ -163,6 +173,10 @@ final settingsPageMenu = [
   {"title": "Data Control", "icon": "assets/icons/data_center.svg"},
 ];
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Categories of Category Screen
+ */
 final categorisPageMenu = [
   {
     "title": "Minimalist Chair",
@@ -191,31 +205,79 @@ final categorisPageMenu = [
   },
 ];
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Notifications Screen Menu
+ */
 final notificationPageMenu = [
   {
-    "title": "Minimalist Chair",
-    "icon": IconsConstants.MINIMALIST_CHAIR,
-    "products": "126 Products"
+    "title": "Your order will be ship. Once we get confirm address",
+    "icon": IconsConstants.FLORENCE_ARCADIA_CHAIR,
+    "subtitle": "16 minute ago",
+    "isDismissed": false
   },
   {
-    "title": "Hiro Arm Chair",
-    "icon": IconsConstants.HIRO_ARM_CHAIR,
-    "products": "236 Products"
+    "title": "Special offer on bean upto 46% off all the products",
+    "icon": IconsConstants.ROATATING_LOUNGE_CHAIR,
+    "subtitle": "26 minute ago",
+    "isDismissed": false
   },
   {
-    "title": "Florence Chair ",
-    "icon": IconsConstants.FLORENCE_CHAIR,
-    "products": "375 Products"
+    "title": "New products you may like are available go and show now.",
+    "icon": IconsConstants.LEVI_ARMCHAIR,
+    "subtitle": "49 minute ago",
+    "isDismissed": false
   },
   {
-    "title": "Pearlystic Chair",
-    "icon": IconsConstants.PEARLYSTIC_CHAIR,
-    "products": "296 Products"
+    "title": "Your order 3 summery green chiar has been shipped!",
+    "icon": IconsConstants.NOTIFICATION_MENU_DEFAULT_ICON,
+    "subtitle": "16 days ago",
+    "isDismissed": false
+  },
+];
+
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Checkout Screen Address Menu
+ */
+final addressList = [
+  {
+    "addressId": 1,
+    "addressType": "Home Address",
+    "phoneNumber": "(269)- 444-6853",
+    "address": "Road Number 5649 Akali"
   },
   {
-    "title": "Arm Oxer Chair",
-    "icon": IconsConstants.ARM_OXER_CHAIR,
-    "products": "946 Products"
+    "addressId": 2,
+    "addressType": "Office Address",
+    "phoneNumber": "259- 444-6853",
+    "address": "1578 H Blog Shekh Para"
+  }
+];
+
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Checkout Screen Address Menu
+ */
+final paymentsList = [
+  {
+    "paymentId": 1,
+    "paymentMethodName": "Credit Card",
+    "icon": IconsConstants.CREDIT_CARD_ICON,
+  },
+  {
+    "paymentId": 2,
+    "paymentMethodName": "Paypal",
+    "icon": IconsConstants.PAYPAL_ICON,
+  },
+  {
+    "paymentId": 3,
+    "paymentMethodName": "Apple Pay",
+    "icon": IconsConstants.APPLE_PAY_ICON,
+  },
+  {
+    "paymentMethodName": "All 12 Methods",
+    "icon": IconsConstants.ALL_OTHER_ICON,
   },
 ];
 

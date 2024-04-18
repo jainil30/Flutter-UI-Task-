@@ -7,6 +7,10 @@ import 'package:get/get.dart';
 import '../widgets/custom_back_icon_button.dart';
 import '../widgets/custom_textformfield_password.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Allows user to change his/her password
+ */
 class ChangePasswordScreen extends GetView<ChangePasswordController> {
   const ChangePasswordScreen({super.key});
 

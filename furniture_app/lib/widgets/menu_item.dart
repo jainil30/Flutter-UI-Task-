@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Single Menu Item for menus in the app
+ */
 class CustomMenuItem extends StatelessWidget {
   const CustomMenuItem(
       {super.key,
@@ -21,19 +25,15 @@ class CustomMenuItem extends StatelessWidget {
       color: Theme.of(context).hoverColor,
       child: InkWell(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(4.0),
           child: ListTile(
-            leading: (isSvg!)
-                ? SvgPicture.asset(iconPath!)
-                : Container(
-                    width: 50, height: 50, child: Image.asset(iconPath!)),
+            leading: Container(
+                child: (isSvg!)
+                    ? SvgPicture.asset(iconPath!)
+                    : Image.asset(iconPath!)),
             title: Text(
               title ?? "",
               style: Theme.of(context).textTheme.displaySmall!,
-            ),
-            subtitle: Text(
-              subTitle ?? "",
-              style: Theme.of(context).textTheme.titleMedium!,
             ),
           ),
         ),

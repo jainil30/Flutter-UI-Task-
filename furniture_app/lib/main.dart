@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/controllers/change_password_controller.dart';
+import 'package:furniture_app/controllers/profile_page_menu_item_controller.dart';
 import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/controllers/sign_up_controller.dart';
 import 'package:furniture_app/routes.dart';
 
+
 import 'package:furniture_app/views/initial_screen.dart';
 
+
+import 'package:furniture_app/views/checkout_screen.dart';
 
 import 'package:get/get.dart';
 
 import 'common/theme.dart';
+import 'controllers/checkout_controller.dart';
+import 'controllers/notification_menu_controller.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +28,9 @@ class MyApp extends StatelessWidget {
     Get.put(SignInController());
     Get.put(SignUpController());
     Get.put(ChangePasswordController());
+    Get.put(ProfilePageMenuItemController());
+    Get.put(NotificationMenuController());
+    Get.put(CheckoutController());
     return GetMaterialApp(
       title: 'Crafty',
       theme: lightTheme(),
@@ -29,10 +38,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: (settings) => genterateRoutes(settings),
-
-      home:const MyInitialScreen(),
-
-
+      home: const CheckOutScreen(),
     );
   }
 }

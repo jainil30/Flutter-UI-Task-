@@ -11,6 +11,7 @@ class MyOneInterestedItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+
     return Row(
       children: [
         SizedBox(width: getWidth(width: 0.02, context: context),),
@@ -62,6 +63,7 @@ class MyOneInterestedItem extends StatelessWidget {
         ),
         SizedBox(width: getWidth(width: 0.005, context: context),),
       ],
+
     );
   }
 }

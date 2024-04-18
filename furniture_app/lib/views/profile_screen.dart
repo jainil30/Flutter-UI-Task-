@@ -6,6 +6,10 @@ import 'package:get/get.dart';
 import '../widgets/custom_back_icon_button.dart';
 import '../widgets/profile_menu.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Shows User Profile and menu
+ */
 class MyProfileScreen extends StatefulWidget {
   const MyProfileScreen({super.key});
   static const String routeName = "/profileScreen";

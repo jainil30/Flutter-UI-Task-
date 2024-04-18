@@ -8,7 +8,7 @@ import '../widgets/reusable_text.dart';
 
 /*
   Created By : Jainil Dalwadi
-  Purpose : Sign In Sreen
+  Purpose : Sign In Screen
  */
 
 class SignInScreen extends StatefulWidget {

@@ -3,6 +3,10 @@ import 'package:furniture_app/widgets/reusable_text.dart';
 
 import '../common/colors.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Elevated Button
+ */
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton(
       {super.key, required this.text, required this.onClickFunction});

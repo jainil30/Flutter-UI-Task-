@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:furniture_app/widgets/categories_menu.dart';
+import 'package:furniture_app/common/colors.dart';
+import 'package:furniture_app/controllers/notification_menu_controller.dart';
+import 'package:furniture_app/widgets/notification_menu.dart';
 import 'package:get/get.dart';
 
-import '../constants/icons.dart';
 import '../widgets/custom_back_icon_button.dart';
 
-class NotificationScreen extends StatelessWidget {
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Shows all recent notifications
+ */
+class NotificationScreen extends GetView<NotificationMenuController> {
   const NotificationScreen({super.key});
 
   @override
@@ -16,8 +20,9 @@ class NotificationScreen extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
+          leadingWidth: 80,
           leading: Container(
-            margin: EdgeInsets.only(left: 10, top: 10),
+            margin: EdgeInsets.only(left: 34, top: 10),
             child: CustomBackIconButton(
               icon: Icons.arrow_back,
               function: Get.back,
@@ -26,29 +31,30 @@ class NotificationScreen extends StatelessWidget {
           centerTitle: true,
           actions: [
             Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Theme.of(context).hoverColor),
-                margin: EdgeInsets.only(right: 20, top: 10),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: InkWell(
-                    child: SvgPicture.asset(
-                      IconsConstants.BAG_ICON,
-                      color: Theme.of(context).appBarTheme.shadowColor,
-                      // colorFilter: ColorFilter.mode(
-                      //     Theme.of(context).appBarTheme.shadowColor!,
-                      //     BlendMode.difference),
-                    ),
-                    onTap: () =>
-                        Get.snackbar("Products", "Redirecting to products",
-                            icon: SvgPicture.asset(
-                              IconsConstants.BAG_ICON,
-                            )),
-                  ),
-                ))
+              margin: EdgeInsets.only(
+                right: 40,
+              ),
+              child: InkWell(
+                child: Text(
+                  'Clear All',
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleLarge!
+                      .copyWith(color: greyColor),
+                ),
+                onTap: () {
+                  if (controller.notifications.length > 0) {
+                    Get.snackbar("Notifications", "Marked as read",
+                        icon: Icon(Icons.done_outline_outlined));
+                    controller.notifications
+                        .removeRange(0, controller.notifications.length);
+                  } else {
+                    Get.snackbar("Notifications", "No notification to clear",
+                        icon: Icon(Icons.sms_failed));
+                  }
+                },
+              ),
+            ),
           ],
           title: Text(
             "Notification",
@@ -66,7 +72,7 @@ class NotificationScreen extends StatelessWidget {
                       EdgeInsets.only(top: 10, left: 24, right: 24, bottom: 14),
                   // color: Colors.red,
                   height: MediaQuery.sizeOf(context).height * 0.6,
-                  child: CategoriesMenu()),
+                  child: NotificationMenu()),
             ],
           ),
         ));

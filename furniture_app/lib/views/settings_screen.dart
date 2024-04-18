@@ -4,6 +4,10 @@ import 'package:get/get.dart';
 import '../widgets/custom_back_icon_button.dart';
 import '../widgets/settings_menu.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Settings Screen
+ */
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
   static const String routeName = "/settingsScreen";
