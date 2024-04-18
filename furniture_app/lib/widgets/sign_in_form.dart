@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/common/bottom_nav.dart';
 import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/widgets/custom_elvated_btn.dart';
 import 'package:furniture_app/widgets/custom_elvated_btn_icon.dart';
@@ -92,6 +93,7 @@ class SignInForm extends GetView<SignInController> {
               text: "Sign In",
               onClickFunction: () {
                 controller.validateSignInForm(context);
+                Navigator.pushNamed(context, MyBottomNavigation.routeName);
               },
             ),
             CustomElevatedIconButton(
