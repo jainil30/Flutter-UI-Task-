@@ -32,8 +32,8 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
     final theme = Theme.of(context);
     return Scaffold(
         appBar: PreferredSize(
-            preferredSize: Size(
-                double.infinity, getHeight(height: 0.18, context: context)),
+            preferredSize:
+                Size(double.infinity, getHeight(height: 0.2, context: context)),
             child: const HomeAppBarWidget()),
         body: SingleChildScrollView(
           child: Column(
@@ -57,7 +57,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                 rightText: "ViewAll",
                 leftStyle: theme.textTheme.bodyLarge!
                     .copyWith(fontWeight: FontWeight.w600),
-                rightStyle: theme.textTheme.titleLarge!
+                rightStyle: theme.textTheme.titleMedium!
                     .copyWith(fontWeight: FontWeight.w400, color: priceColor),
               ),
               Gap(getHeight(height: 0.02, context: context)),
@@ -68,7 +68,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                 rightText: "ViewAll",
                 leftStyle: theme.textTheme.bodyLarge!
                     .copyWith(fontWeight: FontWeight.w600),
-                rightStyle: theme.textTheme.titleLarge!
+                rightStyle: theme.textTheme.titleMedium!
                     .copyWith(fontWeight: FontWeight.w400, color: priceColor),
               ),
               Gap(getHeight(height: 0.02, context: context)),
@@ -79,5 +79,3 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
         ));
   }
 }
-
-

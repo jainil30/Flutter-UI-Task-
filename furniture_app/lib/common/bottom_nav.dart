@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:furniture_app/common/sizes.dart';
+import 'package:furniture_app/constants/strings.dart';
 import 'package:furniture_app/controllers/bottom_navigation_controller.dart';
 import 'package:furniture_app/views/favourite_screen.dart';
 import 'package:furniture_app/views/home_screen.dart';
@@ -37,23 +39,24 @@ class MyBottomNavigation extends StatelessWidget {
                   height: getHeight(height: 0.08, context: context),
                   child: Obx(
                     () => BottomNavigationBar(
-                        elevation: 0,
-                        onTap: (value) {
-                          bottomBarController.setBottomIndex = value;
-                        },
-                        currentIndex: bottomBarController.bottomIndex,
-                        items: const [
-                          BottomNavigationBarItem(
-                              icon: Icon(Icons.home), label: "Home"),
-                          BottomNavigationBarItem(
-                              icon: Icon(Icons.favorite_border),
-                              label: "Favourite"),
-                          BottomNavigationBarItem(
-                              icon: Icon(Icons.shopping_cart_outlined),
-                              label: "Shopping"),
-                          BottomNavigationBarItem(
-                              icon: Icon(Icons.person), label: "Profile"),
-                        ]),
+                      elevation: 0,
+                      onTap: (value) {
+                        bottomBarController.setBottomIndex = value;
+                      },
+                      currentIndex: bottomBarController.bottomIndex,
+                      items: const [
+                        BottomNavigationBarItem(
+                            icon: Icon(Icons.home), label: "Home"),
+                        BottomNavigationBarItem(
+                            icon: Icon(Icons.favorite_border),
+                            label: "Favourite"),
+                        BottomNavigationBarItem(
+                            icon: Icon(Icons.shopping_cart_outlined),
+                            label: "Shopping"),
+                        BottomNavigationBarItem(
+                            icon: Icon(Icons.person), label: "Profile"),
+                      ],
+                    ),
                   ),
                 )),
             const MyEyeContainer(),

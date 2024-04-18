@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/controllers/favourite_controller.dart';
 import 'package:furniture_app/models/interested_item_model.dart';
@@ -7,6 +6,8 @@ import 'package:furniture_app/widgets/favorite_one_widget.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:get/get.dart';
 
+/*Creted By:Tushar Jethva
+ */
 class MyFavouriteScreen extends StatefulWidget {
   const MyFavouriteScreen({super.key});
 
