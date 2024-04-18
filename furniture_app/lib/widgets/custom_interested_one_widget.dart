@@ -13,13 +13,11 @@ class MyOneInterestedItem extends StatelessWidget {
     final theme = Theme.of(context);
     return Container(
       padding: EdgeInsets.all(getHeight(height: 0.02, context: context)),
-      margin:  EdgeInsets.only(right: getWidth(width: 0.02, context: context)),
+      margin: EdgeInsets.only(right: getWidth(width: 0.02, context: context)),
       height: getHeight(height: 0.3, context: context),
-            width: getWidth(width: 0.3, context: context),
-            decoration: BoxDecoration(
-              color: theme.hoverColor,
-             borderRadius: BorderRadius.circular(20)
-            ),
+      width: getWidth(width: 0.3, context: context),
+      decoration: BoxDecoration(
+          color: theme.hoverColor, borderRadius: BorderRadius.circular(20)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -29,25 +27,33 @@ class MyOneInterestedItem extends StatelessWidget {
               alignment: Alignment.center,
               height: getHeight(height: 0.15, context: context),
               width: getWidth(width: 0.15, context: context),
-              decoration:  BoxDecoration(
-                image: DecorationImage(image: AssetImage(interestedItemModel.imageUrl!))
-              ),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(interestedItemModel.imageUrl!))),
             ),
           ),
           ListTile(
-            title: MyReusableText(content: interestedItemModel.itemName!,style: theme.textTheme.bodyLarge!,),
-            subtitle: MyReusableText(content: interestedItemModel.shopName!,style: theme.textTheme.titleMedium!.copyWith(color: greyColor),),
+            title: MyReusableText(
+              content: interestedItemModel.itemName!,
+              style: theme.textTheme.bodyLarge!,
+            ),
+            subtitle: MyReusableText(
+              content: interestedItemModel.shopName!,
+              style: theme.textTheme.titleMedium!.copyWith(color: greyColor),
+            ),
             trailing: Container(
-              padding: EdgeInsets.all(getHeight(height: 0.01, context: context)),
+              padding:
+                  EdgeInsets.all(getHeight(height: 0.01, context: context)),
               decoration: const BoxDecoration(
-                color: primaryColor,
-                shape: BoxShape.circle
-              ),
-              child: SvgPicture.asset("assets/images/shoping_bag.svg")),
+                  color: primaryColor, shape: BoxShape.circle),
+              child: SvgPicture.asset("assets/images/shoping_bag.svg"),
+            ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left:15.0),
-            child: MyReusableText(content: "\$${interestedItemModel.price}", style: theme.textTheme.bodyLarge!.copyWith(color: priceColor)),
+            padding: const EdgeInsets.only(left: 15.0),
+            child: MyReusableText(
+                content: "\$${interestedItemModel.price}",
+                style: theme.textTheme.bodyLarge!.copyWith(color: priceColor)),
           )
         ],
       ),

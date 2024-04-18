@@ -30,8 +30,8 @@ class CustomMenuItemSpecial extends StatelessWidget {
           child: ListTile(
             leading: (isSvg!)
                 ? Container(
-                    width: 50,
-                    height: 50,
+                    width: 70,
+                    height: 70,
                     decoration: BoxDecoration(
                         color: lightGreyColor,
                         borderRadius: BorderRadius.circular(8)),
@@ -40,8 +40,8 @@ class CustomMenuItemSpecial extends StatelessWidget {
                       child: SvgPicture.asset(iconPath!),
                     ))
                 : Container(
-                    width: 50,
-                    height: 50,
+                    width: 60,
+                    height: 60,
                     decoration: BoxDecoration(
                         color: lightGreyColor,
                         borderRadius: BorderRadius.circular(8)),

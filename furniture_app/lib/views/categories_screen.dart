@@ -41,7 +41,7 @@ class CategoriesScreen extends StatelessWidget {
                   child: InkWell(
                     child: SvgPicture.asset(
                       IconsConstants.BAG_ICON,
-                      color: Theme.of(context).appBarTheme.shadowColor,
+                      // color: Theme.of(context).appBarTheme.shadowColor,
                       // colorFilter: ColorFilter.mode(
                       //     Theme.of(context).appBarTheme.shadowColor!,
                       //     BlendMode.difference),

@@ -35,7 +35,7 @@ class SignOutForm extends GetView<SignUpController> {
             ),
             SizedBox(height: 8),
             CustomTextFormField(
-                controller: controller.emailController.value,
+                controller: controller.fullnameController.value,
                 hintText: "Enter Your Fullname",
                 textInputType: TextInputType.emailAddress,
                 labelText: ""),

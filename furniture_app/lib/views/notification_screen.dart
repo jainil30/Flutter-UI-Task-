@@ -20,8 +20,9 @@ class NotificationScreen extends GetView<NotificationMenuController> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
+          leadingWidth: 80,
           leading: Container(
-            margin: EdgeInsets.only(left: 10, top: 10),
+            margin: EdgeInsets.only(left: 34, top: 10),
             child: CustomBackIconButton(
               icon: Icons.arrow_back,
               function: Get.back,
@@ -31,7 +32,7 @@ class NotificationScreen extends GetView<NotificationMenuController> {
           actions: [
             Container(
               margin: EdgeInsets.only(
-                right: 25,
+                right: 40,
               ),
               child: InkWell(
                 child: Text(

@@ -178,3 +178,48 @@ final notificationPageMenu = [
     "isDismissed": false
   },
 ];
+
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Checkout Screen Address Menu
+ */
+final addressList = [
+  {
+    "addressId": 1,
+    "addressType": "Home Address",
+    "phoneNumber": "(269)- 444-6853",
+    "address": "Road Number 5649 Akali"
+  },
+  {
+    "addressId": 2,
+    "addressType": "Office Address",
+    "phoneNumber": "259- 444-6853",
+    "address": "1578 H Blog Shekh Para"
+  }
+];
+
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Checkout Screen Address Menu
+ */
+final paymentsList = [
+  {
+    "paymentId": 1,
+    "paymentMethodName": "Credit Card",
+    "icon": IconsConstants.CREDIT_CARD_ICON,
+  },
+  {
+    "paymentId": 2,
+    "paymentMethodName": "Paypal",
+    "icon": IconsConstants.PAYPAL_ICON,
+  },
+  {
+    "paymentId": 3,
+    "paymentMethodName": "Apple Pay",
+    "icon": IconsConstants.APPLE_PAY_ICON,
+  },
+  {
+    "paymentMethodName": "All 12 Methods",
+    "icon": IconsConstants.ALL_OTHER_ICON,
+  },
+];

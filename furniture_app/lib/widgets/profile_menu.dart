@@ -15,6 +15,7 @@ class ProfileMenu extends GetView<ProfilePageMenuItemController> {
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
+      primary: false,
       itemBuilder: (context, index) {
         return CustomMenuItem(
           title: profilePageMenu[index]["title"]

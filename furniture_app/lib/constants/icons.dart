@@ -21,4 +21,11 @@ class IconsConstants {
       "assets/icons/rotating_lounge_chair.png";
 
   static const String TRASH_ICON = "assets/icons/trash.svg";
+
+  //Checkout Screen
+  static const String CREDIT_CARD_ICON = "assets/icons/credit_card.svg";
+  static const String PAYPAL_ICON = "assets/icons/paypal_icon.svg";
+  static const String APPLE_PAY_ICON = "assets/icons/apple_pay_icon.svg";
+  static const String ALL_OTHER_ICON = "assets/icons/all_others_icon.svg";
+  static const String EDIT_ICON = "assets/icons/edit.svg";
 }
