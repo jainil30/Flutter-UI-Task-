@@ -36,7 +36,7 @@ ThemeData lightTheme() {
         shape: MaterialStatePropertyAll(RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         )),
-        elevation: const MaterialStatePropertyAll(3),
+        elevation: const MaterialStatePropertyAll(0),
         iconColor: const MaterialStatePropertyAll(lightTextColor),
       ),
     ),

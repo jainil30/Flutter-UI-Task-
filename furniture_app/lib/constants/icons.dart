@@ -28,4 +28,12 @@ class IconsConstants {
   static const String APPLE_PAY_ICON = "assets/icons/apple_pay_icon.svg";
   static const String ALL_OTHER_ICON = "assets/icons/all_others_icon.svg";
   static const String EDIT_ICON = "assets/icons/edit.svg";
+
+  //Checkout Bottomsheet
+  static const String TICK_MARK = "assets/icons/tick_mark.svg";
+
+  //Track Order
+  static const String TRACK_ORDER_BACKGROUND_IMAGE =
+      "assets/images/track_order_background.png";
+  static const String MAP_PATH = "assets/images/map_path.svg";
 }

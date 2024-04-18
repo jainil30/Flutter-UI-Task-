@@ -21,6 +21,7 @@ class PaymentMenu extends GetView<CheckoutController> {
         Expanded(
           child: ListView.builder(
             itemCount: controller.payments.length,
+            primary: false,
             itemBuilder: (context, index) {
               print("PAYMENT------->");
               return PaymentWdiget(

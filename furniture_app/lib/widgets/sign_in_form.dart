@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/controllers/sign_in_controller.dart';
-import 'package:furniture_app/widgets/custom_elvated_btn.dart';
-import 'package:furniture_app/widgets/custom_elvated_btn_icon.dart';
+import 'package:furniture_app/widgets/custom_elevated_btn.dart';
+import 'package:furniture_app/widgets/custom_elevated_btn_icon.dart';
 import 'package:furniture_app/widgets/custom_textformfield_password.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:get/get.dart';
@@ -57,42 +57,6 @@ class SignInForm extends GetView<SignInController> {
                   fieldName: "Password",
                   controller: controller.passwordController.value,
                   isObscured: controller.isObstruct),
-              // () => TextFormField(
-              //   controller: controller.passwordController.value,
-              //   obscureText: controller.isObstruct.value,
-              //   autovalidateMode: AutovalidateMode.onUserInteraction,
-              //   decoration: InputDecoration(
-              //     hintText: "Enter Your Password",
-              //     hintStyle: Theme.of(context).textTheme.titleMedium!,
-              //     fillColor: Theme.of(context).hoverColor,
-              //     border: OutlineInputBorder(
-              //       borderRadius: BorderRadius.circular(20),
-              //       borderSide: BorderSide.none,
-              //     ),
-              //     helperStyle: TextStyle(color: Colors.green),
-              //     suffixIcon: IconButton(
-              //       icon: Icon(controller.isObstruct.value
-              //           ? Icons.visibility
-              //           : Icons.visibility_off),
-              //       onPressed: () {
-              //         controller.passwordController.value =
-              //             controller.passwordController.value;
-              //         controller.isObstruct.value =
-              //             !controller.isObstruct.value;
-              //       },
-              //     ),
-              //     alignLabelWithHint: false,
-              //     filled: true,
-              //   ),
-              //   keyboardType: TextInputType.visiblePassword,
-              //   textInputAction: TextInputAction.done,
-              //   validator: (value) {
-              //     if (value!.isEmpty) {
-              //       return "Password is mandatory";
-              //     }
-              //     return null;
-              //   },
-              // ),
             ),
             Row(
               children: [
@@ -140,49 +104,6 @@ class SignInForm extends GetView<SignInController> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class CustomTextField extends StatelessWidget {
-  const CustomTextField({
-    super.key,
-    required this.controller,
-  });
-
-  final SignInController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      controller: controller.passwordController.value,
-      obscureText: controller.isObstruct.value,
-      decoration: InputDecoration(
-        hintText: "Enter Your Password",
-        hintStyle: Theme.of(context).textTheme.titleMedium!,
-        fillColor: Theme.of(context).hoverColor,
-        border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-            borderSide: BorderSide.none),
-        helperStyle: TextStyle(color: Colors.green),
-        suffixIcon: IconButton(
-          icon: Icon(controller.isObstruct.value
-              ? Icons.visibility
-              : Icons.visibility_off),
-          onPressed: () {
-            print(" << -- ${controller.passwordController.value.text}");
-            controller.passwordController.value =
-                controller.passwordController.value;
-            controller.isObstruct.value = !controller.isObstruct.value;
-
-            print(" -------> ${controller.passwordController.value.text}");
-          },
-        ),
-        alignLabelWithHint: false,
-        filled: true,
-      ),
-      keyboardType: TextInputType.visiblePassword,
-      textInputAction: TextInputAction.done,
     );
   }
 }

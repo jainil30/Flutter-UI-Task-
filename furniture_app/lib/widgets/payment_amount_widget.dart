@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/widgets/custom_elvated_btn.dart';
+import 'package:furniture_app/widgets/custom_elevated_btn.dart';
+import 'package:furniture_app/widgets/payment_confirmation_bottomsheet.dart';
 import 'package:gap/gap.dart';
 
 import '../common/colors.dart';
@@ -81,7 +82,14 @@ class PaymentAmountWidget extends StatelessWidget {
             Gap(20),
             CustomElevatedButton(
               text: "Payment",
-              onClickFunction: () => Navigator.pushNamed(context, "/"),
+              onClickFunction: () {
+                showBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return PaymentConfirmationBottomSheet();
+                  },
+                );
+              },
             )
           ],
         ),

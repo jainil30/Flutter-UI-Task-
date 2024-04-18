@@ -19,6 +19,7 @@ class AddressMenu extends GetView<CheckoutController> {
         Expanded(
           child: ListView.builder(
             itemCount: controller.addresses.length,
+            primary: false,
             itemBuilder: (context, index) {
               print("Card------->");
               return AddressWidget(index);

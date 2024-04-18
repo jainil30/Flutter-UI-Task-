@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/views/initial_screen.dart';
 import 'package:furniture_app/views/sign_up_screen.dart';
 import 'package:furniture_app/widgets/sign_in_form.dart';
 
@@ -30,25 +29,25 @@ class _SignInScreenState extends State<SignInScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
-        flexibleSpace: Container(
-          margin: EdgeInsets.only(top: 50, left: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              IconButton(
-                style: IconButton.styleFrom(
-                    backgroundColor: Theme.of(context).hoverColor),
-                icon: Icon(
-                  Icons.arrow_back,
-                ),
-                onPressed: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, MyInitialScreen.routeName, (route) => false);
-                },
-              ),
-            ],
-          ),
-        ),
+        // flexibleSpace: Container(
+        //   margin: EdgeInsets.only(top: 50, left: 20),
+        //   child: Row(
+        //     mainAxisAlignment: MainAxisAlignment.start,
+        //     children: [
+        //       IconButton(
+        //         style: IconButton.styleFrom(
+        //             backgroundColor: Theme.of(context).hoverColor),
+        //         icon: Icon(
+        //           Icons.arrow_back,
+        //         ),
+        //         onPressed: () {
+        //           Navigator.pushNamedAndRemoveUntil(
+        //               context, MyInitialScreen.routeName, (route) => false);
+        //         },
+        //       ),
+        //     ],
+        //   ),
+        // ),
       ),
       body: SingleChildScrollView(
         child: Padding(

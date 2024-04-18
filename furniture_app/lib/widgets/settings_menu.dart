@@ -9,10 +9,13 @@ class SettingsMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemBuilder: (context, index) {
-        return CustomMenuItem(
-          title: settingsPageMenu[index]["title"].toString(),
-          iconPath: settingsPageMenu[index]["icon"].toString(),
-          isSvg: true,
+        return Container(
+          margin: EdgeInsets.symmetric(vertical: 3),
+          child: CustomMenuItem(
+            title: settingsPageMenu[index]["title"].toString(),
+            iconPath: settingsPageMenu[index]["icon"].toString(),
+            isSvg: true,
+          ),
         );
       },
       itemCount: settingsPageMenu.length,

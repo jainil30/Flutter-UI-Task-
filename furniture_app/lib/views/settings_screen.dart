@@ -19,8 +19,9 @@ class SettingsScreen extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
+          leadingWidth: 80,
           leading: Container(
-            margin: EdgeInsets.only(left: 10, top: 10),
+            margin: EdgeInsets.only(left: 34, top: 10),
             child: CustomBackIconButton(
               icon: Icons.arrow_back,
               function: Get.back,

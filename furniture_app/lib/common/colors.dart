@@ -16,4 +16,4 @@ const white = Colors.white;
 const bottomBackColor = Color(0xff1B201E);
 const imageBackColorD = Color(0xff292F2D);
 const imageBackColorL = Color(0xffF0F0F2);
-
+const creditCardFontColor = Color.fromRGBO(128, 168, 184, 1);

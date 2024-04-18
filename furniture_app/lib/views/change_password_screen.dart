@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/controllers/change_password_controller.dart';
-import 'package:furniture_app/widgets/custom_elvated_btn.dart';
+import 'package:furniture_app/widgets/custom_elevated_btn.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:get/get.dart';
 
@@ -22,32 +22,45 @@ class ChangePasswordScreen extends GetView<ChangePasswordController> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
-        flexibleSpace: SizedBox(
-          height: 100,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                margin: EdgeInsets.only(top: 40, left: 10),
-                child: CustomBackIconButton(
-                  icon: Icons.arrow_back,
-                  function: Get.back,
-                ),
-              ),
-              Container(
-                  margin: const EdgeInsets.only(top: 50),
-                  width: MediaQuery.sizeOf(context).width * 0.68,
-                  child: Center(
-                    child: MyReusableText(
-                        content: "Change Password",
-                        style: Theme.of(context)
-                            .textTheme
-                            .titleLarge!
-                            .copyWith(fontWeight: FontWeight.bold)),
-                  )),
-            ],
+        leadingWidth: 80,
+        leading: Container(
+          margin: EdgeInsets.only(left: 34, top: 10),
+          child: CustomBackIconButton(
+            icon: Icons.arrow_back,
+            function: Get.back,
           ),
         ),
+        centerTitle: true,
+        title: Text(
+          "Change Password",
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
+        // flexibleSpace: SizedBox(
+        //   height: 100,
+        //   child: Row(
+        //     mainAxisAlignment: MainAxisAlignment.start,
+        //     children: [
+        //       Container(
+        //         margin: EdgeInsets.only(top: 40, left: 10),
+        //         child: CustomBackIconButton(
+        //           icon: Icons.arrow_back,
+        //           function: Get.back,
+        //         ),
+        //       ),
+        //       Container(
+        //           margin: const EdgeInsets.only(top: 50),
+        //           width: MediaQuery.sizeOf(context).width * 0.68,
+        //           child: Center(
+        //             child: MyReusableText(
+        //                 content: "Change Password",
+        //                 style: Theme.of(context)
+        //                     .textTheme
+        //                     .titleLarge!
+        //                     .copyWith(fontWeight: FontWeight.bold)),
+        //           )),
+        //     ],
+        //   ),
+        // ),
       ),
       bottomNavigationBar: Container(
         margin: EdgeInsets.all(25),
@@ -57,7 +70,7 @@ class ChangePasswordScreen extends GetView<ChangePasswordController> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 16, right: 16, top: 40),
+          padding: const EdgeInsets.only(left: 24, right: 24, top: 40),
           child: Form(
             key: controller.formKey,
             child: Column(

@@ -85,7 +85,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       const SizedBox(
                         height: 20,
                       ),
-                      SignOutForm(),
+                      SignUpForm(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,

@@ -102,6 +102,7 @@ final profilePageMenu = [
   },
   {"title": "Support Center", "icon": "assets/icons/support_center.svg"},
   {"title": "Legal Policy", "icon": "assets/icons/legal_policy.svg"},
+  {"title": "Settings", "icon": "assets/icons/legal_policy.svg"},
 ];
 
 /*
