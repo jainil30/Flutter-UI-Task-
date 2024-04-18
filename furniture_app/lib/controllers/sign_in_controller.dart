@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/common/bottom_nav.dart';
 import 'package:get/get.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : TO Sign In User
+ */
 class SignInController extends GetxController {
   var emailController = TextEditingController().obs;
   var passwordController = TextEditingController().obs;

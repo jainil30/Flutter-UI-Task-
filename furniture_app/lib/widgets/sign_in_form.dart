@@ -7,9 +7,13 @@ import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:get/get.dart';
 
 import '../common/colors.dart';
-import '../common/text_form_field.dart';
 import '../views/change_password_screen.dart';
+import 'text_form_field.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Sing In Form
+ */
 class SignInForm extends GetView<SignInController> {
   const SignInForm({super.key});
 
@@ -139,6 +143,7 @@ class SignInForm extends GetView<SignInController> {
     );
   }
 }
+
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
@@ -165,15 +170,12 @@ class CustomTextField extends StatelessWidget {
               ? Icons.visibility
               : Icons.visibility_off),
           onPressed: () {
-            print(
-                " << -- ${controller.passwordController.value.text}");
+            print(" << -- ${controller.passwordController.value.text}");
             controller.passwordController.value =
                 controller.passwordController.value;
-            controller.isObstruct.value =
-                !controller.isObstruct.value;
-    
-            print(
-                " -------> ${controller.passwordController.value.text}");
+            controller.isObstruct.value = !controller.isObstruct.value;
+
+            print(" -------> ${controller.passwordController.value.text}");
           },
         ),
         alignLabelWithHint: false,
@@ -184,4 +186,3 @@ class CustomTextField extends StatelessWidget {
     );
   }
 }
-

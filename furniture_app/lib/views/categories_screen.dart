@@ -6,6 +6,10 @@ import 'package:get/get.dart';
 import '../constants/icons.dart';
 import '../widgets/custom_back_icon_button.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Shows All Categories
+ */
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
 

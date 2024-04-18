@@ -7,9 +7,13 @@ import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:get/get.dart';
 
 import '../common/colors.dart';
-import '../common/text_form_field.dart';
 import 'custom_textformfield_password.dart';
+import 'text_form_field.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Sing Up Form
+ */
 class SignOutForm extends GetView<SignUpController> {
   const SignOutForm({super.key});
 

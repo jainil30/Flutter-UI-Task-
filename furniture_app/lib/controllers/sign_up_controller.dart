@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : To Sign Up User
+ */
 class SignUpController extends GetxController {
   var fullnameController = TextEditingController().obs;
   var emailController = TextEditingController().obs;

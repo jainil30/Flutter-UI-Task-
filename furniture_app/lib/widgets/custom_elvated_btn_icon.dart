@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 
-
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Elevated Button with Icon in prefix
+ */
 class CustomElevatedIconButton extends StatefulWidget {
   CustomElevatedIconButton(
-
       {super.key,
       required this.text,
       required this.onClickFunction,
@@ -42,7 +44,6 @@ class _CustomElevatedIconButtonState extends State<CustomElevatedIconButton> {
                   width: 23,
                   height: 24,
                   child: Image.asset("${widget.imagePath}")),
-
               MyReusableText(
                 content: widget.text!,
                 style: Theme.of(context).textTheme.titleLarge!,

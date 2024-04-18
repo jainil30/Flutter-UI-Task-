@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : To Change Password
+ */
 class ChangePasswordController extends GetxController {
   var oldPasswordController = TextEditingController().obs;
   var confirmPasswordController = TextEditingController().obs;

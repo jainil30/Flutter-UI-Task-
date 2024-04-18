@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/data.dart';
+import 'package:furniture_app/controllers/profile_page_menu_item_controller.dart';
 import 'package:furniture_app/widgets/menu_item.dart';
+import 'package:get/get.dart';
 
-class ProfileMenu extends StatelessWidget {
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Profile Menu
+ */
+class ProfileMenu extends GetView<ProfilePageMenuItemController> {
   const ProfileMenu({super.key});
 
   @override
@@ -11,8 +17,12 @@ class ProfileMenu extends StatelessWidget {
       shrinkWrap: true,
       itemBuilder: (context, index) {
         return CustomMenuItem(
-          title: profilePageMenu[index]["title"].toString(),
-          iconPath: profilePageMenu[index]["icon"].toString(),
+          title: profilePageMenu[index]["title"]
+              .toString(), // controller.profileMenus[index].title
+
+          iconPath: profilePageMenu[index]["icon"]
+              .toString(), //controller.profileMenus[index].icon
+
           isSvg: true,
         );
       },
