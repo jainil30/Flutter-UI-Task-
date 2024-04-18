@@ -6,7 +6,6 @@ import 'package:furniture_app/routes.dart';
 
 import 'package:furniture_app/views/initial_screen.dart';
 
-import 'package:furniture_app/views/notification_screen.dart';
 
 import 'package:get/get.dart';
 

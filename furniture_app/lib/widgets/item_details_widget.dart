@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/sizes.dart';
-import 'package:furniture_app/constants/strings.dart';
+import 'package:furniture_app/constants/icons.dart';
 import 'package:furniture_app/models/interested_item_model.dart';
 import 'package:furniture_app/widgets/custom_header_row.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
@@ -41,14 +41,14 @@ class MyItemDetailsWidget extends StatelessWidget {
         ListTile(
           title: Row(
             children: [
-              SvgPicture.asset(StringConstants.PERSON_ICON),
+              SvgPicture.asset(IconsConstants.PERSON_ICON),
               Gap(getWidth(width: 0.01, context: context)),
               MyReusableText(
                   content: "341 Seen",
                   style: theme.textTheme.titleMedium!
                       .copyWith(color: greyColor)),
               Gap(getWidth(width: 0.02, context: context)),
-              SvgPicture.asset(StringConstants.FAVOURITE_ICON),
+              SvgPicture.asset(IconsConstants.FAVOURITE_ICON),
               Gap(getWidth(width: 0.01, context: context)),
               MyReusableText(
                   content: "${item.likes} Liked",
@@ -60,7 +60,7 @@ class MyItemDetailsWidget extends StatelessWidget {
             alignment: Alignment.topLeft,
             child: Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: Image.asset(StringConstants.STARS_ICON),
+              child: Image.asset(IconsConstants.STARS_ICON),
             ),
           ),
         ),

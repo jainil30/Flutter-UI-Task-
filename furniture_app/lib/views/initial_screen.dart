@@ -15,7 +15,6 @@ import 'package:get/get.dart';
 class MyInitialScreen extends StatefulWidget {
   static const String routeName = "/init";
   const MyInitialScreen({super.key});
-
   @override
   State<MyInitialScreen> createState() => _MyInitialScreenState();
 }

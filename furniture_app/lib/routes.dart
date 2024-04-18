@@ -7,7 +7,6 @@ import 'package:furniture_app/views/initial_screen.dart';
 import 'package:furniture_app/views/item_details_screen.dart';
 
 import 'package:furniture_app/views/change_password_screen.dart';
-import 'package:furniture_app/views/initial_screen.dart';
 import 'package:furniture_app/views/profile_screen.dart';
 import 'package:furniture_app/views/settings_screen.dart';
 import 'package:furniture_app/views/sign_in_screen.dart';

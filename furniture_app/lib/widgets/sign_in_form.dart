@@ -29,7 +29,7 @@ class SignInForm extends GetView<SignInController> {
                   .titleLarge!
                   .copyWith(fontWeight: FontWeight.w500),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             CustomTextFormField(
                 controller: controller.emailController.value,
                 hintText: "Enter Your Email",
@@ -53,42 +53,6 @@ class SignInForm extends GetView<SignInController> {
                   fieldName: "Password",
                   controller: controller.passwordController.value,
                   isObscured: controller.isObstruct),
-              // () => TextFormField(
-              //   controller: controller.passwordController.value,
-              //   obscureText: controller.isObstruct.value,
-              //   autovalidateMode: AutovalidateMode.onUserInteraction,
-              //   decoration: InputDecoration(
-              //     hintText: "Enter Your Password",
-              //     hintStyle: Theme.of(context).textTheme.titleMedium!,
-              //     fillColor: Theme.of(context).hoverColor,
-              //     border: OutlineInputBorder(
-              //       borderRadius: BorderRadius.circular(20),
-              //       borderSide: BorderSide.none,
-              //     ),
-              //     helperStyle: TextStyle(color: Colors.green),
-              //     suffixIcon: IconButton(
-              //       icon: Icon(controller.isObstruct.value
-              //           ? Icons.visibility
-              //           : Icons.visibility_off),
-              //       onPressed: () {
-              //         controller.passwordController.value =
-              //             controller.passwordController.value;
-              //         controller.isObstruct.value =
-              //             !controller.isObstruct.value;
-              //       },
-              //     ),
-              //     alignLabelWithHint: false,
-              //     filled: true,
-              //   ),
-              //   keyboardType: TextInputType.visiblePassword,
-              //   textInputAction: TextInputAction.done,
-              //   validator: (value) {
-              //     if (value!.isEmpty) {
-              //       return "Password is mandatory";
-              //     }
-              //     return null;
-              //   },
-              // ),
             ),
             Row(
               children: [
