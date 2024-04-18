@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/sizes.dart';
-import 'package:furniture_app/constants/strings.dart';
+import 'package:furniture_app/constants/icons.dart';
+import 'package:furniture_app/controllers/cart_controller.dart';
 import 'package:furniture_app/controllers/item_count_controller.dart';
+import 'package:furniture_app/models/cart_model.dart';
 import 'package:furniture_app/models/interested_item_model.dart';
 import 'package:furniture_app/widgets/custom_one_category.dart';
 import 'package:furniture_app/widgets/icrement_decrement_container.dart';
@@ -22,8 +24,8 @@ class MyItemDetailsBottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final itemCountController = Get.put(ItemCountController());
-    int itemCount = 1;
-    itemCountController.setItemCount = itemCount;
+    final cartController = Get.put(MyCartController());
+    itemCountController.setItemCount = 1;
     return Container(
       height: getHeight(height: 0.17, context: context),
       padding: EdgeInsets.all(getHeight(height: 0.03, context: context)),
@@ -49,7 +51,7 @@ class MyItemDetailsBottomBar extends StatelessWidget {
                       height: getHeight(height: 0.000045, context: context),
                       width: getWidth(width: 0.000045, context: context),
                       child: Image.asset(
-                        StringConstants.MINUS_ICON,
+                        IconsConstants.MINUS_ICON,
                       )),
                   Gap(getWidth(width: 0.02, context: context)),
                   Obx(() => MyReusableText(
@@ -81,7 +83,10 @@ class MyItemDetailsBottomBar extends StatelessWidget {
           MyCustomOneCategory(
               color: primaryColor,
               buttonName: "Add To Cart",
-              onPressed: () {},
+              onPressed: () {
+                  int quantity = itemCountController.itemCount;
+                  cartController.addCartItem(MyCartModel(itemId: item.id,quantity: quantity,totalAmount: itemCountController.itemCount * (item.price as double)));
+              },
               height: 0.05,
               width: double.infinity,
               style: theme.textTheme.bodyMedium!.copyWith(color: white),

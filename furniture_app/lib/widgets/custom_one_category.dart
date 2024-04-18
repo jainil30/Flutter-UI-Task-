@@ -22,20 +22,19 @@ class MyCustomOneCategory extends StatelessWidget {
       required this.height,
       required this.width,
       required this.style,
-      required this.widget, required this.color});
+      required this.widget,
+      required this.color});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        margin: EdgeInsets.only(right: getWidth(width: 0.015, context: context)),
+        margin: EdgeInsets.only(right: getWidth(width: 0.02, context: context)),
         height: getHeight(height: height, context: context),
         width: getWidth(width: width, context: context),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          color: color
-        ),
+            borderRadius: BorderRadius.circular(30), color: color),
         padding: const EdgeInsets.all(10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

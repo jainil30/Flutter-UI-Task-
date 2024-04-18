@@ -33,7 +33,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
     return Scaffold(
         appBar: PreferredSize(
             preferredSize: Size(
-                double.infinity, getHeight(height: 0.25, context: context)),
+                double.infinity, getHeight(height: 0.18, context: context)),
             child: const HomeAppBarWidget()),
         body: SingleChildScrollView(
           child: Column(
