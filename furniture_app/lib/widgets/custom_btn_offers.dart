@@ -3,7 +3,7 @@ import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 
 /*Created By: Tushar Jethva
-
+  used_for: custom button
 */
 class MyCustomSpecialButton extends StatelessWidget {
   final String buttonName;

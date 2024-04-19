@@ -4,6 +4,10 @@ import 'package:flutter/widgets.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 
+/*Created By: Tushar Jethva
+  used_for: for custom row with left and right text
+  screen: common for all
+ */
 class MyCustomHeaderRow extends StatelessWidget {
   final String leftText;
   final String rightText;

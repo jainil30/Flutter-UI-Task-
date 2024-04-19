@@ -7,6 +7,10 @@ import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
+/*Created By: Tushar Jethva
+  used_for: to show  app bar
+  screen: shopping_screen
+ */
 class MyShopingAppBar extends StatefulWidget {
   const MyShopingAppBar({
     super.key,
@@ -20,7 +24,6 @@ class _MyShopingAppBarState extends State<MyShopingAppBar> {
   final cartController = Get.put(MyCartController());
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Future.delayed(const Duration(seconds: 1), () {
       cartController.totalAmountF();

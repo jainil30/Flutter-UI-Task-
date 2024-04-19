@@ -5,7 +5,7 @@ import 'package:furniture_app/controllers/initial_page_controller.dart';
 import 'package:get/get.dart';
 
 /*Created By: Tushar Jethva
-
+  used_for: dot for pageview navigation
 */
 
 class MyOneDotWidget extends StatelessWidget {

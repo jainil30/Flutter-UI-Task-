@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/common/bottom_nav.dart';
 import 'package:furniture_app/common/data.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/constants/strings.dart';

@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/sizes.dart';
-import 'package:furniture_app/views/search_screen.dart';
 import 'package:gap/gap.dart';
 
+/*Created By: Tushar Jethva
+  used_for: to show search app bar
+  screen: home_screen
+ */
 class MySearchAppBar extends StatefulWidget {
   const MySearchAppBar({
     super.key,
@@ -20,9 +23,8 @@ class _MySearchAppBarState extends State<MySearchAppBar> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 1),(){
+    Future.delayed(const Duration(seconds: 1),(){
       getFocus();
     });
   }

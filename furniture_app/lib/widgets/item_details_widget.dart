@@ -9,6 +9,8 @@ import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
 
 /*Created By: Tushar Jethva
+  used_for: bottom bar with description, incrementer and decremeter and add to cart button
+  screen: item_details_screen
  */
 
 class MyItemDetailsWidget extends StatelessWidget {

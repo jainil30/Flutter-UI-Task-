@@ -5,7 +5,8 @@ import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
 
 /*Created By: Tushar Jethva
-
+  used_for: to show categories
+  screen: home_screen
 */
 class MyCustomOneCategory extends StatelessWidget {
   final String buttonName;

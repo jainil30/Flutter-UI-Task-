@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/sizes.dart';
 
+/*Created By: Tushar Jethva
+  used_for: container with icon
+  screen: common to all
+ */
 class MyIconContainer extends StatelessWidget {
   final Widget child;
   final VoidCallback onPressed;

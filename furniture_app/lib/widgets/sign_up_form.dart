@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/common/bottom_nav.dart';
 import 'package:furniture_app/controllers/sign_up_controller.dart';
 import 'package:furniture_app/views/change_password_screen.dart';
 import 'package:furniture_app/widgets/custom_elevated_btn.dart';
@@ -34,7 +33,7 @@ class SignUpForm extends GetView<SignUpController> {
                   .titleLarge!
                   .copyWith(fontWeight: FontWeight.w500),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             CustomTextFormField(
                 controller: controller.fullnameController.value,
                 hintText: "Enter Your Fullname",
@@ -50,7 +49,7 @@ class SignUpForm extends GetView<SignUpController> {
                   .titleLarge!
                   .copyWith(fontWeight: FontWeight.w500),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             CustomTextFormField(
                 controller: controller.emailController.value,
                 hintText: "Enter Your Email",

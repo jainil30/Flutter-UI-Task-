@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/widgets/home_top_widget.dart';
 
+/*Created By: Tushar Jethva
+  used_for: custom app bar 
+  screen: home_screen
+ */
 class HomeAppBarWidget extends StatelessWidget {
   const HomeAppBarWidget({
     super.key,

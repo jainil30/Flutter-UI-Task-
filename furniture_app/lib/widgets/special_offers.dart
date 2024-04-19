@@ -3,6 +3,10 @@ import 'package:furniture_app/common/data.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/widgets/one_special_offer.dart';
 
+/*Created By: Tushar Jethva
+  used_for: to show special offers
+  screen: home_screen
+ */
 class MySpecialOffers extends StatelessWidget {
   const MySpecialOffers({
     super.key,

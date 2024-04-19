@@ -11,7 +11,7 @@ import 'package:get/get.dart';
   Purpose : Promo Code Part in Payment Screen
  */
 class PromoCodeWidget extends StatelessWidget {
-  PromoCodeWidget({super.key});
+   PromoCodeWidget({super.key});
 
   var promoCodeController = TextEditingController();
   var _formKey = GlobalKey<FormState>();

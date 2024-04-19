@@ -19,7 +19,7 @@ class PaymentConfirmationBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getHeight(height: 0.61, context: context),
+      height: getHeight(height: 0.62, context: context),
       width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.only(

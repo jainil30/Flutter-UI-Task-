@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:furniture_app/common/data.dart';
 import 'package:furniture_app/controllers/notification_menu_controller.dart';
 import 'package:get/get.dart';
 
