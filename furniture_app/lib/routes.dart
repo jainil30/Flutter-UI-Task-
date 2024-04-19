@@ -7,12 +7,7 @@ import 'package:furniture_app/views/home_screen.dart';
 import 'package:furniture_app/views/initial_screen.dart';
 import 'package:furniture_app/views/item_details_screen.dart';
 import 'package:furniture_app/views/all_items_screen.dart';
-import 'package:furniture_app/views/checkout_screen.dart';
 import 'package:furniture_app/views/filter_screen.dart';
-import 'package:furniture_app/views/home_screen.dart';
-import 'package:furniture_app/views/initial_screen.dart';
-import 'package:furniture_app/views/item_details_screen.dart';
-import 'package:furniture_app/views/change_password_screen.dart';
 import 'package:furniture_app/views/notification_screen.dart';
 import 'package:furniture_app/views/profile_screen.dart';
 import 'package:furniture_app/views/search_screen.dart';
@@ -37,7 +32,7 @@ Route<dynamic> genterateRoutes(RouteSettings routeSettings) {
 
     case MyHomeScreen.routeName:
       return MaterialPageRoute(
-          builder: (_) => MyHomeScreen(), settings: routeSettings);
+          builder: (_) => const MyHomeScreen(), settings: routeSettings);
 
     case MyItemDetailsScreen.routeName:
       ItemModel itemModel = routeSettings.arguments as ItemModel;
@@ -72,11 +67,11 @@ Route<dynamic> genterateRoutes(RouteSettings routeSettings) {
 
     case TrackOrderScreen.routeName:
       return MaterialPageRoute(
-          builder: (_) => TrackOrderScreen(), settings: routeSettings);
+          builder: (_) => const TrackOrderScreen(), settings: routeSettings);
 
     case CheckOutScreen.routeName:
       return MaterialPageRoute(
-          builder: (_) => CheckOutScreen(), settings: routeSettings);
+          builder: (_) => const CheckOutScreen(), settings: routeSettings);
     case MyHomeScreen.routeName:
       return MaterialPageRoute(
           builder: (_) => const MyHomeScreen(), settings: routeSettings);

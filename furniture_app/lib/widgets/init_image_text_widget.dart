@@ -3,7 +3,8 @@ import 'package:furniture_app/common/sizes.dart';
 import 'package:gap/gap.dart';
 
 /*Created By: Tushar Jethva
-
+  used_for: to show initial screen image
+  screen: initial_screen
 */
 class MyInitImageText extends StatelessWidget {
   const MyInitImageText({

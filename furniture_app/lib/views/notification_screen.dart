@@ -5,7 +5,6 @@ import 'package:furniture_app/widgets/icon_container.dart';
 import 'package:furniture_app/widgets/notification_menu.dart';
 import 'package:get/get.dart';
 
-import '../widgets/custom_back_icon_button.dart';
 
 /*
   Created By : Jainil Dalwadi

@@ -1,6 +1,9 @@
 import 'package:furniture_app/models/interested_item_model.dart';
 import 'package:get/get.dart';
 
+/*Created By: Tushar Jethva
+
+ */
 class MyItemsController extends GetxController{
   RxList<ItemModel> intrestedItems = RxList<ItemModel>();
   RxList<ItemModel> popularItems = RxList<ItemModel>();

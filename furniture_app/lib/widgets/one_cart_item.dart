@@ -3,10 +3,13 @@ import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/models/cart_model.dart';
 import 'package:furniture_app/models/interested_item_model.dart';
 import 'package:furniture_app/widgets/cart_image.dart';
-import 'package:furniture_app/widgets/cart_in_de_widget.dart';
 import 'package:furniture_app/widgets/cart_item_des.dart';
 import 'package:gap/gap.dart';
 
+/*Created By: Tushar Jethva
+  used_for: cart widget
+  screen: cart_screen
+ */
 class MyOneCartWidget extends StatelessWidget {
   final ItemModel popularItemModel;
   final MyCartModel cartModel;

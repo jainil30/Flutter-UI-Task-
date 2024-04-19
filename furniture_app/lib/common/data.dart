@@ -1,5 +1,7 @@
 import 'package:furniture_app/constants/icons.dart';
 
+/*used_for: All static data are present here
+ */
 final initData = [
   {
     "imageUrl": "assets/images/init_1.png",

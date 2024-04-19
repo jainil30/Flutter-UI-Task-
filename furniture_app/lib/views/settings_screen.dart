@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/widgets/icon_container.dart';
-import 'package:get/get.dart';
-
-import '../widgets/custom_back_icon_button.dart';
 import '../widgets/settings_menu.dart';
 
 /*

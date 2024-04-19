@@ -26,7 +26,7 @@ class TrackOrderBackground extends StatelessWidget {
         ),
         Positioned(
             top: 165,
-            child: InkWell(
+            child: GestureDetector(
                 onTap: () {
                   print("Clicked Route");
                   showBottomSheet(

@@ -3,14 +3,15 @@ import 'package:flutter_svg/svg.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/data.dart';
 import 'package:furniture_app/common/sizes.dart';
-import 'package:furniture_app/controllers/bottom_navigation_controller.dart';
 import 'package:furniture_app/models/interested_item_model.dart';
 import 'package:furniture_app/views/item_details_screen.dart';
 import 'package:furniture_app/widgets/all_items_widget.dart';
 import 'package:furniture_app/widgets/icon_container.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
-import 'package:get/get.dart';
 
+/*Created By: Tushar Jethva
+
+ */
 class MyTotalItems extends StatefulWidget {
   static const routeName = '/totalItems';
   final String appBarName;

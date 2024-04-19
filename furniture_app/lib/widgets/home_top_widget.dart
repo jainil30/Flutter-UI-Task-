@@ -9,6 +9,10 @@ import 'package:furniture_app/widgets/search_widget.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
+/*Created By: Tushar Jethva
+  used_for: custom app bar 
+  screen: home_screen
+ */
 class MyHomeTopWidget extends StatelessWidget {
   const MyHomeTopWidget({
     super.key,

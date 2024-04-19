@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/models/interested_item_model.dart';
 
+/*Created By: Tushar Jethva
+  used_for: to show cart image in container
+  screen: shopping_screen
+  constructor: ItemModel
+ */
 class MyCartImageWidget extends StatelessWidget {
   const MyCartImageWidget({
     super.key,
