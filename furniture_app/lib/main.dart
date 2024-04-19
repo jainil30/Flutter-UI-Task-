@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: (settings) => genterateRoutes(settings),
-      home: const CheckOutScreen(),
+      home: MyInitialScreen(),
     );
   }
 }
