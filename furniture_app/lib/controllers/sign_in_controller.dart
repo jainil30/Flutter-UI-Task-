@@ -14,6 +14,7 @@ class SignInController extends GetxController {
   var formKey = GlobalKey<FormState>();
   var isObstruct = true.obs;
   var rememberMe = false.obs;
+
   // bool invalidPassword = true;
   void validateSignInForm(context) async {
     if (formKey.currentState!.validate()) {

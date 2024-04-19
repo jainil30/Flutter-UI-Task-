@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/controllers/sign_up_controller.dart';
 import 'package:furniture_app/views/sign_in_screen.dart';
 import 'package:furniture_app/widgets/sign_up_form.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 import '../common/colors.dart';
+import '../common/sizes.dart';
 import '../widgets/reusable_text.dart';
 
 /*
@@ -26,41 +28,12 @@ class SignUpScreen extends GetView<SignUpController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.transparent,
-        // flexibleSpace: Container(
-        //   height: 100,
-        //   child: Row(
-        //     mainAxisAlignment: MainAxisAlignment.start,
-        //     children: [
-        //       // if (Navigator.of(context).canPop())
-        //       Container(
-        //         margin: EdgeInsets.only(top: 50, left: 20),
-        //         child: IconButton(
-        //           style: IconButton.styleFrom(
-        //               backgroundColor: Theme.of(context).hoverColor),
-        //           icon: Icon(
-        //             Icons.arrow_back,
-        //           ),
-        //           onPressed: () {
-        //             print("Asdasda");
-        //             () => Navigator.pushNamedAndRemoveUntil(
-        //                 context, SignInScreen.routeName, (route) => false);
-        //           },
-        //         ),
-        //       )
-        //       // else
-        //       //   Text("data"),
-        //     ],
-        //   ),
-        // ),
-      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(left: 16, right: 16, top: 40),
           child: Column(
             children: [
+              Gap(getHeight(height: 0.15, context: context)),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(

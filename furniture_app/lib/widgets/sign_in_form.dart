@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/common/bottom_nav.dart';
+import 'package:furniture_app/controllers/bottom_navigation_controller.dart';
 import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/widgets/custom_elevated_btn.dart';
 import 'package:furniture_app/widgets/custom_elevated_btn_icon.dart';
@@ -20,6 +20,7 @@ class SignInForm extends GetView<SignInController> {
 
   @override
   Widget build(BuildContext context) {
+    final bottomNavBarController = Get.put(BottomNavigationController());
     return Form(
       key: controller.formKey,
       child: Padding(
@@ -93,13 +94,14 @@ class SignInForm extends GetView<SignInController> {
               text: "Sign In",
               onClickFunction: () {
                 controller.validateSignInForm(context);
-                Navigator.pushNamed(context, MyBottomNavigation.routeName);
+                bottomNavBarController.setBottomIndex = 0;
               },
             ),
             CustomElevatedIconButton(
               text: "Sign In",
               onClickFunction: () {
                 controller.validateSignInForm(context);
+                bottomNavBarController.setBottomIndex = 0;
               },
               imagePath: "assets/images/google_logo.png",
             ),

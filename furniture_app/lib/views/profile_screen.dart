@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/sizes.dart';
+import 'package:furniture_app/controllers/UserController.dart';
 import 'package:furniture_app/views/sign_in_screen.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
@@ -28,6 +29,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
   // String? iconPath;
   bool? isOnline;
 
+  final userController = Get.put(UserController());
   @override
   void initState() {
     // TODO: implement initState
@@ -39,18 +41,23 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
             preferences.setBool("isOnline", user.isOnline);
 
  */
+    print("init not called");
+    getSharedPreference();
   }
 
   void getSharedPreference() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
-    email = preferences.getString("email").toString();
-    name = preferences.getString("name").toString();
-    isOnline = preferences.getBool("isOnline");
+    userController.email.value = preferences.getString("email").toString();
+    userController.name.value = preferences.getString("name").toString();
+    userController.isOnline.value = preferences.getBool("isOnline")!;
+    print("==========================");
+    print(preferences.getString("email"));
+    print(preferences.getString("name"));
+    print(preferences.getBool("isOnline"));
   }
 
   @override
   Widget build(BuildContext context) {
-    getSharedPreference();
     print("-------------------------------");
     print("Name :${name}");
     print("Email :$email");
@@ -105,9 +112,13 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                 maxRadius: 50,
               ),
               Gap(12),
-              MyReusableText(
-                  content: (name != null) ? name! : "Jainil Dalwadi",
-                  style: Theme.of(context).textTheme.displayMedium!),
+              Obx(
+                () => MyReusableText(
+                    content: (userController.name.value.isEmpty)
+                        ? userController.name.value.toString()
+                        : "Jainil Dalwadi",
+                    style: Theme.of(context).textTheme.displayMedium!),
+              ),
               Gap(5),
               MyReusableText(
                   content:
