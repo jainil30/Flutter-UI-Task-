@@ -11,6 +11,13 @@ class IconsConstants {
   static const String ARM_OXER_CHAIR = "assets/icons/arm_oxer_chair.png";
   static const String BAG_ICON = "assets/icons/bag.svg";
 
+  static const String BELL_ICON = "assets/images/bell_icon.png";
+  static const String PERSON_ICON = "assets/images/person_d_icon.svg";
+  static const String FAVOURITE_ICON = "assets/images/favourite_d_icon.svg";
+  static const String STARS_ICON = "assets/images/rating_stars.png";
+  static const String MINUS_ICON = "assets/images/minus_icon.png";
+
+
   //Notification Page Icons/Images
   static const String LEVI_ARMCHAIR = "assets/icons/levi_armchair.png";
   static const String NOTIFICATION_MENU_DEFAULT_ICON =
@@ -40,4 +47,5 @@ class IconsConstants {
   //Track Order Bottom Sheet
   static const String CALL_ICON = "assets/icons/call_icon.svg";
   static const String CLOCK_ICON = "assets/icons/clock_icon.svg";
+
 }

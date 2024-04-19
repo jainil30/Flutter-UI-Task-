@@ -36,10 +36,12 @@ final categories = [
   {"imageUrl": "assets/images/sofa.svg", "label": "Sofa"},
   {"imageUrl": "assets/images/bed.svg", "label": "Bed"},
   {"imageUrl": "assets/images/lamp.svg", "label": "Light"},
+
 ];
 
-final interestedItems = [
+final items = [
   {
+    "id": 1,
     "imageUrl": "assets/images/inte_1.png",
     "imageBig": "assets/images/inte_b_1.png",
     "itemName": "Ox Mathis Chair",
@@ -51,6 +53,116 @@ final interestedItems = [
     "isLiked": false,
   },
   {
+    "id": 2,
+    "imageUrl": "assets/images/inte_2.png",
+    "itemName": "Fuji Arm Chair",
+    "imageBig": "assets/images/inte_2.png",
+    "shopName": "Hans j. wegner",
+    "price": 9.99,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 290,
+    "isLiked": false,
+  },
+  {
+    "id": 3,
+    "imageUrl": "assets/images/popular_1.png",
+    "itemName": "Swoon Lounge",
+    "shopName": "Regal Do Lobo",
+    "imageBig": "assets/images/popular_b_1.png",
+    "price": 9.99,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 294,
+    "isLiked": false,
+  },
+  {
+    "id": 4,
+    "imageUrl": "assets/images/popular_2.png",
+    "itemName": "Rotating Chair",
+    "shopName": "Hans j. wegner",
+    "imageBig": "assets/images/popular_b_2.png",
+    "price": 39.99,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 290,
+    "isLiked": false,
+  },
+    {
+    "id": 5,
+    "imageUrl": "assets/images/i1.png",
+    "itemName": "Levi Armchair",
+    "shopName": "Cultured White",
+    "imageBig": "assets/images/popular_b_2.png",
+    "price": 279.95,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 290,
+    "isLiked": false,
+  },  {
+    "id": 6,
+    "imageUrl": "assets/images/i2.png",
+    "itemName": "Hero Armchair",
+    "shopName": "Cultured White",
+    "imageBig": "assets/images/popular_b_2.png",
+    "price": 250.91,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 290,
+    "isLiked": false,
+  } , {
+    "id": 7,
+    "imageUrl": "assets/images/i3.png",
+    "itemName": "Slipcove Armchair",
+    "shopName": "Hatil-Loren",
+    "imageBig": "assets/images/popular_b_2.png",
+    "price": 369.86,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 290,
+    "isLiked": false,
+  } , {
+    "id": 8,
+    "imageUrl": "assets/images/i4.png",
+    "itemName": "Rose Armchair",
+    "shopName": "Regel Furniture",
+    "imageBig": "assets/images/popular_b_2.png",
+    "price": 258.91,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 290,
+    "isLiked": false,
+  },
+    {
+    "id": 9,
+    "imageUrl": "assets/images/i6.png",
+    "itemName": "Besen Egge Chair",
+    "shopName": "Partex Furniture",
+    "imageBig": "assets/images/popular_b_2.png",
+    "price": 398.86,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 290,
+    "isLiked": false,
+  }
+
+];
+
+final interestedItems = [
+  {
+    "id": 1,
+    "imageUrl": "assets/images/inte_1.png",
+    "imageBig": "assets/images/inte_b_1.png",
+    "itemName": "Ox Mathis Chair",
+    "shopName": "Hans j. wegner",
+    "price": 9.99,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 294,
+    "isLiked": false,
+  },
+  {
+    "id": 2,
     "imageUrl": "assets/images/inte_2.png",
     "itemName": "Fuji Arm Chair",
     "imageBig": "assets/images/inte_2.png",
@@ -65,6 +177,7 @@ final interestedItems = [
 
 final popularItems = [
   {
+    "id": 3,
     "imageUrl": "assets/images/popular_1.png",
     "itemName": "Swoon Lounge",
     "shopName": "Regal Do Lobo",
@@ -76,6 +189,7 @@ final popularItems = [
     "isLiked": false,
   },
   {
+    "id": 4,
     "imageUrl": "assets/images/popular_2.png",
     "itemName": "Rotating Chair",
     "shopName": "Hans j. wegner",
@@ -224,3 +338,4 @@ final paymentsList = [
     "icon": IconsConstants.ALL_OTHER_ICON,
   },
 ];
+

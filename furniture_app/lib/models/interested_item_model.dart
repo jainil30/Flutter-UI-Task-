@@ -1,4 +1,7 @@
+import 'package:get/get.dart';
+
 class ItemModel {
+  int? id;
   String? imageUrl;
   String? imageBig;
   String? itemName;
@@ -9,7 +12,8 @@ class ItemModel {
   bool? isLiked;
 
   ItemModel(
-      {this.imageUrl,
+      {this.id,
+        this.imageUrl,
       this.itemName,
       this.shopName,
       this.price,
@@ -18,6 +22,7 @@ class ItemModel {
       this.isLiked,
       this.imageBig});
   ItemModel.fromJson(Map<String, dynamic> json) {
+    id = json["id"];
     imageUrl = json['imageUrl'];
     itemName = json['itemName'];
     shopName = json['shopName'];
@@ -38,6 +43,9 @@ class ItemModel {
     data['likes'] = this.likes;
     data['isLiked'] = this.isLiked;
     data['imageBig'] = this.imageBig;
+    data["id"] = this.id;
     return data;
   }
+
+  final isFavourite = false.obs;
 }

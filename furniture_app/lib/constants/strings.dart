@@ -4,6 +4,7 @@ class StringConstants {
 
   //images
   static const String EYE_IMAGE = "assets/images/Vector.png";
+
   static const String BELL_ICON = "assets/images/bell_icon.png";
   static const String PERSON_ICON = "assets/images/person_d_icon.svg";
   static const String FAVOURITE_ICON = "assets/images/favourite_d_icon.svg";
@@ -20,4 +21,5 @@ class StringConstants {
       "Thank you for your order";
   static const String ORDER_PLACED_SUCCESSFULLY =
       "Your order been place successfully! you can track the delivery in the order section";
+
 }

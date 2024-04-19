@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/widgets/icon_container.dart';
 import 'package:get/get.dart';
 
 import '../widgets/custom_back_icon_button.dart';
@@ -17,17 +18,20 @@ class SettingsScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         appBar: AppBar(
-          automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
-          leadingWidth: 80,
-          leading: Container(
-            margin: EdgeInsets.only(left: 34, top: 10),
-            child: CustomBackIconButton(
-              icon: Icons.arrow_back,
-              function: Get.back,
+          centerTitle: true,
+          automaticallyImplyLeading: false,
+          flexibleSpace: Align(
+            alignment: Alignment.topLeft,
+            child: Container(
+              margin: const EdgeInsets.only(left: 15, top: 30),
+              child: MyIconContainer(
+                  child: const Icon(Icons.arrow_back),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  }),
             ),
           ),
-          centerTitle: true,
           title: Text(
             "Settings",
             style:

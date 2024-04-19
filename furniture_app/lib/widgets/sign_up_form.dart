@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/common/bottom_nav.dart';
 import 'package:furniture_app/controllers/sign_up_controller.dart';
 import 'package:furniture_app/views/change_password_screen.dart';
 import 'package:furniture_app/widgets/custom_elevated_btn.dart';
@@ -73,39 +74,6 @@ class SignUpForm extends GetView<SignUpController> {
                   fieldName: "Password",
                   controller: controller.passwordController.value,
                   isObscured: controller.isObstruct),
-              //     TextField(
-              //   controller: controller.passwordController.value,
-              //   obscureText: controller.isObstruct.value,
-              //   decoration: InputDecoration(
-              //     hintText: "Enter Your Password",
-              //     hintStyle: Theme.of(context).textTheme.titleMedium!,
-              //     fillColor: Theme.of(context).hoverColor,
-              //     border: OutlineInputBorder(
-              //         borderRadius: BorderRadius.circular(20),
-              //         borderSide: BorderSide.none),
-              //     helperStyle: TextStyle(color: Colors.green),
-              //     suffixIcon: IconButton(
-              //       icon: Icon(controller.isObstruct.value
-              //           ? Icons.visibility
-              //           : Icons.visibility_off),
-              //       onPressed: () {
-              //         print(
-              //             " << -- ${controller.passwordController.value.text}");
-              //         controller.passwordController.value =
-              //             controller.passwordController.value;
-              //         controller.isObstruct.value =
-              //             !controller.isObstruct.value;
-              //
-              //         print(
-              //             " -------> ${controller.passwordController.value.text}");
-              //       },
-              //     ),
-              //     alignLabelWithHint: false,
-              //     filled: true,
-              //   ),
-              //   keyboardType: TextInputType.visiblePassword,
-              //   textInputAction: TextInputAction.done,
-              // ),
             ),
             Row(
               children: [
@@ -141,6 +109,7 @@ class SignUpForm extends GetView<SignUpController> {
               text: "Sign Up",
               onClickFunction: () => controller.validateSignUpForm(context),
             ),
+
             CustomElevatedIconButton(
               text: "Sign Up",
               onClickFunction: () => controller.validateSignUpForm(context),

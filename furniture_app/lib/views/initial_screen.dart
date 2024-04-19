@@ -15,7 +15,6 @@ import 'package:get/get.dart';
 class MyInitialScreen extends StatefulWidget {
   static const String routeName = "/init";
   const MyInitialScreen({super.key});
-
   @override
   State<MyInitialScreen> createState() => _MyInitialScreenState();
 }
@@ -70,8 +69,8 @@ class _MyInitialScreenState extends State<MyInitialScreen> {
                     child: MyInitRow(
                       content: "Skip",
                       onContentPressed: () {
-                        Navigator.pushNamedAndRemoveUntil(
-                            context, SignInScreen.routeName, (route) => false);
+                        Navigator.pushNamedAndRemoveUntil(context,
+                            MyBottomNavigation.routeName, (route) => false);
                       },
                       onButtonPressed: () {
                         int val = initialPageController.initialPage;

@@ -7,21 +7,18 @@ class HomeAppBarWidget extends StatelessWidget {
     super.key,
   });
 
-
-
   @override
   Widget build(BuildContext context) {
-        final theme = Theme.of(context);
+    final theme = Theme.of(context);
 
-    return  Container(
-        padding: EdgeInsets.only(
-          top: getHeight(height: 0.05, context: context),
-          right: getWidth(width: 0.02, context: context),
-        ),
-        height: getHeight(height: 0.25, context: context),
-        color: theme.scaffoldBackgroundColor,
-        child: const MyHomeTopWidget(),
-      
+    return Container(
+      padding: EdgeInsets.only(
+        top: getHeight(height: 0.05, context: context),
+        right: getWidth(width: 0.02, context: context),
+      ),
+      height: getHeight(height: 0.25, context: context),
+      color: theme.scaffoldBackgroundColor,
+      child: const MyHomeTopWidget(),
     );
   }
 }

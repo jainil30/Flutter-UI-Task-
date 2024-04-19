@@ -12,7 +12,7 @@ class MySpecialOffers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: getHeight(height: 0.2, context: context),
-      margin: EdgeInsets.only(left: getWidth(width: 0.02, context: context)),
+      // margin: EdgeInsets.only(left: getWidth(width: 0.02, context: context)),
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: List.generate(2, (index) {

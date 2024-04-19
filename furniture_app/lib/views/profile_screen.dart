@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/colors.dart';
+
 import 'package:furniture_app/views/sign_in_screen.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
@@ -7,6 +8,14 @@ import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../widgets/custom_back_icon_button.dart';
+
+import 'package:furniture_app/common/sizes.dart';
+import 'package:furniture_app/views/settings_screen.dart';
+import 'package:furniture_app/views/sign_in_screen.dart';
+import 'package:furniture_app/widgets/icon_container.dart';
+import 'package:furniture_app/widgets/reusable_text.dart';
+import 'package:gap/gap.dart';
+
 import '../widgets/profile_menu.dart';
 
 /*

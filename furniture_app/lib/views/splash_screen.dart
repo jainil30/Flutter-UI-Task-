@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:furniture_app/constants/strings.dart';
 import 'package:furniture_app/views/initial_screen.dart';
+import 'package:furniture_app/views/sign_in_screen.dart';
 
 import '../common/colors.dart';
 import '../widgets/reusable_text.dart';
@@ -25,8 +26,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(
         const Duration(seconds: 3),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => MyInitialScreen())));
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => const MyInitialScreen())));
   }
 
   @override

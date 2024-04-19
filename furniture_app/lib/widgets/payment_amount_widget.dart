@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+
 import 'package:furniture_app/widgets/custom_elevated_btn.dart';
 import 'package:furniture_app/widgets/payment_confirmation_bottomsheet.dart';
+
+import 'package:furniture_app/controllers/cart_controller.dart';
+import 'package:furniture_app/widgets/custom_elvated_btn.dart';
+
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 
 import '../common/colors.dart';
 import '../common/sizes.dart';
@@ -11,11 +17,12 @@ import '../common/sizes.dart';
   Purpose : Bottomsheet of Checkout Screen
  */
 class PaymentAmountWidget extends StatelessWidget {
-  const PaymentAmountWidget({super.key, this.itemTotal, this.deliveryFee});
+  const PaymentAmountWidget({super.key, required this.itemTotal, required this.deliveryFee});
   final double? itemTotal;
   final double? deliveryFee;
   @override
   Widget build(BuildContext context) {
+    final cartController = Get.put(MyCartController());
     double total = itemTotal! + deliveryFee!;
     return Container(
       height: getHeight(height: 0.35, context: context),
@@ -41,7 +48,7 @@ class PaymentAmountWidget extends StatelessWidget {
                         .textTheme
                         .displaySmall!
                         .copyWith(color: greyColor)),
-                Text("\$$itemTotal",
+                Text("\$${itemTotal!.toStringAsFixed(2)}",
                     style: Theme.of(context)
                         .textTheme
                         .titleLarge!
@@ -76,7 +83,7 @@ class PaymentAmountWidget extends StatelessWidget {
                   "Total",
                   style: Theme.of(context).textTheme.displayMedium!,
                 ),
-                Text("\$ $total",
+                Text("\$ ${total.toStringAsFixed(2)}",
                     style: Theme.of(context)
                         .textTheme
                         .titleLarge!
@@ -93,6 +100,7 @@ class PaymentAmountWidget extends StatelessWidget {
                     return PaymentConfirmationBottomSheet();
                   },
                 );
+                cartController.totalAmountF();
               },
             )
           ],
