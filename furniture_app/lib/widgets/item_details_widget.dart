@@ -33,11 +33,13 @@ class MyItemDetailsWidget extends StatelessWidget {
         ),
         Gap(getHeight(height: 0.02, context: context)),
         MyCustomHeaderRow(
-            leftText: item.itemName!,
-            rightText: "\$${item.price}",
-            leftStyle: theme.textTheme.displayMedium!,
-            rightStyle:
-                theme.textTheme.displayMedium!.copyWith(color: priceColor)),
+          leftText: item.itemName!,
+          rightText: "\$${item.price}",
+          leftStyle: theme.textTheme.displayMedium!,
+          rightStyle:
+              theme.textTheme.displayMedium!.copyWith(color: priceColor),
+          onPressedRight: () {},
+        ),
         ListTile(
           title: Row(
             children: [
@@ -45,15 +47,15 @@ class MyItemDetailsWidget extends StatelessWidget {
               Gap(getWidth(width: 0.01, context: context)),
               MyReusableText(
                   content: "341 Seen",
-                  style: theme.textTheme.titleMedium!
-                      .copyWith(color: greyColor)),
+                  style:
+                      theme.textTheme.titleMedium!.copyWith(color: greyColor)),
               Gap(getWidth(width: 0.02, context: context)),
               SvgPicture.asset(IconsConstants.FAVOURITE_ICON),
               Gap(getWidth(width: 0.01, context: context)),
               MyReusableText(
                   content: "${item.likes} Liked",
-                  style: theme.textTheme.titleMedium!
-                      .copyWith(color: greyColor)),
+                  style:
+                      theme.textTheme.titleMedium!.copyWith(color: greyColor)),
             ],
           ),
           subtitle: Align(
@@ -77,8 +79,8 @@ class MyItemDetailsWidget extends StatelessWidget {
               Gap(getHeight(height: 0.01, context: context)),
               MyReusableText(
                   content: item.description!,
-                  style: theme.textTheme.titleMedium!
-                      .copyWith(color: greyColor))
+                  style:
+                      theme.textTheme.titleMedium!.copyWith(color: greyColor))
             ],
           ),
         ),

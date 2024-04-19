@@ -4,7 +4,6 @@ import 'package:furniture_app/controllers/profile_page_menu_item_controller.dart
 import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/controllers/sign_up_controller.dart';
 import 'package:furniture_app/routes.dart';
-import 'package:furniture_app/views/initial_screen.dart';
 import 'package:furniture_app/views/splash_screen.dart';
 import 'package:get/get.dart';
 import 'common/theme.dart';

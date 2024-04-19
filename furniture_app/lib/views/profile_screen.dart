@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/views/settings_screen.dart';
+import 'package:furniture_app/views/sign_in_screen.dart';
 import 'package:furniture_app/widgets/icon_container.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
-import 'package:get/get.dart';
-
-import '../widgets/custom_back_icon_button.dart';
 import '../widgets/profile_menu.dart';
 
 /*
@@ -26,24 +23,6 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        // appBar: AppBar(
-        //   automaticallyImplyLeading: false,
-        //   backgroundColor: Colors.transparent,
-        //   // leading: Container(
-        //   //   margin: EdgeInsets.only(left: 10, top: 10),
-        //   //   child: CustomBackIconButton(
-        //   //     icon: Icons.arrow_back,
-        //   //     function: Get.back,
-        //   //   ),
-        //   // ),
-        //   centerTitle: true,
-        //   title: Text(
-        //     "Profile",
-        //     style:
-        //         Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 20),
-        //   ),
-        // ),
         body: SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.all(8.0),
@@ -82,7 +61,9 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                 height: MediaQuery.sizeOf(context).height * 0.53,
                 child: ProfileMenu()),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, SignInScreen.routeName);
+                },
                 child: Text(
                   "Log out",
                   style: Theme.of(context)

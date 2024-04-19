@@ -40,10 +40,24 @@ class MySearchWidget extends StatelessWidget {
                     color: greyColor,
                   ),
                   Gap(getWidth(width: 0.015, context: context)),
-                  MyReusableText(
-                      content: "Search Furniture",
-                      style: theme.textTheme.bodyMedium!.copyWith(
-                          color: greyColor, fontWeight: FontWeight.w500))
+                  SizedBox(
+                    width: getWidth(width: 0.3, context: context),
+                    child: TextField(
+                      onTap: () {
+                        Navigator.pushNamed(context, MySearchScreen.routeName);
+                        FocusScope.of(context).unfocus();
+                      },
+                      onTapOutside: (event) {
+                        FocusScope.of(context).unfocus();
+                      },
+                      cursorColor: primaryColor,
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Search Furniture",
+                          hintStyle: theme.textTheme.bodyMedium!.copyWith(
+                              color: greyColor, fontWeight: FontWeight.w500)),
+                    ),
+                  ),
                 ],
               ),
             ),

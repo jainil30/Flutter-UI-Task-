@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/controllers/catetgory_controller.dart';
+import 'package:furniture_app/views/all_items_screen.dart';
 import 'package:furniture_app/widgets/categories.dart';
 import 'package:furniture_app/widgets/custom_header_row.dart';
 import 'package:furniture_app/widgets/home_appbar_widget.dart';
@@ -59,6 +60,9 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                     .copyWith(fontWeight: FontWeight.w600),
                 rightStyle: theme.textTheme.titleMedium!
                     .copyWith(fontWeight: FontWeight.w400, color: priceColor),
+                onPressedRight: () {
+                  Navigator.pushNamed(context, MyTotalItems.routeName,arguments: "Interested");
+                },
               ),
               Gap(getHeight(height: 0.02, context: context)),
               const MyInterestedItems(),
@@ -70,6 +74,9 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                     .copyWith(fontWeight: FontWeight.w600),
                 rightStyle: theme.textTheme.titleMedium!
                     .copyWith(fontWeight: FontWeight.w400, color: priceColor),
+                onPressedRight: () {
+                  Navigator.pushNamed(context, MyTotalItems.routeName,arguments: "Popular");
+                },
               ),
               Gap(getHeight(height: 0.02, context: context)),
               const MyPopularItems(),

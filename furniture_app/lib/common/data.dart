@@ -87,6 +87,63 @@ final items = [
         "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
     "likes": 290,
     "isLiked": false,
+  },
+    {
+    "id": 5,
+    "imageUrl": "assets/images/i1.png",
+    "itemName": "Levi Armchair",
+    "shopName": "Cultured White",
+    "imageBig": "assets/images/popular_b_2.png",
+    "price": 279.95,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 290,
+    "isLiked": false,
+  },  {
+    "id": 6,
+    "imageUrl": "assets/images/i2.png",
+    "itemName": "Hero Armchair",
+    "shopName": "Cultured White",
+    "imageBig": "assets/images/popular_b_2.png",
+    "price": 250.91,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 290,
+    "isLiked": false,
+  } , {
+    "id": 7,
+    "imageUrl": "assets/images/i3.png",
+    "itemName": "Slipcove Armchair",
+    "shopName": "Hatil-Loren",
+    "imageBig": "assets/images/popular_b_2.png",
+    "price": 369.86,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 290,
+    "isLiked": false,
+  } , {
+    "id": 8,
+    "imageUrl": "assets/images/i4.png",
+    "itemName": "Rose Armchair",
+    "shopName": "Regel Furniture",
+    "imageBig": "assets/images/popular_b_2.png",
+    "price": 258.91,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 290,
+    "isLiked": false,
+  },
+    {
+    "id": 9,
+    "imageUrl": "assets/images/i6.png",
+    "itemName": "Besen Egge Chair",
+    "shopName": "Partex Furniture",
+    "imageBig": "assets/images/popular_b_2.png",
+    "price": 398.86,
+    "description":
+        "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
+    "likes": 290,
+    "isLiked": false,
   }
 
 ];
