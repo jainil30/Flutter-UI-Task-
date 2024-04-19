@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/controllers/notification_menu_controller.dart';
+import 'package:furniture_app/widgets/icon_container.dart';
 import 'package:furniture_app/widgets/notification_menu.dart';
 import 'package:get/get.dart';
 
@@ -11,6 +12,7 @@ import '../widgets/custom_back_icon_button.dart';
   Purpose : Shows all recent notifications
  */
 class NotificationScreen extends GetView<NotificationMenuController> {
+  static const routeName = '/notificationScreen';
   const NotificationScreen({super.key});
 
   @override
@@ -21,18 +23,16 @@ class NotificationScreen extends GetView<NotificationMenuController> {
           automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
           leadingWidth: 80,
-          leading: Container(
-            margin: EdgeInsets.only(left: 34, top: 10),
-            child: CustomBackIconButton(
-              icon: Icons.arrow_back,
-              function: Get.back,
-            ),
-          ),
+          leading: MyIconContainer(
+              child: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              }),
           centerTitle: true,
           actions: [
             Container(
               margin: EdgeInsets.only(
-                right: 40,
+                right: 20,
               ),
               child: InkWell(
                 child: Text(
@@ -68,10 +68,9 @@ class NotificationScreen extends GetView<NotificationMenuController> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                  margin:
-                      EdgeInsets.only(top: 10, left: 24, right: 24, bottom: 14),
                   // color: Colors.red,
                   height: MediaQuery.sizeOf(context).height * 0.6,
+                  width: double.infinity,
                   child: NotificationMenu()),
             ],
           ),

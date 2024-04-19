@@ -11,11 +11,13 @@ class MyOneCartWidget extends StatelessWidget {
   final ItemModel popularItemModel;
   final MyCartModel cartModel;
   final int index;
+  final Widget widget;
   const MyOneCartWidget({
     super.key,
     required this.popularItemModel,
     required this.cartModel,
     required this.index,
+    required this.widget
   });
 
   @override
@@ -41,9 +43,8 @@ class MyOneCartWidget extends StatelessWidget {
                   popularItemModel: popularItemModel, cartModel: cartModel),
             ],
           ),
-          MyCartInDeWidget(
-            cartModel: cartModel,
-          ),
+          widget
+          
         ],
       ),
     );
