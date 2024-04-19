@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:furniture_app/common/data.dart';
 import 'package:furniture_app/controllers/notification_menu_controller.dart';
 import 'package:get/get.dart';
 
@@ -32,10 +31,11 @@ class NotificationMenu extends GetView<NotificationMenuController> {
               ),
               children: [
                 Container(
+                  margin: EdgeInsets.only(left: 20),
                   height: 70,
-                  width: 60,
+                  width: 70,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
+                      borderRadius: BorderRadius.circular(35),
                       color: Theme.of(context).hoverColor),
                   child: IconButton(
                     onPressed: () {

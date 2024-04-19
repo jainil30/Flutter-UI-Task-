@@ -6,7 +6,6 @@ import 'package:furniture_app/widgets/payments_menu.dart';
 import 'package:get/get.dart';
 
 import '../widgets/address_menu.dart';
-import '../widgets/custom_back_icon_button.dart';
 import '../widgets/payment_amount_widget.dart';
 
 /*
@@ -16,7 +15,6 @@ import '../widgets/payment_amount_widget.dart';
 class CheckOutScreen extends StatefulWidget {
   static const String routeName = "/checkOut";
   const CheckOutScreen({super.key});
-  static const String routeName = "/checkOut";
   @override
   State<CheckOutScreen> createState() => _CheckOutScreenState();
 }
@@ -33,7 +31,6 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
         backgroundColor: Colors.transparent,
         leadingWidth: 70,
         leading: Container(
-
             margin: const EdgeInsets.only(left: 10, top: 10),
             child: MyIconContainer(
                 child: const Icon(Icons.arrow_back),

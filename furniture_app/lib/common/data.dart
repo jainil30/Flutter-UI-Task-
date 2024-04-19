@@ -1,4 +1,8 @@
 import 'package:furniture_app/constants/icons.dart';
+import 'package:furniture_app/views/payments_screen.dart';
+import 'package:furniture_app/views/settings_screen.dart';
+
+import '../views/notification_screen.dart';
 
 final initData = [
   {
@@ -36,7 +40,6 @@ final categories = [
   {"imageUrl": "assets/images/sofa.svg", "label": "Sofa"},
   {"imageUrl": "assets/images/bed.svg", "label": "Bed"},
   {"imageUrl": "assets/images/lamp.svg", "label": "Light"},
-
 ];
 
 final items = [
@@ -88,7 +91,7 @@ final items = [
     "likes": 290,
     "isLiked": false,
   },
-    {
+  {
     "id": 5,
     "imageUrl": "assets/images/i1.png",
     "itemName": "Levi Armchair",
@@ -99,7 +102,8 @@ final items = [
         "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
     "likes": 290,
     "isLiked": false,
-  },  {
+  },
+  {
     "id": 6,
     "imageUrl": "assets/images/i2.png",
     "itemName": "Hero Armchair",
@@ -110,7 +114,8 @@ final items = [
         "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
     "likes": 290,
     "isLiked": false,
-  } , {
+  },
+  {
     "id": 7,
     "imageUrl": "assets/images/i3.png",
     "itemName": "Slipcove Armchair",
@@ -121,7 +126,8 @@ final items = [
         "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
     "likes": 290,
     "isLiked": false,
-  } , {
+  },
+  {
     "id": 8,
     "imageUrl": "assets/images/i4.png",
     "itemName": "Rose Armchair",
@@ -133,7 +139,7 @@ final items = [
     "likes": 290,
     "isLiked": false,
   },
-    {
+  {
     "id": 9,
     "imageUrl": "assets/images/i6.png",
     "itemName": "Besen Egge Chair",
@@ -145,7 +151,6 @@ final items = [
     "likes": 290,
     "isLiked": false,
   }
-
 ];
 
 final interestedItems = [
@@ -207,16 +212,37 @@ final popularItems = [
   Purpose : Profile Menu Items
  */
 final profilePageMenu = [
-  {"title": "Profile", "icon": "assets/icons/profile_icon.svg"},
-  {"title": "Payment Methods", "icon": "assets/icons/payments_icon.svg"},
-  {"title": "Order History", "icon": "assets/icons/order_history.svg"},
+  {"title": "Profile", "icon": "assets/icons/profile_icon.svg", "routeTo": ""},
+  {
+    "title": "Payment Methods",
+    "icon": "assets/icons/payments_icon.svg",
+    "routeTo": PaymentScreen.routeName
+  },
+  {
+    "title": "Order History",
+    "icon": "assets/icons/order_history.svg",
+    "routeTo": ""
+  },
   {
     "title": "Delivery Address",
-    "icon": "assets/icons/delivery_address_icon.svg"
+    "icon": "assets/icons/delivery_address_icon.svg",
+    "routeTo": ""
   },
-  {"title": "Support Center", "icon": "assets/icons/support_center.svg"},
-  {"title": "Legal Policy", "icon": "assets/icons/legal_policy.svg"},
-  {"title": "Settings", "icon": "assets/icons/legal_policy.svg"},
+  {
+    "title": "Support Center",
+    "icon": "assets/icons/support_center.svg",
+    "routeTo": ""
+  },
+  {
+    "title": "Legal Policy",
+    "icon": "assets/icons/legal_policy.svg",
+    "routeTo": ""
+  },
+  {
+    "title": "Settings",
+    "icon": "assets/icons/legal_policy.svg",
+    "routeTo": SettingsScreen.routeName
+  },
 ];
 
 /*
@@ -224,11 +250,31 @@ final profilePageMenu = [
   Purpose : Settings Menu Item
  */
 final settingsPageMenu = [
-  {"title": "Notifications", "icon": "assets/icons/notification.svg"},
-  {"title": "Email Settings", "icon": "assets/icons/email_icon.svg"},
-  {"title": "Manage Addresses", "icon": "assets/icons/manage_address.svg"},
-  {"title": "Manage Payment", "icon": "assets/icons/payments_icon.svg"},
-  {"title": "Data Control", "icon": "assets/icons/data_center.svg"},
+  {
+    "title": "Notifications",
+    "icon": "assets/icons/notification.svg",
+    "routeTo": NotificationScreen.routeName
+  },
+  {
+    "title": "Email Settings",
+    "icon": "assets/icons/email_icon.svg",
+    "routeTo": ""
+  },
+  {
+    "title": "Manage Addresses",
+    "icon": "assets/icons/manage_address.svg",
+    "routeTo": ""
+  },
+  {
+    "title": "Manage Payment",
+    "icon": "assets/icons/payments_icon.svg",
+    "routeTo": ""
+  },
+  {
+    "title": "Data Control",
+    "icon": "assets/icons/data_center.svg",
+    "routeTo": ""
+  },
 ];
 
 /*
@@ -339,3 +385,9 @@ final paymentsList = [
   },
 ];
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : To show reviews in Review Screen
+ */
+
+final reviewsList = [{}];

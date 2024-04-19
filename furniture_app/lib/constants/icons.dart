@@ -17,7 +17,6 @@ class IconsConstants {
   static const String STARS_ICON = "assets/images/rating_stars.png";
   static const String MINUS_ICON = "assets/images/minus_icon.png";
 
-
   //Notification Page Icons/Images
   static const String LEVI_ARMCHAIR = "assets/icons/levi_armchair.png";
   static const String NOTIFICATION_MENU_DEFAULT_ICON =
@@ -48,4 +47,6 @@ class IconsConstants {
   static const String CALL_ICON = "assets/icons/call_icon.svg";
   static const String CLOCK_ICON = "assets/icons/clock_icon.svg";
 
+  //Reviews Screen Icons and Images
+  static const String STARS = "assets/icons/stars.svg";
 }
