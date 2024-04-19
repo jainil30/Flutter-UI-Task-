@@ -11,11 +11,17 @@ class CustomBackIconButton extends StatelessWidget {
   final Function? function;
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-      style:
-          IconButton.styleFrom(backgroundColor: Theme.of(context).hoverColor),
-      icon: Icon(icon),
-      onPressed: () => function,
+    return Container(
+      // margin: EdgeInsets.only(left: 24),
+      width: 48,
+      height: 48,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(24)),
+      child: IconButton(
+        style:
+            IconButton.styleFrom(backgroundColor: Theme.of(context).hoverColor),
+        icon: Icon(icon),
+        onPressed: () => function!(),
+      ),
     );
   }
 }

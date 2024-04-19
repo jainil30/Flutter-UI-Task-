@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Textform field with textInputType as password
+ */
 class CustomPasswordTextFormField extends StatefulWidget {
   final TextEditingController controller;
   final RxBool isObscured;

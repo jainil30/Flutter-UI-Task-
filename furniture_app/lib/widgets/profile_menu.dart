@@ -17,14 +17,17 @@ class ProfileMenu extends GetView<ProfilePageMenuItemController> {
       shrinkWrap: true,
       primary: false,
       itemBuilder: (context, index) {
-        return CustomMenuItem(
-          title: profilePageMenu[index]["title"]
-              .toString(), // controller.profileMenus[index].title
+        return Container(
+          margin: EdgeInsets.symmetric(vertical: 3),
+          child: CustomMenuItem(
+            title: profilePageMenu[index]["title"]
+                .toString(), // controller.profileMenus[index].title
 
-          iconPath: profilePageMenu[index]["icon"]
-              .toString(), //controller.profileMenus[index].icon
+            iconPath: profilePageMenu[index]["icon"]
+                .toString(), //controller.profileMenus[index].icon
 
-          isSvg: true,
+            isSvg: true,
+          ),
         );
       },
       itemCount: profilePageMenu.length,

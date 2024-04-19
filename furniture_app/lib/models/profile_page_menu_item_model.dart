@@ -1,6 +1,9 @@
 /// title : "Profile"
 /// icon : "assets/icons/profile_icon.svg"
 
+/*
+  Created By : Jainil Dalwadi
+ */
 class ProfilePageMenuItemModel {
   ProfilePageMenuItemModel({
     String? title,

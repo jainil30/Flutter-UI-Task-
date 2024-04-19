@@ -54,6 +54,7 @@ class NotificationMenu extends GetView<NotificationMenuController> {
               subTitle: controller.notifications[index].subtitle.toString(),
               iconPath: controller.notifications[index].icon.toString(),
               isSvg: false,
+              hasTrailIcon: false,
             ),
           );
         },

@@ -4,6 +4,10 @@ import 'package:furniture_app/widgets/address_widget.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Shows Addresses on the Checkout Screen
+ */
 class AddressMenu extends GetView<CheckoutController> {
   const AddressMenu({super.key});
   @override
@@ -19,6 +23,7 @@ class AddressMenu extends GetView<CheckoutController> {
         Expanded(
           child: ListView.builder(
             itemCount: controller.addresses.length,
+            primary: false,
             itemBuilder: (context, index) {
               print("Card------->");
               return AddressWidget(index);
