@@ -4,15 +4,8 @@ import 'package:furniture_app/controllers/profile_page_menu_item_controller.dart
 import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/controllers/sign_up_controller.dart';
 import 'package:furniture_app/routes.dart';
-
-
-import 'package:furniture_app/views/initial_screen.dart';
-
-
-import 'package:furniture_app/views/checkout_screen.dart';
-
+import 'package:furniture_app/views/splash_screen.dart';
 import 'package:get/get.dart';
-
 import 'common/theme.dart';
 import 'controllers/checkout_controller.dart';
 import 'controllers/notification_menu_controller.dart';
@@ -38,7 +31,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: (settings) => genterateRoutes(settings),
-      home: const CheckOutScreen(),
+      home: const SplashScreen(),
     );
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/sizes.dart';
+import 'package:furniture_app/controllers/cart_controller.dart';
+import 'package:furniture_app/widgets/icon_container.dart';
 import 'package:furniture_app/widgets/payments_menu.dart';
 import 'package:get/get.dart';
 
@@ -8,6 +10,7 @@ import '../widgets/custom_back_icon_button.dart';
 import '../widgets/payment_amount_widget.dart';
 
 class CheckOutScreen extends StatefulWidget {
+  static const String routeName = "/checkOut";
   const CheckOutScreen({super.key});
 
   @override
@@ -17,18 +20,20 @@ class CheckOutScreen extends StatefulWidget {
 class _CheckOutScreenState extends State<CheckOutScreen> {
   @override
   Widget build(BuildContext context) {
+    final cartController = Get.put(MyCartController());
+    double total = cartController.totalAmount.value;
     return Scaffold(
       appBar: AppBar(
         scrolledUnderElevation: 0,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         leading: Container(
-          margin: EdgeInsets.only(left: 10, top: 10),
-          child: CustomBackIconButton(
-            icon: Icons.arrow_back,
-            function: Get.back,
-          ),
-        ),
+            margin: const EdgeInsets.only(left: 10, top: 10),
+            child: MyIconContainer(
+                child: const Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.pop(context);
+                })),
         centerTitle: true,
         title: Text(
           "Check Out",
@@ -50,7 +55,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                 child: PaymentMenu(),
               ),
               PaymentAmountWidget(
-                itemTotal: 367.65,
+                itemTotal: total,
                 deliveryFee: 80,
               )
             ],

@@ -21,6 +21,7 @@ class CustomMenuItemSpecial extends StatelessWidget {
   final bool? isSvg;
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Card(
       elevation: 0,
       color: Theme.of(context).hoverColor,
@@ -31,19 +32,19 @@ class CustomMenuItemSpecial extends StatelessWidget {
             leading: (isSvg!)
                 ? Container(
                     width: 70,
-                    height: 70,
+                    height: 90,
                     decoration: BoxDecoration(
-                        color: lightGreyColor,
+                        color: theme.cardColor,
                         borderRadius: BorderRadius.circular(8)),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: SvgPicture.asset(iconPath!),
                     ))
                 : Container(
-                    width: 60,
-                    height: 60,
+                    width: 80,
+                    height: 100,
                     decoration: BoxDecoration(
-                        color: lightGreyColor,
+                        color: theme.cardColor,
                         borderRadius: BorderRadius.circular(8)),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
