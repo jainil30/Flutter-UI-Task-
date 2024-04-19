@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
+
+import 'package:furniture_app/widgets/custom_elevated_btn.dart';
+import 'package:furniture_app/widgets/payment_confirmation_bottomsheet.dart';
+
 import 'package:furniture_app/controllers/cart_controller.dart';
 import 'package:furniture_app/widgets/custom_elvated_btn.dart';
+
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 import '../common/colors.dart';
 import '../common/sizes.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Bottomsheet of Checkout Screen
+ */
 class PaymentAmountWidget extends StatelessWidget {
   const PaymentAmountWidget({super.key, required this.itemTotal, required this.deliveryFee});
   final double? itemTotal;
@@ -85,6 +94,12 @@ class PaymentAmountWidget extends StatelessWidget {
             CustomElevatedButton(
               text: "Payment",
               onClickFunction: () {
+                showBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return PaymentConfirmationBottomSheet();
+                  },
+                );
                 cartController.totalAmountF();
               },
             )

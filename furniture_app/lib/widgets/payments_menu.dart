@@ -5,6 +5,10 @@ import 'package:get/get.dart';
 
 import '../controllers/checkout_controller.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Menu Showed in Checkout Screen
+ */
 class PaymentMenu extends GetView<CheckoutController> {
   const PaymentMenu({super.key});
 
@@ -21,6 +25,7 @@ class PaymentMenu extends GetView<CheckoutController> {
         Expanded(
           child: ListView.builder(
             itemCount: controller.payments.length,
+            primary: false,
             itemBuilder: (context, index) {
               print("PAYMENT------->");
               return PaymentWdiget(

@@ -5,6 +5,10 @@ import 'package:furniture_app/constants/icons.dart';
 import 'package:furniture_app/controllers/checkout_controller.dart';
 import 'package:get/get.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Shows Single address in the Address Menu of Checkout Screen
+ */
 class AddressWidget extends GetView<CheckoutController> {
   const AddressWidget(this.index, {super.key});
 

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/common/bottom_nav.dart';
 import 'package:furniture_app/controllers/sign_up_controller.dart';
 import 'package:furniture_app/views/change_password_screen.dart';
-import 'package:furniture_app/widgets/custom_elvated_btn.dart';
-import 'package:furniture_app/widgets/custom_elvated_btn_icon.dart';
+import 'package:furniture_app/widgets/custom_elevated_btn.dart';
+import 'package:furniture_app/widgets/custom_elevated_btn_icon.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:get/get.dart';
 
@@ -15,8 +15,8 @@ import 'text_form_field.dart';
   Created By : Jainil Dalwadi
   Purpose : Sing Up Form
  */
-class SignOutForm extends GetView<SignUpController> {
-  const SignOutForm({super.key});
+class SignUpForm extends GetView<SignUpController> {
+  const SignUpForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class SignOutForm extends GetView<SignUpController> {
             CustomTextFormField(
                 controller: controller.fullnameController.value,
                 hintText: "Enter Your Fullname",
-                textInputType: TextInputType.emailAddress,
+                textInputType: TextInputType.name,
                 labelText: ""),
             const SizedBox(
               height: 10,
@@ -106,14 +106,13 @@ class SignOutForm extends GetView<SignUpController> {
               ],
             ),
             CustomElevatedButton(
-                text: "Sign Up",
-                onClickFunction: () {
-                  controller.validateSignUpForm;
-                  Navigator.pushNamed(context, MyBottomNavigation.routeName);
-                }),
+              text: "Sign Up",
+              onClickFunction: () => controller.validateSignUpForm(context),
+            ),
+
             CustomElevatedIconButton(
               text: "Sign Up",
-              onClickFunction: controller.validateSignUpForm,
+              onClickFunction: () => controller.validateSignUpForm(context),
               imagePath: "assets/images/google_logo.png",
             ),
           ],

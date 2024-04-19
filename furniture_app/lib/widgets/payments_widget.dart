@@ -6,6 +6,10 @@ import 'package:get/get.dart';
 
 import '../constants/icons.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Single Payment Widget in PaymentMenu
+ */
 class PaymentWdiget extends GetView<CheckoutController> {
   const PaymentWdiget({super.key, this.index});
 

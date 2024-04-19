@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/services/hive_services.dart';
+import 'package:furniture_app/views/sign_in_screen.dart';
 import 'package:get/get.dart';
 
 /*
@@ -13,10 +15,30 @@ class SignUpController extends GetxController {
   var isObstruct = true.obs;
   var rememberMe = false.obs;
 
-  void validateSignUpForm() {
+  void validateSignUpForm(context) {
     if (formKey.currentState!.validate()) {
-      Get.snackbar("Sign In Successful", "Redirecting to home page",
-          icon: Icon(Icons.next_week));
+      var users = HiveService()
+          .searchUserByEmail(emailController.value.text.toString());
+      if (users.length == 0) {
+        HiveService().addUser(
+            fullnameController.value.text.toString(),
+            emailController.value.text.toString(),
+            passwordController.value.text.toString());
+
+        Get.snackbar("Sign Up Successful", "Redirecting Sign In Page",
+            icon: Icon(Icons.next_week));
+
+        fullnameController.value.text = "";
+        emailController.value.text = "";
+        passwordController.value.text = "";
+
+        Navigator.pushNamedAndRemoveUntil(
+            context, SignInScreen.routeName, (route) => false);
+      } else {
+        Get.snackbar(
+            "User with ${emailController.value.text.toString()} already exist",
+            "Please try some other email address.");
+      }
     }
   }
 }
