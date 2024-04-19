@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/common/data.dart';
 import 'package:furniture_app/widgets/menu_item.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Menu Showed in Settings Screen
+ */
 class SettingsMenu extends StatelessWidget {
   const SettingsMenu({super.key});
 

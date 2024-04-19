@@ -1,14 +1,14 @@
 import '../common/boxes.dart';
 import '../models/user_model.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : To store and retrive user's data from Hive DB
+ */
 class HiveService {
-  static const String _categoryBoxName = 'category';
   final box = Boxes.getUsers();
 
   void addUser(String fullName, String email, String password) {
-    // final box = Hive.box<Category>(_categoryBoxName);
-    // final newCategory = Category.Category(categoryName: categoryName);
-    // box.add(newCategory);
     box.add(
       UserModel(
           fullName: fullName,

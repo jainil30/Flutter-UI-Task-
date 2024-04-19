@@ -7,9 +7,13 @@ import '../widgets/address_menu.dart';
 import '../widgets/custom_back_icon_button.dart';
 import '../widgets/payment_amount_widget.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Showed when user tries to checkout
+ */
 class CheckOutScreen extends StatefulWidget {
   const CheckOutScreen({super.key});
-
+  static const String routeName = "/checkOut";
   @override
   State<CheckOutScreen> createState() => _CheckOutScreenState();
 }
@@ -22,9 +26,9 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
         scrolledUnderElevation: 0,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
-        leadingWidth: 80,
+        leadingWidth: 70,
         leading: Container(
-          margin: EdgeInsets.only(left: 34, top: 10),
+          margin: EdgeInsets.only(left: 24, top: 10),
           child: CustomBackIconButton(
             icon: Icons.arrow_back,
             function: Get.back,

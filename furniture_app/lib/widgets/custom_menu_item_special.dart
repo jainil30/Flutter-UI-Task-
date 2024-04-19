@@ -13,12 +13,14 @@ class CustomMenuItemSpecial extends StatelessWidget {
       this.title,
       this.iconPath,
       this.subTitle,
-      required this.isSvg});
+      required this.isSvg,
+      this.hasTrailIcon});
 
   final String? iconPath;
   final String? title;
   final String? subTitle;
   final bool? isSvg;
+  final bool? hasTrailIcon;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -60,6 +62,10 @@ class CustomMenuItemSpecial extends StatelessWidget {
                   .textTheme
                   .titleMedium!
                   .copyWith(color: greyColor),
+            ),
+            trailing: Icon(
+              Icons.keyboard_arrow_right,
+              color: greyColor,
             ),
           ),
         ),

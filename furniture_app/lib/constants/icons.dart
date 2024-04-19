@@ -36,4 +36,8 @@ class IconsConstants {
   static const String TRACK_ORDER_BACKGROUND_IMAGE =
       "assets/images/track_order_background.png";
   static const String MAP_PATH = "assets/images/map_path.svg";
+
+  //Track Order Bottom Sheet
+  static const String CALL_ICON = "assets/icons/call_icon.svg";
+  static const String CLOCK_ICON = "assets/icons/clock_icon.svg";
 }

@@ -38,15 +38,17 @@ class CategoriesScreen extends StatelessWidget {
                     color: Theme.of(context).hoverColor),
                 margin: EdgeInsets.only(right: 20, top: 10),
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: InkWell(
-                    child: SvgPicture.asset(
-                      IconsConstants.BAG_ICON,
-                      // color: Theme.of(context).appBarTheme.shadowColor,
-                      // colorFilter: ColorFilter.mode(
-                      //     Theme.of(context).appBarTheme.shadowColor!,
-                      //     BlendMode.difference),
-                    ),
+                    child: SvgPicture.asset(IconsConstants.BAG_ICON,
+                        color: Theme.of(context)
+                            .datePickerTheme
+                            .headerForegroundColor
+                        // color: Theme.of(context).appBarTheme.shadowColor,
+                        // colorFilter: ColorFilter.mode(
+                        //     Theme.of(context).appBarTheme.shadowColor!,
+                        //     BlendMode.difference),
+                        ),
                     onTap: () =>
                         Get.snackbar("Products", "Redirecting to products",
                             icon: SvgPicture.asset(

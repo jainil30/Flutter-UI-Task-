@@ -23,6 +23,7 @@ class CategoriesMenu extends StatelessWidget {
           subTitle: categorisPageMenu[index]["products"].toString(),
           iconPath: categorisPageMenu[index]["icon"].toString(),
           isSvg: false,
+          hasTrailIcon: true,
         );
       },
       itemCount: categorisPageMenu.length,

@@ -5,6 +5,10 @@ import 'package:get/get.dart';
 
 import '../controllers/checkout_controller.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Menu Showed in Checkout Screen
+ */
 class PaymentMenu extends GetView<CheckoutController> {
   const PaymentMenu({super.key});
 

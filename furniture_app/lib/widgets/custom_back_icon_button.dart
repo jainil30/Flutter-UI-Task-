@@ -20,7 +20,7 @@ class CustomBackIconButton extends StatelessWidget {
         style:
             IconButton.styleFrom(backgroundColor: Theme.of(context).hoverColor),
         icon: Icon(icon),
-        onPressed: () => function,
+        onPressed: () => function!(),
       ),
     );
   }

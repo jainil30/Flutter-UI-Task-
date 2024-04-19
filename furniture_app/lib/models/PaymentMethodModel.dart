@@ -2,6 +2,9 @@
 /// paymentMethodName : "Paypal"
 /// icon : "IconsConstants.PAYPAL_ICON"
 
+/*
+  Created By : Jainil Dalwadi
+ */
 class PaymentMethodModel {
   PaymentMethodModel({
     num? paymentId,

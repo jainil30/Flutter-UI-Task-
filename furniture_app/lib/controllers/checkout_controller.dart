@@ -3,6 +3,10 @@ import 'package:furniture_app/models/AddressModel.dart';
 import 'package:furniture_app/models/PaymentMethodModel.dart';
 import 'package:get/get.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : To fetch addresses and payment methods in Checkout screen
+ */
 class CheckoutController extends GetxController {
   var addresses = <AddressModel>[].obs;
   var selectedAddress = 1.obs;

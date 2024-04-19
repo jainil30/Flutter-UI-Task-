@@ -38,7 +38,6 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
             preferences.setBool("isOnline", user.isOnline);
 
  */
-    getSharedPreference();
   }
 
   void getSharedPreference() async {
@@ -50,9 +49,16 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
+    getSharedPreference();
+    print("-------------------------------");
+    print("Name :${name}");
+    print("Email :$email");
+    print("isOnline :$isOnline");
+
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
+        forceMaterialTransparency: true,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         leadingWidth: 80,

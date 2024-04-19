@@ -9,6 +9,10 @@ import '../common/colors.dart';
 import '../common/sizes.dart';
 import '../constants/strings.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Showed after Checkout Screen's Payment button is clicked
+ */
 class PaymentConfirmationBottomSheet extends StatelessWidget {
   const PaymentConfirmationBottomSheet({super.key});
 
@@ -18,15 +22,15 @@ class PaymentConfirmationBottomSheet extends StatelessWidget {
       height: getHeight(height: 0.61, context: context),
       width: double.infinity,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(45), topRight: Radius.circular(45)),
+          borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(28), topRight: Radius.circular(28)),
           color: Theme.of(context).hoverColor),
       child: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Gap(10),
+            const Gap(10),
             Container(
               width: 84,
               height: 84,
@@ -40,7 +44,7 @@ class PaymentConfirmationBottomSheet extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 24, bottom: 8),
+              margin: const EdgeInsets.only(top: 24, bottom: 8),
               width: 200,
               child: Text(
                 softWrap: true,
@@ -62,19 +66,19 @@ class PaymentConfirmationBottomSheet extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 16,
               ),
               child: CustomElevatedIconButton(
-                text: "Track Your Order",
+                text: "      Back Home",
                 onClickFunction: () => Navigator.pop(context),
                 imagePath: "",
-                color: Colors.white,
+                color: Theme.of(context).datePickerTheme.headerBackgroundColor,
                 elevation: 0.5,
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 16, bottom: 24),
+              margin: const EdgeInsets.only(top: 16, bottom: 24),
               child: CustomElevatedButton(
                 text: "Track Your Order",
                 onClickFunction: () =>
@@ -82,7 +86,7 @@ class PaymentConfirmationBottomSheet extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(bottom: 10),
+              margin: const EdgeInsets.only(bottom: 10),
               width: getWidth(width: 0.3, context: context),
               child: Text(
                 textAlign: TextAlign.center,

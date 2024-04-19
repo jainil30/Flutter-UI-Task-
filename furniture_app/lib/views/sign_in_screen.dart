@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/views/sign_up_screen.dart';
 import 'package:furniture_app/widgets/sign_in_form.dart';
+import 'package:get/get.dart';
 
 import '../common/colors.dart';
 import '../widgets/reusable_text.dart';
@@ -10,19 +12,17 @@ import '../widgets/reusable_text.dart';
   Purpose : Sign In Screen
  */
 
-class SignInScreen extends StatefulWidget {
+class SignInScreen extends GetView<SignInController> {
   const SignInScreen({super.key});
   static const String routeName = "/signIn";
-  @override
-  State<SignInScreen> createState() => _SignInScreenState();
-}
+  // var emailController = TextEditingController();
+  //
+  // var passwordController = TextEditingController();
+  //
+  // bool passwordVisible = false;
+  //
+  // bool rememberMe = false;
 
-class _SignInScreenState extends State<SignInScreen> {
-  var emailController = TextEditingController();
-  var passwordController = TextEditingController();
-
-  bool passwordVisible = false;
-  bool rememberMe = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,18 +94,19 @@ class _SignInScreenState extends State<SignInScreen> {
                             width: 5,
                           ),
                           InkWell(
-                            child: MyReusableText(
-                              content: "Sign Up for free",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleMedium!
-                                  .copyWith(fontWeight: FontWeight.w500),
-                            ),
-                            onTap: () => Navigator.pushNamedAndRemoveUntil(
-                                context,
-                                SignUpScreen.routeName,
-                                (route) => false),
-                          ),
+                              child: MyReusableText(
+                                content: "Sign Up for free",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium!
+                                    .copyWith(fontWeight: FontWeight.w500),
+                              ),
+                              onTap: () {
+                                controller.emailController.value.text = "";
+                                controller.passwordController.value.text = "";
+                                Navigator.pushNamedAndRemoveUntil(context,
+                                    SignUpScreen.routeName, (route) => false);
+                              }),
                         ],
                       )
                     ],

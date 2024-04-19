@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/common/bottom_nav.dart';
+import 'package:furniture_app/common/data.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/constants/strings.dart';
 import 'package:furniture_app/controllers/initial_page_controller.dart';
+import 'package:furniture_app/views/sign_in_screen.dart';
 import 'package:furniture_app/widgets/custom_button.dart';
 import 'package:furniture_app/widgets/init_image_text_widget.dart';
 import 'package:furniture_app/widgets/init_row.dart';
 import 'package:furniture_app/widgets/one_dot_widget.dart';
-import 'package:furniture_app/common/data.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
@@ -60,8 +60,7 @@ class _MyInitialScreenState extends State<MyInitialScreen> {
                 ? MyCustomButton(
                     buttonName: StringConstants.INIT_BUTTON_TEXT,
                     onPressed: () {
-                      Navigator.pushNamed(
-                          context, MyBottomNavigation.routeName);
+                      Navigator.pushNamed(context, SignInScreen.routeName);
                     },
                   )
                 : Padding(
@@ -71,7 +70,8 @@ class _MyInitialScreenState extends State<MyInitialScreen> {
                     child: MyInitRow(
                       content: "Skip",
                       onContentPressed: () {
-                        Navigator.pushNamedAndRemoveUntil(context, MyBottomNavigation.routeName,(route)=>false);
+                        Navigator.pushNamedAndRemoveUntil(
+                            context, SignInScreen.routeName, (route) => false);
                       },
                       onButtonPressed: () {
                         int val = initialPageController.initialPage;

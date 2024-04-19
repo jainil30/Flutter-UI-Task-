@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/controllers/sign_up_controller.dart';
 import 'package:furniture_app/views/sign_in_screen.dart';
 import 'package:furniture_app/widgets/sign_up_form.dart';
+import 'package:get/get.dart';
 
 import '../common/colors.dart';
 import '../widgets/reusable_text.dart';
@@ -10,51 +12,49 @@ import '../widgets/reusable_text.dart';
   Purpose : Sign Up Screen
  */
 
-class SignUpScreen extends StatefulWidget {
+class SignUpScreen extends GetView<SignUpController> {
   const SignUpScreen({super.key});
   static const String routeName = "/signUp";
-  @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
-}
+  // var emailController = TextEditingController();
+  //
+  // var passwordController = TextEditingController();
+  //
+  // bool passwordVisible = false;
+  //
+  // bool rememberMe = false;
 
-class _SignUpScreenState extends State<SignUpScreen> {
-  var emailController = TextEditingController();
-  var passwordController = TextEditingController();
-
-  bool passwordVisible = false;
-  bool rememberMe = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
-        flexibleSpace: Container(
-          height: 100,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              // if (Navigator.of(context).canPop())
-              Container(
-                margin: EdgeInsets.only(top: 50, left: 20),
-                child: IconButton(
-                  style: IconButton.styleFrom(
-                      backgroundColor: Theme.of(context).hoverColor),
-                  icon: Icon(
-                    Icons.arrow_back,
-                  ),
-                  onPressed: () {
-                    print("Asdasda");
-                    () => Navigator.pushNamedAndRemoveUntil(
-                        context, SignInScreen.routeName, (route) => false);
-                  },
-                ),
-              )
-              // else
-              //   Text("data"),
-            ],
-          ),
-        ),
+        // flexibleSpace: Container(
+        //   height: 100,
+        //   child: Row(
+        //     mainAxisAlignment: MainAxisAlignment.start,
+        //     children: [
+        //       // if (Navigator.of(context).canPop())
+        //       Container(
+        //         margin: EdgeInsets.only(top: 50, left: 20),
+        //         child: IconButton(
+        //           style: IconButton.styleFrom(
+        //               backgroundColor: Theme.of(context).hoverColor),
+        //           icon: Icon(
+        //             Icons.arrow_back,
+        //           ),
+        //           onPressed: () {
+        //             print("Asdasda");
+        //             () => Navigator.pushNamedAndRemoveUntil(
+        //                 context, SignInScreen.routeName, (route) => false);
+        //           },
+        //         ),
+        //       )
+        //       // else
+        //       //   Text("data"),
+        //     ],
+        //   ),
+        // ),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -101,18 +101,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             width: 5,
                           ),
                           InkWell(
-                            child: MyReusableText(
-                              content: "Sign In",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleMedium!
-                                  .copyWith(fontWeight: FontWeight.w500),
-                            ),
-                            onTap: () => Navigator.pushNamedAndRemoveUntil(
-                                context,
-                                SignInScreen.routeName,
-                                (route) => false),
-                          ),
+                              child: MyReusableText(
+                                content: "Sign In",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium!
+                                    .copyWith(fontWeight: FontWeight.w500),
+                              ),
+                              onTap: () {
+                                controller.fullnameController.value.text = "";
+                                controller.emailController.value.text = "";
+                                controller.passwordController.value.text = "";
+                                Navigator.pushNamedAndRemoveUntil(context,
+                                    SignInScreen.routeName, (route) => false);
+                              }),
                         ],
                       )
                     ],

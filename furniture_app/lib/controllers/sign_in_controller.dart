@@ -38,6 +38,9 @@ class SignInController extends GetxController {
             print(preferences.getString("email"));
             print(preferences.getString("name"));
             print(preferences.getBool("isOnline"));
+
+            emailController.value.text = "";
+            passwordController.value.text = "";
             Navigator.pushNamedAndRemoveUntil(
                 context, MyBottomNavigation.routeName, (route) => false);
           } else {

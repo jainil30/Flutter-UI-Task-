@@ -6,6 +6,10 @@ import 'package:gap/gap.dart';
 import '../common/colors.dart';
 import '../common/sizes.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Bottomsheet of Checkout Screen
+ */
 class PaymentAmountWidget extends StatelessWidget {
   const PaymentAmountWidget({super.key, this.itemTotal, this.deliveryFee});
   final double? itemTotal;

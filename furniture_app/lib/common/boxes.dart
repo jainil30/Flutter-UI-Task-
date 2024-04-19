@@ -3,6 +3,10 @@ import 'package:hive/hive.dart';
 
 import '../constants/strings.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : To fetch same box every time
+ */
 class Boxes {
   static Box<UserModel>? _usersBox;
   static Box<UserModel> getUsers() {

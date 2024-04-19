@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/views/sign_in_screen.dart';
 import 'package:get/get.dart';
 
 /*
@@ -16,10 +17,19 @@ class ChangePasswordController extends GetxController {
   var isObstructConfirmPassword = true.obs;
   var rememberMe = false.obs;
 
-  void validatePasswords() {
+  void validatePasswords(BuildContext context) {
     if (formKey.currentState!.validate()) {
-      Get.snackbar("Password Changed Successfully", "Redirecting to home page",
-          icon: Icon(Icons.next_week));
+      if (newPasswordController.value.text ==
+          confirmPasswordController.value.text) {
+        Get.snackbar(
+            "Password Changed Successfully", "Redirecting to home page",
+            icon: Icon(Icons.next_week));
+
+        Navigator.pushReplacementNamed(context, SignInScreen.routeName);
+      } else {
+        Get.snackbar("New Password and Confirm Password ", "Do not match",
+            icon: Icon(Icons.sms_failed));
+      }
     }
   }
 }

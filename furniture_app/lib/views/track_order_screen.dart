@@ -3,6 +3,10 @@ import 'package:furniture_app/widgets/custom_back_icon_button.dart';
 import 'package:furniture_app/widgets/track_order_background.dart';
 import 'package:get/get.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : It tracks order on map
+ */
 class TrackOrderScreen extends StatefulWidget {
   const TrackOrderScreen({super.key});
   static const String routeName = "/trackOrder";
@@ -21,13 +25,17 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        leading: CustomBackIconButton(
-          function: Get.back,
-          icon: Icons.arrow_back,
+        leading: Container(
+          margin: EdgeInsets.only(left: 20),
+          child: CustomBackIconButton(
+            function: Get.back,
+            icon: Icons.arrow_back,
+          ),
         ),
-        leadingWidth: 80,
+        leadingWidth: 75,
         title: Text(
           "Track Order",
           style: Theme.of(context).textTheme.displayMedium!,
@@ -37,7 +45,6 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
         forceMaterialTransparency: true,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           TrackOrderBackground(),
           // GoogleMap(

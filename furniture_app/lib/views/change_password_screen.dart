@@ -22,9 +22,9 @@ class ChangePasswordScreen extends GetView<ChangePasswordController> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
-        leadingWidth: 80,
+        leadingWidth: 70,
         leading: Container(
-          margin: EdgeInsets.only(left: 34, top: 10),
+          margin: EdgeInsets.only(left: 24, top: 10),
           child: CustomBackIconButton(
             icon: Icons.arrow_back,
             function: Get.back,
@@ -35,38 +35,15 @@ class ChangePasswordScreen extends GetView<ChangePasswordController> {
           "Change Password",
           style: Theme.of(context).textTheme.titleLarge,
         ),
-        // flexibleSpace: SizedBox(
-        //   height: 100,
-        //   child: Row(
-        //     mainAxisAlignment: MainAxisAlignment.start,
-        //     children: [
-        //       Container(
-        //         margin: EdgeInsets.only(top: 40, left: 10),
-        //         child: CustomBackIconButton(
-        //           icon: Icons.arrow_back,
-        //           function: Get.back,
-        //         ),
-        //       ),
-        //       Container(
-        //           margin: const EdgeInsets.only(top: 50),
-        //           width: MediaQuery.sizeOf(context).width * 0.68,
-        //           child: Center(
-        //             child: MyReusableText(
-        //                 content: "Change Password",
-        //                 style: Theme.of(context)
-        //                     .textTheme
-        //                     .titleLarge!
-        //                     .copyWith(fontWeight: FontWeight.bold)),
-        //           )),
-        //     ],
-        //   ),
-        // ),
       ),
       bottomNavigationBar: Container(
         margin: EdgeInsets.all(25),
         child: CustomElevatedButton(
-            text: "Change Password",
-            onClickFunction: controller.validatePasswords),
+          text: "Change Password",
+          onClickFunction: () {
+            controller.validatePasswords(context);
+          },
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(

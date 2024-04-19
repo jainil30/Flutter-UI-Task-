@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
-class UserController extends GetxController {
-
-}
+/*
+  Created By : Jainil Dalwadi
+  Purpose : Still their is no purpose to use it, hence it is empty
+ */
+class UserController extends GetxController {}

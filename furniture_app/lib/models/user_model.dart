@@ -2,6 +2,10 @@ import 'package:hive/hive.dart';
 
 part 'user_model.g.dart';
 
+/*
+  Created By : Jainil Dalwadi
+  Purpose : To Store user data
+ */
 @HiveType(typeId: 0)
 class UserModel {
   UserModel({
