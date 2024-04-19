@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-
+import 'package:furniture_app/controllers/cart_controller.dart';
 import 'package:furniture_app/widgets/custom_elevated_btn.dart';
 import 'package:furniture_app/widgets/payment_confirmation_bottomsheet.dart';
 
 import 'package:furniture_app/controllers/cart_controller.dart';
 
-import 'package:gap/gap.dart';
-import 'package:get/get.dart';
 
 import '../common/colors.dart';
 import '../common/sizes.dart';
@@ -16,7 +14,8 @@ import '../common/sizes.dart';
   Purpose : Bottomsheet of Checkout Screen
  */
 class PaymentAmountWidget extends StatelessWidget {
-  const PaymentAmountWidget({super.key, required this.itemTotal, required this.deliveryFee});
+  const PaymentAmountWidget(
+      {super.key, required this.itemTotal, required this.deliveryFee});
   final double? itemTotal;
   final double? deliveryFee;
   @override

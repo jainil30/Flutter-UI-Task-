@@ -44,7 +44,7 @@ class PaymentsBottomSheet extends StatelessWidget {
             ),
             Gap(24),
             CustomElevatedButton(
-              text: "Payment",
+              text: "Payments",
               onClickFunction: () =>
                   Navigator.pushNamed(context, MyBottomNavigation.routeName),
             )

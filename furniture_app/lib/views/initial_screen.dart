@@ -70,8 +70,8 @@ class _MyInitialScreenState extends State<MyInitialScreen> {
                     child: MyInitRow(
                       content: "Skip",
                       onContentPressed: () {
-                        Navigator.pushNamedAndRemoveUntil(context,
-                            MyBottomNavigation.routeName, (route) => false);
+                        Navigator.pushNamedAndRemoveUntil(
+                            context, SignInScreen.routeName, (route) => false);
                       },
                       onButtonPressed: () {
                         int val = initialPageController.initialPage;

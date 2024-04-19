@@ -5,11 +5,12 @@ import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/controllers/sign_up_controller.dart';
 import 'package:furniture_app/models/user_model.dart';
 import 'package:furniture_app/routes.dart';
+import 'package:furniture_app/views/reviews_screen.dart';
+
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:furniture_app/views/splash_screen.dart';
 import 'common/theme.dart';
 import 'constants/strings.dart';
 import 'controllers/checkout_controller.dart';
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: (settings) => genterateRoutes(settings),
-      home: const SplashScreen(),
+      home: const ReviewScreen(),
     );
   }
 }

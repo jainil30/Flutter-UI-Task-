@@ -19,6 +19,7 @@ class SettingsMenu extends StatelessWidget {
             title: settingsPageMenu[index]["title"].toString(),
             iconPath: settingsPageMenu[index]["icon"].toString(),
             isSvg: true,
+            routeTo: settingsPageMenu[index]["routeTo"].toString(),
           ),
         );
       },

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/widgets/icon_container.dart';
-import '../widgets/settings_menu.dart';
+import 'package:get/get.dart';
 
+import '../widgets/custom_back_icon_button.dart';
 /*
   Created By : Jainil Dalwadi
   Purpose : Settings Screen
@@ -18,15 +18,12 @@ class SettingsScreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
           centerTitle: true,
           automaticallyImplyLeading: false,
-          flexibleSpace: Align(
-            alignment: Alignment.topLeft,
-            child: Container(
-              margin: const EdgeInsets.only(left: 15, top: 30),
-              child: MyIconContainer(
-                  child: const Icon(Icons.arrow_back),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
+          leadingWidth: 80,
+          leading: Container(
+            margin: const EdgeInsets.only(left: 34, top: 10),
+            child: CustomBackIconButton(
+              icon: Icons.arrow_back,
+              function: Get.back,
             ),
           ),
           title: Text(

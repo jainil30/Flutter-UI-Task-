@@ -12,34 +12,42 @@ class CustomMenuItem extends StatelessWidget {
       this.title,
       this.iconPath,
       this.subTitle,
-      required this.isSvg});
+      required this.isSvg,
+      this.routeTo});
 
   final String? iconPath;
   final String? title;
   final String? subTitle;
   final bool? isSvg;
+  final String? routeTo;
+
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
       color: Theme.of(context).hoverColor,
       child: InkWell(
-        child: Padding(
-          padding: const EdgeInsets.all(4.0),
-          child: ListTile(
-            leading: Container(
-                child: (isSvg!)
-                    ? SvgPicture.asset(iconPath!)
-                    : Image.asset(iconPath!)),
-            title: Text(
-              title ?? "",
-              style: Theme.of(context).textTheme.displaySmall!,
+          child: Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: ListTile(
+              leading: Container(
+                  child: (isSvg!)
+                      ? SvgPicture.asset(iconPath!)
+                      : Image.asset(iconPath!)),
+              title: Text(
+                title ?? "",
+                style: Theme.of(context).textTheme.displaySmall!,
+              ),
             ),
           ),
-        ),
-        onTap: () => Get.snackbar("$title", "$title is clicked",
-            duration: Duration(seconds: 2), icon: SvgPicture.asset(iconPath!)),
-      ),
+          onTap: () {
+            Get.snackbar("$title", "$title is clicked",
+                duration: Duration(seconds: 2),
+                icon: SvgPicture.asset(iconPath!));
+            if (routeTo!.isNotEmpty || routeTo != "") {
+              Navigator.pushNamed(context, routeTo!);
+            }
+          }),
     );
   }
 }

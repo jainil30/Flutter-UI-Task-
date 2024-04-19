@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/controllers/notification_menu_controller.dart';
-import 'package:furniture_app/widgets/icon_container.dart';
 import 'package:furniture_app/widgets/notification_menu.dart';
 import 'package:get/get.dart';
 
@@ -22,11 +21,13 @@ class NotificationScreen extends GetView<NotificationMenuController> {
           automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
           leadingWidth: 80,
-          leading: MyIconContainer(
-              child: Icon(Icons.arrow_back),
-              onPressed: () {
-                Navigator.pop(context);
-              }),
+          leading: Container(
+            margin: EdgeInsets.only(left: 34, top: 10),
+            child: CustomBackIconButton(
+              icon: Icons.arrow_back,
+              function: Get.back,
+            ),
+          ),
           centerTitle: true,
           actions: [
             Container(
@@ -62,7 +63,7 @@ class NotificationScreen extends GetView<NotificationMenuController> {
           ),
         ),
         body: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(24.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

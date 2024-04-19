@@ -30,7 +30,6 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
         backgroundColor: Colors.transparent,
         leadingWidth: 70,
         leading: Container(
-
             margin: const EdgeInsets.only(left: 10, top: 10),
             child: MyIconContainer(
                 child: const Icon(Icons.arrow_back),

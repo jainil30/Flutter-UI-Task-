@@ -27,6 +27,7 @@ class ProfileMenu extends GetView<ProfilePageMenuItemController> {
                 .toString(), //controller.profileMenus[index].icon
 
             isSvg: true,
+            routeTo: profilePageMenu[index]["routeTo"],
           ),
         );
       },

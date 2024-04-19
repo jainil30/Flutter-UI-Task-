@@ -9,6 +9,7 @@ import '../widgets/payments_bottom_sheet.dart';
 import '../widgets/promo_code_widget.dart';
 
 class PaymentScreen extends StatelessWidget {
+  static const String routeName = "/paymentScreen";
   const PaymentScreen({super.key});
 
   @override
