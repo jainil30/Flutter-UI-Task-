@@ -5,6 +5,10 @@ import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/models/interested_item_model.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 
+/*Created By: Tushar Jethva
+  used_for: for one interested item container
+  screen: home_screen
+ */
 class MyOneInterestedItem extends StatelessWidget {
   final ItemModel interestedItemModel;
   const MyOneInterestedItem({super.key, required this.interestedItemModel});

@@ -9,6 +9,11 @@ import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
+/*Created By: Tushar Jethva
+  used_for: to increment and decrement item count
+  screen: shopping_screen
+  constructor: CartModel
+ */
 class MyCartInDeWidget extends StatelessWidget {
   const MyCartInDeWidget({
     super.key,

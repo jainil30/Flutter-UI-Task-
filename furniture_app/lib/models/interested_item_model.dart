@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
-
+/*Created By: Tushar Jethva
+  model: items model
+ */
 class ItemModel {
   int? id;
   String? imageUrl;

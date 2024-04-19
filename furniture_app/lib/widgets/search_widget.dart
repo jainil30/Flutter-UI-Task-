@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/views/filter_screen.dart';
 import 'package:furniture_app/views/search_screen.dart';
-import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
 
+/*Created By: Tushar Jethva
+  used_for: to show search app bar
+  screen: home_screen
+ */
 class MySearchWidget extends StatelessWidget {
   const MySearchWidget({
     super.key,

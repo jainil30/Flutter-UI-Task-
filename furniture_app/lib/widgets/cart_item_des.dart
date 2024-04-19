@@ -8,6 +8,11 @@ import 'package:furniture_app/models/interested_item_model.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 
+/*Created By: Tushar Jethva
+  used_for: to show item name, price, shop name
+  screen: shopping_screen
+  constructor: CartModel,ItemModel
+ */
 class MyCartItemDescription extends StatelessWidget {
   const MyCartItemDescription({
     super.key,

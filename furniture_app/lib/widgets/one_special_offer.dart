@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/sizes.dart';
-import 'package:furniture_app/widgets/custom_btn_offers.dart';
 import 'package:furniture_app/widgets/custom_one_category.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
+/*Created By: Tushar Jethva
+  used_for:special offer with image and item description
+  screen: home_screen
+ */
 class MyOneSpecialOffer extends StatelessWidget {
   const MyOneSpecialOffer({
     super.key,

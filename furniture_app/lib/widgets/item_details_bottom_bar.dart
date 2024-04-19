@@ -13,6 +13,11 @@ import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
+
+/*Created By: Tushar Jethva
+  used_for: bottom bar with description, incrementer and decremeter and add to cart button
+  screen: item_details_screen
+ */
 class MyItemDetailsBottomBar extends StatelessWidget {
   final ItemModel item;
   const MyItemDetailsBottomBar({

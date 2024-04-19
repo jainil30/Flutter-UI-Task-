@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+/*Created By: Tushar Jethva
+  used_for: All colors are defined here
+ */
 const primaryColor = Color(0xff0C8A7B);
 const darkColor = Color(0xff101817);
 const greyColor = Color(0xff828A89);

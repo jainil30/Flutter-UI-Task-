@@ -1,18 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/data.dart';
 import 'package:furniture_app/common/sizes.dart';
-import 'package:furniture_app/controllers/favourite_controller.dart';
 import 'package:furniture_app/models/interested_item_model.dart';
 import 'package:furniture_app/widgets/categories.dart';
 import 'package:furniture_app/widgets/custom_header_row.dart';
-import 'package:furniture_app/widgets/custom_one_category.dart';
 import 'package:furniture_app/widgets/favorite_one_widget.dart';
 import 'package:gap/gap.dart';
-import 'package:get/get.dart';
 
 import '../widgets/search_app_bar.dart';
 

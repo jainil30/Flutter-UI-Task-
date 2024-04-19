@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/sizes.dart';
 
+/*Created By: Tushar Jethva
+  used_for: to increment and decrement item
+  screen: cart_scren and details_Screen
+ */
 class MyIncreDecreContainer extends StatelessWidget {
   final Widget child;
   final VoidCallback onPressed;
