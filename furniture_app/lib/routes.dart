@@ -8,7 +8,6 @@ import 'package:furniture_app/views/filter_screen.dart';
 import 'package:furniture_app/views/home_screen.dart';
 import 'package:furniture_app/views/initial_screen.dart';
 import 'package:furniture_app/views/item_details_screen.dart';
-import 'package:furniture_app/views/filter_screen.dart';
 import 'package:furniture_app/views/notification_screen.dart';
 import 'package:furniture_app/views/payments_screen.dart';
 import 'package:furniture_app/views/profile_screen.dart';
@@ -72,13 +71,12 @@ Route<dynamic> genterateRoutes(RouteSettings routeSettings) {
 
     case CheckOutScreen.routeName:
       return MaterialPageRoute(
-          builder: (_) => CheckOutScreen(), settings: routeSettings);
+          builder: (_) => const CheckOutScreen(), settings: routeSettings);
 
     case PaymentScreen.routeName:
       return MaterialPageRoute(
-          builder: (_) => PaymentScreen(), settings: routeSettings);
+          builder: (_) => const PaymentScreen(), settings: routeSettings);
 
-          builder: (_) => const CheckOutScreen(), settings: routeSettings);
     case MyHomeScreen.routeName:
       return MaterialPageRoute(
           builder: (_) => const MyHomeScreen(), settings: routeSettings);

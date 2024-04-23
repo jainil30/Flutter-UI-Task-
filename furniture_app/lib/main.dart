@@ -5,7 +5,7 @@ import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/controllers/sign_up_controller.dart';
 import 'package:furniture_app/models/user_model.dart';
 import 'package:furniture_app/routes.dart';
-import 'package:furniture_app/views/reviews_screen.dart';
+import 'package:furniture_app/views/splash_screen.dart';
 
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
@@ -19,13 +19,9 @@ import 'controllers/notification_menu_controller.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   var directory = await getApplicationDocumentsDirectory();
-
   Hive.init(directory.path);
-
   Hive.registerAdapter(UserModelAdapter());
-
   await Hive.openBox<UserModel>(StringConstants.USER_MODEL_HIVE);
-
   SharedPreferences prefs = await SharedPreferences.getInstance();
   runApp(const MyApp());
 }
@@ -47,7 +43,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: (settings) => genterateRoutes(settings),
-      home: const ReviewScreen(),
+      home: const SplashScreen(),
     );
   }
 }
