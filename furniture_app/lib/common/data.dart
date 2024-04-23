@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/constants/icons.dart';
 import 'package:furniture_app/views/payments_screen.dart';
 import 'package:furniture_app/views/settings_screen.dart';
@@ -393,3 +395,25 @@ final paymentsList = [
  */
 
 final reviewsList = [{}];
+
+final brands = [
+  "Partex",
+  "Regular Furniture",
+  "Hatil",
+  "Regal"
+];
+
+final colorsList = [
+  primaryColor,
+  Colors.amber,
+Colors.black,
+Colors.grey
+];
+
+final stars = [
+  "5",
+  "4",
+  "3",
+  "2",
+  "1"
+];

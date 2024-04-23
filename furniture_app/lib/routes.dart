@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/bottom_nav.dart';
 import 'package:furniture_app/models/interested_item_model.dart';
+import 'package:furniture_app/views/all_brands_screen.dart';
 import 'package:furniture_app/views/all_items_screen.dart';
 import 'package:furniture_app/views/change_password_screen.dart';
 import 'package:furniture_app/views/checkout_screen.dart';
@@ -96,6 +97,10 @@ Route<dynamic> genterateRoutes(RouteSettings routeSettings) {
     case MyFilterScreen.routeName:
       return MaterialPageRoute(
           builder: (_) => const MyFilterScreen(), settings: routeSettings);
+    
+    case MyAllBrands.routeName:
+      return MaterialPageRoute(
+          builder: (_) => const MyAllBrands(), settings: routeSettings);
 
     case MyTotalItems.routeName:
       String appBarName = routeSettings.arguments as String;
