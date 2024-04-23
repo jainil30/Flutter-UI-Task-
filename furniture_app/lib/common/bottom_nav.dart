@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:furniture_app/common/sizes.dart';
-import 'package:furniture_app/constants/strings.dart';
 import 'package:furniture_app/controllers/bottom_navigation_controller.dart';
 import 'package:furniture_app/views/favourite_screen.dart';
 import 'package:furniture_app/views/home_screen.dart';
@@ -11,7 +9,7 @@ import 'package:furniture_app/widgets/eye_container_widget.dart';
 import 'package:get/get.dart';
 
 /*Created By: Tushar Jethva
-
+  used_for: BottomNavigation with stack
 */
 class MyBottomNavigation extends StatelessWidget {
   static const String routeName = "/bottomNav";

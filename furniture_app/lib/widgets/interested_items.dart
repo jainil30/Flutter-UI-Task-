@@ -6,6 +6,10 @@ import 'package:furniture_app/views/item_details_screen.dart';
 import 'package:furniture_app/widgets/custom_interested_one_widget.dart';
 import 'package:get/get.dart';
 
+/*Created By: Tushar Jethva
+  used_for: interested items generation
+  screen: home_screen
+ */
 class MyInterestedItems extends StatelessWidget {
   const MyInterestedItems({
     super.key,

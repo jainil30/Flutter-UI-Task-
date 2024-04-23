@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/bottom_nav.dart';
 import 'package:furniture_app/common/colors.dart';
+import 'package:furniture_app/controllers/cart_controller.dart';
 import 'package:furniture_app/widgets/custom_elevated_btn.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:get/get.dart';
@@ -28,6 +29,7 @@ class TrackOrderAddressWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cartController = Get.put(MyCartController());
     return Container(
       width: double.infinity,
       child: Column(
@@ -36,7 +38,7 @@ class TrackOrderAddressWidget extends StatelessWidget {
           Row(
             children: [
               Container(
-                margin: EdgeInsets.all(8),
+                margin: const EdgeInsets.all(8),
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
@@ -67,9 +69,9 @@ class TrackOrderAddressWidget extends StatelessWidget {
             ],
           ),
           Container(
-            margin: EdgeInsets.only(left: 30),
+            margin: const EdgeInsets.only(left: 30),
             height: 30,
-            child: VerticalDivider(
+            child: const VerticalDivider(
               thickness: 2,
               width: 2,
               color: greyColor,
@@ -78,7 +80,7 @@ class TrackOrderAddressWidget extends StatelessWidget {
           Row(
             children: [
               Container(
-                margin: EdgeInsets.all(8),
+                margin: const EdgeInsets.all(8),
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
@@ -112,7 +114,8 @@ class TrackOrderAddressWidget extends StatelessWidget {
               text: "Order Received",
               onClickFunction: () {
                 Get.snackbar("Congratulations!!", "Enjoy the Product",
-                    icon: Icon(Icons.celebration));
+                    icon: const Icon(Icons.celebration));
+                  cartController.cartItems.clear();
                 Navigator.pushNamed(context, MyBottomNavigation.routeName);
               })
         ],

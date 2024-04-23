@@ -7,6 +7,10 @@ import 'package:furniture_app/views/item_details_screen.dart';
 import 'package:furniture_app/widgets/custom_popular_one_widget.dart';
 import 'package:get/get.dart';
 
+/*Created By: Tushar Jethva
+  used_for: to show all popular items
+  screen: home_screen
+ */
 class MyPopularItems extends StatelessWidget {
   const MyPopularItems({
     super.key,

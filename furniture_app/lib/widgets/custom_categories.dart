@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:furniture_app/common/colors.dart';
@@ -6,6 +5,10 @@ import 'package:furniture_app/controllers/catetgory_controller.dart';
 import 'package:furniture_app/widgets/custom_one_category.dart';
 import 'package:get/get.dart';
 
+/*Created By: Tushar Jethva
+  used_for: to show all categories 
+  screen: home_screen
+ */
 class CustomCategories extends StatelessWidget {
   const CustomCategories({
     super.key,

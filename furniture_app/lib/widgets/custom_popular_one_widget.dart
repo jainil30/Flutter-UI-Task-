@@ -6,6 +6,10 @@ import 'package:furniture_app/models/interested_item_model.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
 
+/*Created By: Tushar Jethva
+  used_for: one container item for popular items
+  screen: home_screen
+ */
 class MyOnePopularWidget extends StatelessWidget {
   final ItemModel popularItemModel;
   const MyOnePopularWidget({super.key, required this.popularItemModel});

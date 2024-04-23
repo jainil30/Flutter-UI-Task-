@@ -4,7 +4,6 @@ import 'package:furniture_app/controllers/cart_controller.dart';
 import 'package:furniture_app/widgets/icon_container.dart';
 import 'package:furniture_app/widgets/payments_menu.dart';
 import 'package:get/get.dart';
-
 import '../widgets/address_menu.dart';
 import '../widgets/payment_amount_widget.dart';
 

@@ -1,13 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/models/interested_item_model.dart';
 import 'package:furniture_app/widgets/cart_image.dart';
-import 'package:furniture_app/widgets/cart_item_des.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
 
+/*Created By: Tushar Jethva
+  used_for: For view all items
+  screen: all_item_screens
+  constructor: ItemModel,Widget
+ */
 class MyOneAllItemWidget extends StatelessWidget {
   final ItemModel item;
   final Widget widget;

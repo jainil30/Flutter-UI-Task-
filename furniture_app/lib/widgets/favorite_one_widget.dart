@@ -9,6 +9,10 @@ import 'package:furniture_app/views/item_details_screen.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:get/get.dart';
 
+/*Created By: Tushar Jethva
+  used_for: one favourite item container
+  screen: favourite_screen
+ */
 class MyFavouriteOneWidget extends StatelessWidget {
   const MyFavouriteOneWidget({
     super.key,

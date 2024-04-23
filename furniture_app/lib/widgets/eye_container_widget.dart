@@ -4,7 +4,7 @@ import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/constants/strings.dart';
 
 /*Created By: Tushar Jethva
-
+  used_for: Eye container in bottom bar
 */
 class MyEyeContainer extends StatelessWidget {
   const MyEyeContainer({

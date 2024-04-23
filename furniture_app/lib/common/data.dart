@@ -4,6 +4,8 @@ import 'package:furniture_app/views/settings_screen.dart';
 
 import '../views/notification_screen.dart';
 
+/*used_for: All static data are present here
+ */
 final initData = [
   {
     "imageUrl": "assets/images/init_1.png",

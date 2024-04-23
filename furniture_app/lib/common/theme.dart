@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/common/colors.dart';
 
 /*Created By: Tushar Jethva
-
+  used_for: for light and dark theme
 */
 ThemeData lightTheme() {
   return ThemeData(
