@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/controllers/checkout_controller.dart';
+import 'package:furniture_app/views/payments_screen.dart';
 import 'package:get/get.dart';
 
 import '../constants/icons.dart';
@@ -40,7 +41,8 @@ class PaymentWdiget extends GetView<CheckoutController> {
                 style: Theme.of(context).textTheme.displaySmall,
               ),
               trailing: Icon(Icons.keyboard_arrow_right),
-              onTap: () => Navigator.pushNamed(context, "/"),
+              onTap: () =>
+                  Navigator.pushNamed(context, PaymentScreen.routeName),
             )
           : Obx(
               () => RadioListTile(

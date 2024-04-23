@@ -98,6 +98,7 @@ class PaymentAmountWidget extends StatelessWidget {
                 showBottomSheet(
                   context: context,
                   builder: (context) {
+                    cartController.cartItems.clear();
                     return PaymentConfirmationBottomSheet();
                   },
                 );

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/views/sign_up_screen.dart';
 import 'package:furniture_app/widgets/sign_in_form.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 import '../common/colors.dart';
@@ -26,34 +28,12 @@ class SignInScreen extends GetView<SignInController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.transparent,
-        // flexibleSpace: Container(
-        //   margin: EdgeInsets.only(top: 50, left: 20),
-        //   child: Row(
-        //     mainAxisAlignment: MainAxisAlignment.start,
-        //     children: [
-        //       IconButton(
-        //         style: IconButton.styleFrom(
-        //             backgroundColor: Theme.of(context).hoverColor),
-        //         icon: Icon(
-        //           Icons.arrow_back,
-        //         ),
-        //         onPressed: () {
-        //           Navigator.pushNamedAndRemoveUntil(
-        //               context, MyInitialScreen.routeName, (route) => false);
-        //         },
-        //       ),
-        //     ],
-        //   ),
-        // ),
-      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(left: 16, right: 16, top: 40),
           child: Column(
             children: [
+              Gap(getHeight(height: 0.15, context: context)),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(

@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
     Get.put(ProfilePageMenuItemController());
     Get.put(NotificationMenuController());
     Get.put(CheckoutController());
+
     return GetMaterialApp(
       title: 'Crafty',
       theme: lightTheme(),

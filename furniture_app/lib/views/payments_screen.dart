@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../constants/icons.dart';
+import '../controllers/cart_controller.dart';
 import '../widgets/credit_card_widget.dart';
 import '../widgets/custom_back_icon_button.dart';
 import '../widgets/payment_method_horizontal_chip_list.dart';
@@ -14,6 +15,8 @@ class PaymentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cartController = Get.put(MyCartController());
+    double total = cartController.totalAmount.value;
     return Scaffold(
       extendBodyBehindAppBar: false,
       resizeToAvoidBottomInset: true,
@@ -55,7 +58,7 @@ class PaymentScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: PaymentsBottomSheet(
-        totalPaymentAmount: 86.680,
+        totalPaymentAmount: (total + 80),
       ),
     );
   }

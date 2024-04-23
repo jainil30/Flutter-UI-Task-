@@ -16,7 +16,12 @@ class UserModelAdapter extends TypeAdapter<UserModel> {
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return UserModel(fullName: '', email: '', password: '', profilePicture: '', isOnline: false)
+    return UserModel(
+        fullName: '',
+        email: '',
+        password: '',
+        profilePicture: '',
+        isOnline: false)
       .._fullName = fields[0] as String
       .._email = fields[1] as String
       .._password = fields[2] as String

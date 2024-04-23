@@ -49,4 +49,5 @@ class IconsConstants {
 
   //Reviews Screen Icons and Images
   static const String STARS = "assets/icons/stars.svg";
+  static const String SEND_ICON = "assets/icons/send_icon.svg";
 }

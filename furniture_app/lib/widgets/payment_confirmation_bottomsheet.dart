@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:furniture_app/common/bottom_nav.dart';
 import 'package:furniture_app/constants/icons.dart';
+import 'package:furniture_app/controllers/bottom_navigation_controller.dart';
 import 'package:furniture_app/widgets/custom_elevated_btn.dart';
 import 'package:furniture_app/widgets/custom_elevated_btn_icon.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 
 import '../common/colors.dart';
 import '../common/sizes.dart';
@@ -18,6 +21,7 @@ class PaymentConfirmationBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bottomNavigationController = Get.put(BottomNavigationController());
     return Container(
       height: getHeight(height: 0.62, context: context),
       width: double.infinity,
@@ -71,7 +75,11 @@ class PaymentConfirmationBottomSheet extends StatelessWidget {
               ),
               child: CustomElevatedIconButton(
                 text: "      Back Home",
-                onClickFunction: () => Navigator.pop(context),
+                onClickFunction: () {
+                  bottomNavigationController.setBottomIndex = 0;
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, MyBottomNavigation.routeName, (route) => false);
+                },
                 imagePath: "",
                 color: Theme.of(context).datePickerTheme.headerBackgroundColor,
                 elevation: 0.5,

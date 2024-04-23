@@ -5,6 +5,9 @@ import 'package:furniture_app/common/sizes.dart';
 import 'package:furniture_app/widgets/custom_elevated_btn.dart';
 import 'package:furniture_app/widgets/reusable_text.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
+
+import '../controllers/cart_controller.dart';
 
 /*
   Created By : Jainil Dalwadi
@@ -15,6 +18,8 @@ class PaymentsBottomSheet extends StatelessWidget {
 
   final double? totalPaymentAmount;
   Widget build(BuildContext context) {
+    final cartController = Get.put(MyCartController());
+    double total = cartController.totalAmount.value;
     return Container(
       height: getHeight(height: 0.21, context: context),
       decoration: BoxDecoration(
@@ -34,7 +39,7 @@ class PaymentsBottomSheet extends StatelessWidget {
                 ),
                 MyReusableText(
                   content:
-                      "\$${(totalPaymentAmount != null) ? totalPaymentAmount : 0}",
+                      "\$${(totalPaymentAmount != null) ? totalPaymentAmount!.toStringAsFixed(2) : 0}",
                   style: Theme.of(context)
                       .textTheme
                       .displayMedium!
@@ -45,8 +50,10 @@ class PaymentsBottomSheet extends StatelessWidget {
             Gap(24),
             CustomElevatedButton(
               text: "Payments",
-              onClickFunction: () =>
-                  Navigator.pushNamed(context, MyBottomNavigation.routeName),
+              onClickFunction: () {
+                cartController.cartItems.clear();
+                Navigator.pushNamed(context, MyBottomNavigation.routeName);
+              },
             )
           ],
         ),
