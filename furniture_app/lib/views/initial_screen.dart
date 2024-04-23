@@ -43,7 +43,7 @@ class _MyInitialScreenState extends State<MyInitialScreen> {
           children: [
             Gap(getHeight(height: 0.2, context: context)),
             SizedBox(
-              height: getHeight(height: 0.6, context: context),
+              height: getHeight(height: 0.623, context: context),
               child: PageView.builder(
                 controller: _pageController,
                 onPageChanged: changePage,
@@ -55,7 +55,7 @@ class _MyInitialScreenState extends State<MyInitialScreen> {
               ),
             ),
             const MyOneDotWidget(),
-            Gap(getHeight(height: 0.07, context: context)),
+            Gap(getHeight(height: 0.05, context: context)),
             initialPageController.initialPage == 2
                 ? MyCustomButton(
                     buttonName: StringConstants.INIT_BUTTON_TEXT,
