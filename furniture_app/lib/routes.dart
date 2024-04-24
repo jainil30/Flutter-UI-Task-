@@ -4,6 +4,7 @@ import 'package:furniture_app/models/interested_item_model.dart';
 import 'package:furniture_app/views/all_items_screen.dart';
 import 'package:furniture_app/views/change_password_screen.dart';
 import 'package:furniture_app/views/checkout_screen.dart';
+import 'package:furniture_app/views/eye_screen.dart';
 import 'package:furniture_app/views/filter_screen.dart';
 import 'package:furniture_app/views/home_screen.dart';
 import 'package:furniture_app/views/initial_screen.dart';
@@ -46,7 +47,7 @@ Route<dynamic> genterateRoutes(RouteSettings routeSettings) {
 
     case SignInScreen.routeName:
       return MaterialPageRoute(
-          builder: (_) => const SignInScreen(), settings: routeSettings);
+          builder: (_) => SignInScreen(), settings: routeSettings);
 
     case SignUpScreen.routeName:
       return MaterialPageRoute(
@@ -60,6 +61,10 @@ Route<dynamic> genterateRoutes(RouteSettings routeSettings) {
     case MyProfileScreen.routeName:
       return MaterialPageRoute(
           builder: (_) => const MyProfileScreen(), settings: routeSettings);
+
+    case EyeScreen.routeName:
+      return MaterialPageRoute(
+          builder: (_) => const EyeScreen(), settings: routeSettings);
 
     case SettingsScreen.routeName:
       return MaterialPageRoute(

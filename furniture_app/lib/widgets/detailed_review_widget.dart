@@ -12,14 +12,15 @@ class DetailedReviewWidget extends StatelessWidget {
       this.isSvg,
       this.userName,
       this.detailedReview,
-      this.isTooMuch});
+      this.isTooMuch,
+      this.timeAgo});
 
   final String? imagePath;
   final bool? isSvg;
   final String? userName;
   final String? detailedReview;
   final bool? isTooMuch;
-
+  final String? timeAgo;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -52,19 +53,22 @@ class DetailedReviewWidget extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 10),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SvgPicture.asset(IconsConstants.STARS),
-                    Text(
-                      "16 Minute Ago",
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleSmall!
-                          .copyWith(color: greyColor),
-                    )
-                  ],
+                Container(
+                  width: getWidth(width: 0.3, context: context),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SvgPicture.asset(IconsConstants.STARS),
+                      Text(
+                        timeAgo ?? "Few Minutes Ago",
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleSmall!
+                            .copyWith(color: greyColor),
+                      )
+                    ],
+                  ),
                 ),
                 SizedBox(height: 10),
                 Container(
