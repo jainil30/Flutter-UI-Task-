@@ -394,6 +394,27 @@ final paymentsList = [
   Purpose : To show reviews in Review Screen
  */
 
+
+final reviewsList = [
+  {
+    "reviewerName": "Angelina Anderson",
+    "reviewStars": "4.5",
+    "reviewTime": "16 Minutes Ago",
+    "reviewerProfilePicture":
+        "https://th.bing.com/th/id/OIP.uFXviv0pQL0EQOCHR3sLWQHaFj?rs=1&pid=ImgDetMain",
+    "review":
+        "nice studio, the app where You can buy Your furniture with just a top without any hassle_ products are realy awesome....."
+  },
+  {
+    "reviewerName": "Anila Erin Maha",
+    "reviewStars": "4.5",
+    "reviewTime": "16 Minutes Ago",
+    "reviewerProfilePicture":
+        "https://th.bing.com/th/id/OIP.uFXviv0pQL0EQOCHR3sLWQHaFj?rs=1&pid=ImgDetMain",
+    "review":
+        "Exellent place to discuss your  furniture ideas and get good suggetions and details."
+  }
+
 final reviewsList = [{}];
 
 final brands = [

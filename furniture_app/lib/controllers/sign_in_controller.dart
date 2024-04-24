@@ -30,6 +30,7 @@ class SignInController extends GetxController {
             preferences.setString(
                 "email", emailController.value.text.toString());
             preferences.setString("name", user.fullName);
+            preferences.setString("password", user.password);
             preferences.setBool("isOnline", user.isOnline);
 
             Get.snackbar("Sign In Successful", "Redirecting to home page",

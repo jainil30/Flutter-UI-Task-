@@ -8,6 +8,8 @@ import 'package:furniture_app/views/shopping_screen.dart';
 import 'package:furniture_app/widgets/eye_container_widget.dart';
 import 'package:get/get.dart';
 
+import '../views/eye_screen.dart';
+
 /*Created By: Tushar Jethva
   used_for: BottomNavigation with stack
 */
@@ -19,7 +21,8 @@ class MyBottomNavigation extends StatelessWidget {
     MyHomeScreen(),
     MyFavouriteScreen(),
     MyShoppingScreen(),
-    MyProfileScreen()
+    MyProfileScreen(),
+    EyeScreen()
   ];
   @override
   Widget build(BuildContext context) {
@@ -57,7 +60,7 @@ class MyBottomNavigation extends StatelessWidget {
                     ),
                   ),
                 )),
-            const MyEyeContainer(),
+            MyEyeContainer(),
           ],
         ),
       ),

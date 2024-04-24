@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/sizes.dart';
+import 'package:furniture_app/controllers/UserController.dart';
 import 'package:furniture_app/controllers/sign_in_controller.dart';
 import 'package:furniture_app/views/sign_up_screen.dart';
 import 'package:furniture_app/widgets/sign_in_form.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../common/colors.dart';
 import '../widgets/reusable_text.dart';
@@ -14,17 +16,42 @@ import '../widgets/reusable_text.dart';
   Purpose : Sign In Screen
  */
 
-class SignInScreen extends GetView<SignInController> {
-  const SignInScreen({super.key});
+class SignInScreen extends StatefulWidget {
+  SignInScreen({super.key});
   static const String routeName = "/signIn";
-  // var emailController = TextEditingController();
-  //
-  // var passwordController = TextEditingController();
-  //
-  // bool passwordVisible = false;
-  //
-  // bool rememberMe = false;
 
+  @override
+  State<SignInScreen> createState() => _SignInScreenState();
+}
+
+class _SignInScreenState extends State<SignInScreen> {
+  var controller = Get.put(SignInController());
+  var userController = Get.put(UserController());
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getSharedPreference();
+  }
+
+  void getSharedPreference() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    try {
+      userController.email.value = preferences.getString("email").toString();
+      userController.name.value = preferences.getString("name").toString();
+      userController.password.value =
+          preferences.getString("password").toString();
+      userController.isOnline.value = preferences.getBool("isOnline")!;
+      print("==========================");
+      print(preferences.getString("email"));
+      print(preferences.getString("name"));
+      print(preferences.getBool("isOnline"));
+    } catch (e) {
+      e.printError();
+    }
+  }
+
+  // var emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +85,8 @@ class SignInScreen extends GetView<SignInController> {
                       const SizedBox(
                         height: 20,
                       ),
-                      SignInForm(),
+                      SignInForm(userController.email.value,
+                          userController.password.value),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,

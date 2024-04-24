@@ -16,11 +16,20 @@ import 'text_form_field.dart';
   Purpose : Sing In Form
  */
 class SignInForm extends GetView<SignInController> {
-  const SignInForm({super.key});
+  const SignInForm(this.email, this.password, {super.key});
+
+  final String? email;
+  final String? password;
 
   @override
   Widget build(BuildContext context) {
     final bottomNavBarController = Get.put(BottomNavigationController());
+    if (email != null) {
+      controller.emailController.value.text = email!;
+      controller.passwordController.value.text = password!;
+      controller.rememberMe.value = true;
+    }
+
     return Form(
       key: controller.formKey,
       child: Padding(
