@@ -5,15 +5,15 @@ import 'package:furniture_app/widgets/custom_back_icon_button.dart';
 import 'package:furniture_app/widgets/notification_menu.dart';
 import 'package:get/get.dart';
 
-
 /*
   Created By : Jainil Dalwadi
   Purpose : Shows all recent notifications
  */
-class NotificationScreen extends GetView<NotificationMenuController> {
+class NotificationScreen extends StatelessWidget {
   static const routeName = '/notificationScreen';
-  const NotificationScreen({super.key});
+  NotificationScreen({super.key});
 
+  var controller = Get.put(NotificationMenuController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(

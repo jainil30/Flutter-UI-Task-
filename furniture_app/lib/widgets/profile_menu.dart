@@ -8,9 +8,9 @@ import 'package:get/get.dart';
   Created By : Jainil Dalwadi
   Purpose : Profile Menu
  */
-class ProfileMenu extends GetView<ProfilePageMenuItemController> {
-  const ProfileMenu({super.key});
-
+class ProfileMenu extends StatelessWidget {
+  ProfileMenu({super.key});
+  var controller = Get.put(ProfilePageMenuItemController());
   @override
   Widget build(BuildContext context) {
     return ListView.builder(

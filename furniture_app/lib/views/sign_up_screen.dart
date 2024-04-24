@@ -14,8 +14,8 @@ import '../widgets/reusable_text.dart';
   Purpose : Sign Up Screen
  */
 
-class SignUpScreen extends GetView<SignUpController> {
-  const SignUpScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  SignUpScreen({super.key});
   static const String routeName = "/signUp";
   // var emailController = TextEditingController();
   //
@@ -24,7 +24,7 @@ class SignUpScreen extends GetView<SignUpController> {
   // bool passwordVisible = false;
   //
   // bool rememberMe = false;
-
+  var controller = Get.put(SignUpController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(

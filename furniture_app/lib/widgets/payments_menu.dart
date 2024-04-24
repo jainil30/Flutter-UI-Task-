@@ -9,9 +9,10 @@ import '../controllers/checkout_controller.dart';
   Created By : Jainil Dalwadi
   Purpose : Menu Showed in Checkout Screen
  */
-class PaymentMenu extends GetView<CheckoutController> {
-  const PaymentMenu({super.key});
+class PaymentMenu extends StatelessWidget {
+  PaymentMenu({super.key});
 
+  var controller = Get.put(CheckoutController());
   @override
   Widget build(BuildContext context) {
     return Column(

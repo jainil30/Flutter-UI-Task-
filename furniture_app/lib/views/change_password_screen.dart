@@ -11,8 +11,10 @@ import '../widgets/custom_textformfield_password.dart';
   Created By : Jainil Dalwadi
   Purpose : Allows user to change his/her password
  */
-class ChangePasswordScreen extends GetView<ChangePasswordController> {
-  const ChangePasswordScreen({super.key});
+class ChangePasswordScreen extends StatelessWidget {
+  ChangePasswordScreen({super.key});
+
+  var controller = Get.put(ChangePasswordController());
 
   static const String routeName = "/changePassword";
   @override

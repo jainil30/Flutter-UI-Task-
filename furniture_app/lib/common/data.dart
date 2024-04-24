@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common/colors.dart';
 import 'package:furniture_app/constants/icons.dart';
+import 'package:furniture_app/views/data_control_screen.dart';
+import 'package:furniture_app/views/delivery_address_screen.dart';
+import 'package:furniture_app/views/email_settings_screen.dart';
+import 'package:furniture_app/views/legal_policy_screen.dart';
+import 'package:furniture_app/views/manage_address_screen.dart';
+import 'package:furniture_app/views/order_history_screen.dart';
 import 'package:furniture_app/views/payments_screen.dart';
 import 'package:furniture_app/views/settings_screen.dart';
+import 'package:furniture_app/views/support_center_screen.dart';
 
 import '../views/notification_screen.dart';
 
@@ -216,7 +223,11 @@ final popularItems = [
   Purpose : Profile Menu Items
  */
 final profilePageMenu = [
-  {"title": "Profile", "icon": "assets/icons/profile_icon.svg", "routeTo": ""},
+  // {
+  //   "title": "Profile",
+  //   "icon": "assets/icons/profile_icon.svg",
+  //   "routeTo": MyProfileScreen.routeName
+  // },
   {
     "title": "Payment Methods",
     "icon": "assets/icons/payments_icon.svg",
@@ -225,22 +236,22 @@ final profilePageMenu = [
   {
     "title": "Order History",
     "icon": "assets/icons/order_history.svg",
-    "routeTo": ""
+    "routeTo": OrderHistoryScreen.routeName
   },
   {
     "title": "Delivery Address",
     "icon": "assets/icons/delivery_address_icon.svg",
-    "routeTo": ""
+    "routeTo": DeliveryAddressScreen.routeName
   },
   {
     "title": "Support Center",
     "icon": "assets/icons/support_center.svg",
-    "routeTo": ""
+    "routeTo": SupportCenterScreen.routeName
   },
   {
     "title": "Legal Policy",
     "icon": "assets/icons/legal_policy.svg",
-    "routeTo": ""
+    "routeTo": LegalPolicyScreen.routeName
   },
   {
     "title": "Settings",
@@ -262,22 +273,22 @@ final settingsPageMenu = [
   {
     "title": "Email Settings",
     "icon": "assets/icons/email_icon.svg",
-    "routeTo": ""
+    "routeTo": EmailSettingsScreen.routeName
   },
   {
     "title": "Manage Addresses",
     "icon": "assets/icons/manage_address.svg",
-    "routeTo": ""
+    "routeTo": ManageAddressScreen.routeName
   },
   {
     "title": "Manage Payment",
     "icon": "assets/icons/payments_icon.svg",
-    "routeTo": ""
+    "routeTo": PaymentScreen.routeName
   },
   {
     "title": "Data Control",
     "icon": "assets/icons/data_center.svg",
-    "routeTo": ""
+    "routeTo": DataControlScreen.routeName
   },
 ];
 
@@ -394,7 +405,6 @@ final paymentsList = [
   Purpose : To show reviews in Review Screen
  */
 
-
 final reviewsList = [
   {
     "reviewerName": "Angelina Anderson",
@@ -414,27 +424,10 @@ final reviewsList = [
     "review":
         "Exellent place to discuss your  furniture ideas and get good suggetions and details."
   }
-
-final reviewsList = [{}];
-
-final brands = [
-  "Partex",
-  "Regular Furniture",
-  "Hatil",
-  "Regal"
 ];
 
-final colorsList = [
-  primaryColor,
-  Colors.amber,
-Colors.black,
-Colors.grey
-];
+final brands = ["Partex", "Regular Furniture", "Hatil", "Regal"];
 
-final stars = [
-  "5",
-  "4",
-  "3",
-  "2",
-  "1"
-];
+final colorsList = [primaryColor, Colors.amber, Colors.black, Colors.grey];
+
+final stars = ["5", "4", "3", "2", "1"];

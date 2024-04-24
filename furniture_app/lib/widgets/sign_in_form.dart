@@ -13,7 +13,7 @@ import 'text_form_field.dart';
 
 /*
   Created By : Jainil Dalwadi
-  Purpose : Sing In Form
+  Purpose : Sign In Form
  */
 class SignInForm extends GetView<SignInController> {
   const SignInForm(this.email, this.password, {super.key});
