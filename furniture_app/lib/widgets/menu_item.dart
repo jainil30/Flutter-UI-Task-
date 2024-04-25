@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 
 /*
   Created By : Jainil Dalwadi
@@ -41,9 +40,6 @@ class CustomMenuItem extends StatelessWidget {
             ),
           ),
           onTap: () {
-            Get.snackbar("$title", "$title is clicked",
-                duration: Duration(seconds: 2),
-                icon: SvgPicture.asset(iconPath!));
             if (routeTo!.isNotEmpty || routeTo != "") {
               Navigator.pushNamed(context, routeTo!);
             }

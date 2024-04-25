@@ -8,8 +8,10 @@ import 'package:get/get.dart';
   Created By : Jainil Dalwadi
   Purpose : Shows Addresses on the Checkout Screen
  */
-class AddressMenu extends GetView<CheckoutController> {
-  const AddressMenu({super.key});
+class AddressMenu extends StatelessWidget {
+  AddressMenu({super.key});
+
+  var controller = Get.put(CheckoutController());
   @override
   Widget build(BuildContext context) {
     return Column(

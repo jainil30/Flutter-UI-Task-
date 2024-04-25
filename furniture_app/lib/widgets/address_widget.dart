@@ -9,9 +9,10 @@ import 'package:get/get.dart';
   Created By : Jainil Dalwadi
   Purpose : Shows Single address in the Address Menu of Checkout Screen
  */
-class AddressWidget extends GetView<CheckoutController> {
-  const AddressWidget(this.index, {super.key});
+class AddressWidget extends StatelessWidget {
+  AddressWidget(this.index, {super.key});
 
+  var controller = Get.put(CheckoutController());
   final int? index;
   @override
   Widget build(BuildContext context) {

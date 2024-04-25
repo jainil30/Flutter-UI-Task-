@@ -15,7 +15,8 @@ class CustomTextFormField extends StatelessWidget {
       required this.labelText,
       this.showIcon,
       this.maxLength,
-      this.validation});
+      this.validation,
+      this.focusNode});
 
   final bool? showIcon;
   final TextEditingController controller;
@@ -25,10 +26,12 @@ class CustomTextFormField extends StatelessWidget {
   final TextInputType? textInputType;
   final int? maxLength;
   final Function? validation;
+  final FocusNode? focusNode;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      focusNode: (focusNode != null) ? focusNode : null,
       decoration: InputDecoration(
         filled: true,
         hintText: hintText,

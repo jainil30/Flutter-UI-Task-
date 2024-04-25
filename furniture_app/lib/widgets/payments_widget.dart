@@ -11,9 +11,10 @@ import '../constants/icons.dart';
   Created By : Jainil Dalwadi
   Purpose : Single Payment Widget in PaymentMenu
  */
-class PaymentWdiget extends GetView<CheckoutController> {
-  const PaymentWdiget({super.key, this.index});
+class PaymentWdiget extends StatelessWidget {
+  PaymentWdiget({super.key, this.index});
 
+  var controller = Get.put(CheckoutController());
   final int? index;
   @override
   Widget build(BuildContext context) {
