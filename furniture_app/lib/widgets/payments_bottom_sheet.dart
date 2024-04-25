@@ -51,6 +51,7 @@ class PaymentsBottomSheet extends StatelessWidget {
             CustomElevatedButton(
               text: "Payments",
               onClickFunction: () {
+                Get.snackbar("Payment Done", "", icon: Icon(Icons.payments));
                 cartController.cartItems.clear();
                 Navigator.pushNamed(context, MyBottomNavigation.routeName);
               },

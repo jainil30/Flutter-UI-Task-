@@ -42,7 +42,7 @@ class HiveService {
   }
 
   List<UserModel> searchUserByEmail(String value) {
-    if (value == null || value == "") {
+    if (value == "") {
       print("Value is null");
     }
     print("Searched value : $value");

@@ -8,7 +8,6 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../widgets/custom_back_icon_button.dart';
 import '../widgets/profile_menu.dart';
 
 /*
@@ -34,13 +33,6 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-/* When saved in shared preference
-           preferences.setString(
-                "email", emailController.value.text.toString());
-            preferences.setString("name", user.fullName);
-            preferences.setBool("isOnline", user.isOnline);
-
- */
     print("init not called");
     getSharedPreference();
   }
@@ -69,14 +61,6 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
         forceMaterialTransparency: true,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
-        leadingWidth: 80,
-        leading: Container(
-          margin: EdgeInsets.only(left: 34, top: 10),
-          child: CustomBackIconButton(
-            icon: Icons.arrow_back,
-            function: Get.back,
-          ),
-        ),
         centerTitle: true,
         title: Text(
           "Profile",
@@ -84,7 +68,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
         ),
         actions: [
           Container(
-            margin: EdgeInsets.only(right: 20),
+            margin: const EdgeInsets.only(right: 20),
             child: TextButton(
                 onPressed: () {
                   Navigator.pushNamedAndRemoveUntil(
@@ -102,16 +86,31 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const CircleAvatar(
-                foregroundImage: NetworkImage(
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB9oF0K9m3KZbFrOm1s3GTB57LyEpOX2Rd9jFy91GDrw&s"),
-                maxRadius: 50,
+              const Stack(
+                children: [
+                  Align(
+                    alignment: Alignment.center,
+                    child: CircleAvatar(
+                      foregroundImage: NetworkImage(
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB9oF0K9m3KZbFrOm1s3GTB57LyEpOX2Rd9jFy91GDrw&s"),
+                      maxRadius: 50,
+                    ),
+                  ),
+                  Positioned(
+                    right: 145,
+                    bottom: 15,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.greenAccent,
+                      minRadius: 5,
+                    ),
+                  )
+                ],
               ),
-              Gap(12),
+              const Gap(12),
               Obx(
                 () => MyReusableText(
                     content: (userController.name.value.isEmpty)
@@ -119,7 +118,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                         : "Jainil Dalwadi",
                     style: Theme.of(context).textTheme.displayMedium!),
               ),
-              Gap(5),
+              const Gap(5),
               MyReusableText(
                   content:
                       (email != null) ? email! : "jainil.dalwadi@gmail.com",
@@ -128,11 +127,11 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                       .titleLarge!
                       .copyWith(color: greyColor)),
               Container(
-                  margin: EdgeInsets.only(top: 10, left: 24, right: 24),
+                  margin: const EdgeInsets.only(top: 10, left: 24, right: 24),
                   // color: Colors.red,
                   height: getHeight(height: 0.6, context: context),
                   child: ProfileMenu()),
-              SizedBox(
+              const SizedBox(
                 height: 300,
               )
             ],

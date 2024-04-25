@@ -5,7 +5,6 @@ import 'package:furniture_app/views/splash_screen.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'common/theme.dart';
 import 'constants/strings.dart';
@@ -16,7 +15,7 @@ void main() async {
   Hive.init(directory.path);
   Hive.registerAdapter(UserModelAdapter());
   await Hive.openBox<UserModel>(StringConstants.USER_MODEL_HIVE);
-  SharedPreferences prefs = await SharedPreferences.getInstance();
+  // SharedPreferences prefs = await SharedPreferences.getInstance();
   runApp(const MyApp());
 }
 

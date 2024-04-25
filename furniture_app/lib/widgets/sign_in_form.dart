@@ -15,16 +15,21 @@ import 'text_form_field.dart';
   Created By : Jainil Dalwadi
   Purpose : Sign In Form
  */
-class SignInForm extends GetView<SignInController> {
-  const SignInForm(this.email, this.password, {super.key});
+class SignInForm extends StatelessWidget {
+  SignInForm(this.email, this.password, {super.key});
 
   final String? email;
   final String? password;
 
+  FocusNode emailFocusNode = FocusNode();
+
+  var controller = Get.put(SignInController());
+
   @override
   Widget build(BuildContext context) {
     final bottomNavBarController = Get.put(BottomNavigationController());
-    if (email != null) {
+
+    if (email != "null") {
       controller.emailController.value.text = email!;
       controller.passwordController.value.text = password!;
       controller.rememberMe.value = true;
@@ -46,6 +51,7 @@ class SignInForm extends GetView<SignInController> {
             ),
             const SizedBox(height: 8),
             CustomTextFormField(
+                focusNode: emailFocusNode,
                 controller: controller.emailController.value,
                 hintText: "Enter Your Email",
                 textInputType: TextInputType.emailAddress,

@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 
 /*
   Created By : Jainil Dalwadi
-  Purpose : Shows all recent notifications
+  Purpose : Shows all recent notificationsF
  */
 class NotificationScreen extends StatelessWidget {
   static const routeName = '/notificationScreen';
