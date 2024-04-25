@@ -52,7 +52,7 @@ class _MyFilterScreenState extends State<MyFilterScreen> {
           const AllBrandWidget(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: Divider(
+            child: Divider( 
               color: theme.hoverColor,
             ),
           ),
